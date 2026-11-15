@@ -180,6 +180,19 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 .map-stage .map-frame { position: absolute; inset: 0; width: 100%; height: 100%; min-height: 0; }
 .mapwrap .map-foot { padding: 8px 12px; border-top: 1px solid var(--line); align-items: baseline; }
 .mapwrap .map-foot #map-caption { flex: 1 1 300px; min-width: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.bcards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; margin: 0 0 14px; }
+.bcard { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 4px; }
+.bcard b { font: 800 34px/1 var(--font-display); font-variant-numeric: tabular-nums; color: var(--accent); }
+.bcard span { font-size: 13px; color: var(--muted); }
+.bcard .bcard-t { font: 500 12px/1 var(--font-mono); letter-spacing: .08em; color: var(--fg); }
+.bctl { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; margin: 0 0 10px; font-size: 13px; color: var(--muted); }
+.bctl input { width: 70px; font: 500 13px var(--font-mono); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 4px 6px; }
+table.budget td.num, table.budget th:nth-child(n+3) { text-align: right; }
+table.budget td.bday { text-align: left; color: var(--muted); }
+table.budget .bcat th, table.budget .bcat td { background: var(--bg); font: 600 13px/1.3 var(--font-body); color: var(--fg); letter-spacing: 0; text-transform: none; }
+table.budget tfoot th, table.budget tfoot td { font-weight: 700; font-size: 15px; border-top: 2px solid var(--line); text-transform: none; letter-spacing: 0; color: var(--fg); font-family: var(--font-body); }
+table.budget tfoot .btotal td { color: var(--accent); font-size: 18px; font-family: var(--font-mono); }
+table.budget tfoot .bper td { font-family: var(--font-mono); }
 .fl-now { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 0 0 14px; padding: 12px 14px; background: var(--surface); border: 1px solid var(--accent); border-radius: 10px; font-size: 14px; }
 .fl-now .bk { font-size: 13px; }
 
@@ -330,7 +343,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
       <button type="button" class="segbtn" data-ret="PHX">回程 凤凰城 PHX</button>
       <button type="button" class="segbtn" data-ret="LAS">回程 拉斯维加斯 LAS</button>
     </div>
-    <a class="toplink" href="#more">机票 · 住宿 · 备选景点 ↓</a>
+    <a class="toplink" href="#more">预算 · 机票 · 住宿 · 备选景点 ↓</a>
   </div>
 </header>
 
@@ -383,6 +396,24 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
 </div>
 
 <main class="wrap" id="more">
+
+<section aria-labelledby="budget-h" id="budget">
+  <h2 id="budget-h">预算</h2>
+  <p class="sec-lede">按类别汇总，每一类里按日期排序，金额都换算成加元。两种人数：2 人租中型 SUV、住酒店一间房；4 人租全尺寸 SUV、尽量住整套 Airbnb。价格是 2026 年 11 月 14–15 日按 12/19–12/28 查的（Google Flights、Kayak、Booking.com、Airbnb），改出发日期后日期会跟着变，价格没有重新查。切换路线和回程机场，预算会跟着重算。</p>
+  <div class="bcards" id="budget-cards"></div>
+  <div class="bctl">
+    <span id="budget-scope"></span>
+    <label for="fx">汇率 1 USD = <input id="fx" type="number" step="0.01" min="1" max="2"> CAD</label>
+  </div>
+  <div class="table-wrap">
+    <table class="budget">
+      <thead><tr><th>日期</th><th>项目</th><th>2 人</th><th>4 人</th></tr></thead>
+      <tbody id="budget-body"></tbody>
+      <tfoot id="budget-foot"></tfoot>
+    </table>
+  </div>
+  <p class="fine">没算进去的：旅行保险和医疗保险、租车保险（信用卡不包的话约 $25–35/天）、多伦多往返机场的交通、圣诞和元旦附近可能上涨的房价。机票按经济舱单程价，多人同订时最后几个座位可能更贵。</p>
+</section>
 
 <section aria-labelledby="fl-h">
   <h2 id="fl-h">机票</h2>
@@ -548,7 +579,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
 
 <section aria-labelledby="lodging-h">
   <h2 id="lodging-h">住宿</h2>
-  <p class="sec-lede">每晚的入住和退房日期已经填进 Booking.com 搜索链接。改一下人数和房间数，链接会跟着更新。</p>
+  <p class="sec-lede">每晚的入住和退房日期已经填进 Booking.com（酒店）和 Airbnb（整套房子）的搜索链接。改一下人数和房间数，链接会跟着更新。4 个人建议优先看 Airbnb：一套 2 卧 2 卫通常比两间酒店房便宜，还能做早餐；死亡谷园内和 Tusayan 没有整套出租，订两张 Queen 床的酒店房。</p>
   <div class="party">
     <label for="adults">成人
       <select id="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
@@ -562,7 +593,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
   </div>
   <div class="table-wrap">
     <table>
-      <thead><tr><th>入住</th><th>退房</th><th>晚数</th><th>住哪里</th><th>预订</th></tr></thead>
+      <thead><tr><th>入住</th><th>退房</th><th>晚数</th><th>住哪里</th><th>酒店</th><th>整套房子</th></tr></thead>
       <tbody id="lodging"></tbody>
     </table>
   </div>
@@ -1283,6 +1314,146 @@ function bookingUrl(l) {
   return "https://www.booking.com/searchresults.html?ss=" + enc(l.ss) + "&checkin=" + l.in + "&checkout=" + l.out +
     "&group_adults=" + a + "&group_children=" + c + "&no_rooms=" + r;
 }
+/* =====================  Budget: 2 people (mid-size SUV, hotel rooms) vs 4 people (full-size SUV, whole-home rentals)  ===================== */
+// Prices checked 2026-11-14/15 for a 12/19 start (12/19–12/28 with the Grand Canyon). USD unless marked cad.
+const BUDGET = {
+  fxDefault: 1.41,
+  flightOut: { cad: 732, label: "去程机票 · Air Canada 直飞 YYZ → LAX 08:00", note: "Google Flights，11/15 查，含登机箱" },
+  flightBack: {
+    PHX: { cad: 435, label: "回程机票 · Porter 直飞 PHX → YYZ 13:25", note: "11/14 查，基础票价不含登机箱" },
+    LAS: { cad: 590, label: "回程机票 · Porter 直飞 LAS → YYZ 14:35", note: "11/14 查，含登机箱" }
+  },
+  bags: { cad: 70, label: "托运行李（每人 1 件，往返）", note: "约 CA$35 一程，以航空公司为准" },
+  // Kayak one-way totals for 9 days LAX → airport, incl. drop fee and taxes, before insurance.
+  car: { PHX: { 2: 650, 4: 870 }, LAS: { 2: 710, 4: 1190 }, days: 9 },
+  carName: { 2: "中型 SUV（Intermediate SUV，如 RAV4）", 4: "全尺寸 SUV（Full-size SUV，如 Tahoe）" },
+  extraDriver: 13,                    // per day, 4-person option only
+  mpg: { 2: 28, 4: 18 }, gas: 4.0,    // average $/gal across CA / NV / UT / AZ
+  // Per-night price incl. taxes and resort fees: [2 people (one hotel room), 4 people], with what was found.
+  lodging: {
+    "Hollywood, Los Angeles":    { 2: [190, "3 星酒店，Booking 评分 8 分左右"], 4: [345, "Airbnb 整套 2 卧 2 卫，评分 4.7+"], park: { 2: 30, 4: 0 } },
+    "Death Valley, California":  { 2: [290, "Stovepipe Wells 酒店"], 4: [480, "Stovepipe Wells 两张 Queen 床房（园内没有 Airbnb）"], park: { 2: 0, 4: 0 } },
+    "Las Vegas Strip, Las Vegas": { 2: [100, "Strip 上 4 星酒店，含 resort fee（平日很便宜）"], 4: [200, "Airbnb 整套 2 卧公寓，Strip 附近"], park: { 2: 20, 4: 20 } },
+    "Springdale, Utah":          { 2: [205, "Springdale 酒店，评分 8.5+"], 4: [295, "Airbnb 整套房子，在 La Verkin / Hurricane（离公园约 30 分钟）；Springdale 镇上的贵很多"], park: { 2: 0, 4: 0 } },
+    "Page, Arizona":             { 2: [150, "酒店，评分 8 分左右"], 4: [275, "Airbnb 整套房子"], park: { 2: 0, 4: 0 } },
+    "Tusayan, Arizona":          { 2: [250, "Tusayan 酒店"], 4: [300, "Tusayan 两张 Queen 床房，或 Williams 的 Airbnb（Tusayan 没有整套出租）"], park: { 2: 0, 4: 0 } }
+  },
+  mealPerDay: 80,      // per person: breakfast ~15, lunch ~25, dinner ~40
+  lastDayMeals: 40,
+  miscPerDay: 15,      // per person: tips, snacks, souvenirs
+  // Fees tied to a stop: the item lands on the first day whose schedule includes that stop, and is skipped if the route doesn't go there.
+  items: [
+    { cat: "park", re: /Getty Center/, label: "Getty Center 停车", usd: 25, per: "car" },
+    { cat: "park", re: /Griffith Observatory/, label: "格里菲斯天文台停车（按小时，约 2 小时）", usd: 20, per: "car" },
+    { cat: "fee",  re: /Death Valley/, label: "美国国家公园非居民年票", usd: 250, per: "car", note: "一辆车一张。覆盖死亡谷、红岩、锡安、大峡谷的门票，也免掉锡安和大峡谷每人 $100 的非居民附加费；不买的话 2 人约 $525、4 人约 $925。以 NPS 官网为准" },
+    { cat: "fee",  re: /Valley of Fire/, label: "火焰谷州立公园（外州车）", usd: 15, per: "car" },
+    { cat: "meal", re: /Bacchanal/, label: "Bacchanal 自助餐（比普通午餐多出的部分）", usd: 55, per: "person" },
+    { cat: "fee",  re: /Hoover Dam/, label: "胡佛水坝游客中心", usd: 15, per: "person" },
+    { cat: "park", re: /Hoover Dam/, label: "胡佛水坝停车", usd: 10, per: "car" },
+    { cat: "fee",  re: /High Roller/, label: "High Roller 摩天轮（夜场）", usd: 40, per: "person" },
+    { cat: "fee",  re: /Upper Antelope/, label: "Upper Antelope Canyon 向导团（含纳瓦霍许可费）", usd: 130, per: "person", note: "各家约 $110–160" },
+    { cat: "park", re: /Horseshoe Bend/, label: "马蹄湾停车", usd: 10, per: "car" },
+    { cat: "fee",  re: /Little Colorado/, label: "小科罗拉多河峡谷观景点（纳瓦霍部落公园）", usd: 5, per: "person" }
+  ]
+};
+const BUDGET_CATS = [
+  ["flight", "机票"], ["car", "租车"], ["gas", "油费"], ["lodging", "住宿"], ["fee", "门票和活动"], ["meal", "餐饮"], ["park", "停车"], ["misc", "小费和杂费"]
+];
+const FX_STORE = "usd_cad";
+let FX = +(store.get(FX_STORE)) || BUDGET.fxDefault;
+const dayOfRe = re => P.days.findIndex(d => d.slots.some(s => re.test((s.g || "") + " " + s.name)));
+const cad = n => "CA$" + Math.round(n).toLocaleString("en-US");
+const usd = n => "US$" + Math.round(n).toLocaleString("en-US");
+
+/* Build every line as { cat, day, label, note, amount: {2, 4} in CAD, src } */
+function budgetLines() {
+  const L = [], nDays = P.days.length, last = nDays - 1;
+  const both = (f) => ({ 2: f(2), 4: f(4) });
+  const fromUsd = (f) => both(n => f(n) * FX);
+  // Flights
+  L.push({ cat: "flight", day: 0, label: BUDGET.flightOut.label, note: BUDGET.flightOut.note + " · 每人 " + cad(BUDGET.flightOut.cad), amount: both(n => BUDGET.flightOut.cad * n) });
+  const fb = BUDGET.flightBack[P.home];
+  L.push({ cat: "flight", day: last, label: fb.label, note: fb.note + " · 每人 " + cad(fb.cad), amount: both(n => fb.cad * n) });
+  L.push({ cat: "flight", day: last, label: BUDGET.bags.label, note: BUDGET.bags.note, amount: both(n => BUDGET.bags.cad * n) });
+  // Car: scale the 9-day quote to this route's rental days
+  const carDays = nDays - 1, scale = carDays / BUDGET.car.days, car = BUDGET.car[P.home];
+  L.push({ cat: "car", day: 0, whole: true, label: "单程租车 LAX → " + P.home + "，" + carDays + " 天",
+    note: "2 人：" + BUDGET.carName[2] + "；4 人：" + BUDGET.carName[4] + "。Kayak 11/14 查，含异地还车费，不含保险" + (scale !== 1 ? "，按天数从 9 天报价折算" : ""),
+    amount: fromUsd(n => car[n] * scale), src: both(n => usd(car[n] * scale)) });
+  L.push({ cat: "car", day: 0, whole: true, label: "第二位驾驶员（只算 4 人）", note: "约 $" + BUDGET.extraDriver + "/天，部分公司对配偶免费",
+    amount: fromUsd(n => n === 4 ? BUDGET.extraDriver * carDays : 0), src: both(n => n === 4 ? usd(BUDGET.extraDriver * carDays) : "—") });
+  // Gas
+  const miles = +String(P.miles).replace(/[^\d]/g, "");
+  L.push({ cat: "gas", day: 0, whole: true, label: "油费，全程约 " + miles.toLocaleString("en-US") + " mi",
+    note: "中型 SUV 约 " + BUDGET.mpg[2] + " mpg，全尺寸 SUV 约 " + BUDGET.mpg[4] + " mpg，平均 $" + BUDGET.gas.toFixed(2) + "/加仑（死亡谷园内更贵）",
+    amount: fromUsd(n => miles / BUDGET.mpg[n] * BUDGET.gas), src: both(n => usd(miles / BUDGET.mpg[n] * BUDGET.gas)) });
+  // Lodging + hotel parking, by check-in night
+  P.lodging.forEach(l0 => {
+    const l = lodgingAt(l0), k = nights(l.in, l.out), day = nights(START, l.in), r = BUDGET.lodging[l.ss];
+    if (!r) return;
+    L.push({ cat: "lodging", day, label: l.where + " · " + k + " 晚",
+      note: "2 人：" + r[2][1] + "，约 $" + r[2][0] + "/晚；4 人：" + r[4][1] + "，约 $" + r[4][0] + "/晚",
+      amount: fromUsd(n => r[n][0] * k), src: both(n => usd(r[n][0] * k)) });
+    if (r.park[2] || r.park[4]) L.push({ cat: "park", day, label: l.where + " 过夜停车 · " + k + " 晚",
+      note: r.park[4] ? "酒店或公寓自停车约 $" + r.park[2] + "/晚" : "酒店停车约 $" + r.park[2] + "/晚；选带免费车位的 Airbnb 就不用",
+      amount: fromUsd(n => r.park[n] * k), src: both(n => r.park[n] ? usd(r.park[n] * k) : "—") });
+  });
+  // Stop-linked fees
+  BUDGET.items.forEach(it => {
+    const day = dayOfRe(it.re);
+    if (day < 0) return;
+    L.push({ cat: it.cat, day, label: it.label, note: (it.per === "car" ? "按车 $" + it.usd : "每人 $" + it.usd) + (it.note ? "。" + it.note : ""),
+      amount: fromUsd(n => it.per === "car" ? it.usd : it.usd * n), src: both(n => usd(it.per === "car" ? it.usd : it.usd * n)) });
+  });
+  // Meals and misc, per person per day
+  const mealUsd = BUDGET.mealPerDay * (nDays - 1) + BUDGET.lastDayMeals;
+  L.push({ cat: "meal", day: 0, whole: true, label: "每天三餐，" + nDays + " 天",
+    note: "每人每天约 $" + BUDGET.mealPerDay + "（早餐 ~$15、午餐 ~$25、晚餐 ~$40，含税和小费），最后一天约 $" + BUDGET.lastDayMeals + "。4 人住 Airbnb 可以自己做早餐省一点",
+    amount: fromUsd(n => mealUsd * n), src: both(n => usd(mealUsd * n)) });
+  L.push({ cat: "misc", day: 0, whole: true, label: "小费、零食、纪念品", note: "每人每天约 $" + BUDGET.miscPerDay,
+    amount: fromUsd(n => BUDGET.miscPerDay * nDays * n), src: both(n => usd(BUDGET.miscPerDay * nDays * n)) });
+  return L;
+}
+
+function renderBudget() {
+  document.getElementById("fx").value = FX;
+  const lines = budgetLines();
+  const total = { 2: 0, 4: 0 };
+  let html = "";
+  BUDGET_CATS.forEach(([cat, name]) => {
+    const rows = lines.filter(l => l.cat === cat).sort((a, b) => (a.whole ? -1 : a.day) - (b.whole ? -1 : b.day));
+    if (!rows.length) return;
+    const sub = { 2: 0, 4: 0 };
+    rows.forEach(r => { sub[2] += r.amount[2]; sub[4] += r.amount[4]; });
+    total[2] += sub[2]; total[4] += sub[4];
+    html += `<tr class="bcat"><th scope="rowgroup" colspan="2">${name}</th><td class="num">${cad(sub[2])}</td><td class="num">${cad(sub[4])}</td></tr>` +
+      rows.map(r => `<tr>
+        <td class="num bday">${r.whole ? "全程" : "Day " + (r.day + 1)}<small>${r.whole ? md(START) + "–" + md(dayIso(P.days.length - 1)) : fmtDate(dayIso(r.day))}</small></td>
+        <td>${r.label}<small>${r.note}</small></td>
+        <td class="num">${r.amount[2] ? cad(r.amount[2]) : "—"}${r.src && r.amount[2] ? `<small>${r.src[2]}</small>` : ""}</td>
+        <td class="num">${r.amount[4] ? cad(r.amount[4]) : "—"}${r.src && r.amount[4] ? `<small>${r.src[4]}</small>` : ""}</td>
+      </tr>`).join("");
+  });
+  document.getElementById("budget-body").innerHTML = html;
+  document.getElementById("budget-foot").innerHTML = `
+    <tr class="btotal"><th scope="row" colspan="2">合计（约）</th><td class="num">${cad(total[2])}</td><td class="num">${cad(total[4])}</td></tr>
+    <tr class="bper"><th scope="row" colspan="2">每人</th><td class="num">${cad(total[2] / 2)}</td><td class="num">${cad(total[4] / 4)}</td></tr>`;
+  document.getElementById("budget-cards").innerHTML = [[2, "2 人", BUDGET.carName[2] + " · 酒店"], [4, "4 人", BUDGET.carName[4] + " · 整套 Airbnb"]].map(([n, t, s]) => `
+    <div class="bcard"><span class="bcard-t">${t}</span><b>${cad(total[n])}</b><span>每人约 ${cad(total[n] / n)} · ${s}</span></div>`).join("");
+  const nDays = P.days.length;
+  document.getElementById("budget-scope").textContent = `当前：${P.days.length} 天 ${P.nights} 晚 · ${fmtDate(START)} – ${fmtDate(dayIso(nDays - 1))} · 回程 ${P.home}`;
+}
+document.getElementById("fx").addEventListener("change", e => {
+  const v = +e.target.value;
+  if (!(v > 0.5 && v < 3)) { e.target.value = FX; return; }
+  FX = v; store.set(FX_STORE, String(v)); renderBudget();
+});
+
+function airbnbUrl(l) {
+  const a = document.getElementById("adults").value, c = document.getElementById("children").value;
+  return "https://www.airbnb.com/s/" + enc(l.ss) + "/homes?checkin=" + l.in + "&checkout=" + l.out + "&adults=" + a + "&children=" + c +
+    "&room_types%5B%5D=" + enc("Entire home/apt");
+}
 function renderLodging() {
   document.getElementById("lodging").innerHTML = P.lodging.map(lodgingAt).map(l => `
     <tr>
@@ -1291,6 +1462,7 @@ function renderLodging() {
       <td class="num">${nights(l.in, l.out)}</td>
       <td>${l.where}<small>${l.hint}</small></td>
       <td><a class="bk" href="${bookingUrl(l)}" target="_blank" rel="noopener">Booking.com ↗</a></td>
+      <td><a class="bk" href="${airbnbUrl(l)}" target="_blank" rel="noopener">Airbnb ↗</a></td>
     </tr>`).join("");
   document.querySelectorAll("[data-stay]").forEach(a => { a.href = bookingUrl(lodgingAt(P.lodging[+a.dataset.stay])); });
 }
@@ -1432,6 +1604,7 @@ function render(key, keepView) {
   renderParks();
   renderDays();
   renderLodging();
+  renderBudget();
   renderFlightsNow();
   renderAlts();
   if (keepView && lastShow) lastShow(); else showAll();
