@@ -326,6 +326,10 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
       <button type="button" class="segbtn" data-plan="a">含大峡谷 · 10 天</button>
       <button type="button" class="segbtn" data-plan="b">不去大峡谷 · 8 天</button>
     </div>
+    <div class="seg" role="group" aria-label="回程机场">
+      <button type="button" class="segbtn" data-ret="PHX">回程 凤凰城 PHX</button>
+      <button type="button" class="segbtn" data-ret="LAS">回程 拉斯维加斯 LAS</button>
+    </div>
     <a class="toplink" href="#more">机票 · 住宿 · 备选景点 ↓</a>
   </div>
 </header>
@@ -443,6 +447,45 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
         <li>去程 LAX、回程 PHX，可以在 Google Flights 选「多城市」(Multi-city) 一起搜，有时比两张单程便宜。</li>
         <li>在 Google Flights 打开「跟踪价格」，降价时会发邮件提醒。</li>
         <li>托运行李另外收费，Air Canada 和 Porter 第一件一般 CA$35 起，订票时看清楚。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="ret-h">
+  <h2 id="ret-h">回程机场对比：凤凰城 PHX vs 拉斯维加斯 LAS</h2>
+  <p class="sec-lede">按「含大峡谷」路线、12/19 出发 12/28 回来比较。机票是 2026 年 11 月 14 日在 Google Flights 查的单程价，每位成人、加元、含税；租车是同一天在 Kayak 查的 9 天单程租车总价（美元，含异地还车费，经济型到紧凑型）。最上方「回程」按钮可以直接切换，左边最后一天会跟着变。</p>
+  <div class="table-wrap">
+    <table class="retcmp">
+      <thead><tr><th></th><th>凤凰城 PHX</th><th>拉斯维加斯 LAS</th></tr></thead>
+      <tbody>
+        <tr><td>最后一天路线</td><td>大峡谷 → Flagstaff → I-17 → PHX</td><td>大峡谷 → Williams → Seligman（66 号公路）→ Kingman → US-93 → LAS</td></tr>
+        <tr><td>车程</td><td class="num">≈235 mi · 约 3h45m</td><td class="num">≈280 mi · 约 4h30m<small>进内华达拨慢 1 小时</small></td></tr>
+        <tr><td>几点离开大峡谷</td><td class="num">05:45</td><td class="num">06:30</td></tr>
+        <tr><td>推荐航班</td><td>Porter 直飞 13:25 → 19:39<small>CA$435 · 不含登机箱</small><small>Air Canada Rouge 13:40 → 19:45，CA$553</small></td><td>Porter 直飞 14:35 → 21:52<small>CA$590 · 含登机箱</small><small>Air Canada 12:20 的直飞太早赶不上；23:35 / 23:50 的红眼直飞 CA$873 起</small></td></tr>
+        <tr><td>最便宜的选择</td><td>就是上面的 Porter 直飞</td><td>American 转机 CA$282 起，但都是清晨 7 点前或深夜出发</td></tr>
+        <tr><td>到多伦多</td><td class="num">19:39</td><td class="num">21:52</td></tr>
+        <tr><td>9 天单程租车（LAX 取车）</td><td class="num">约 US$605–630</td><td class="num">约 US$620–700</td></tr>
+        <tr><td>路上能看的</td><td>Flagstaff 吃早餐，没有额外景点</td><td>Williams 和 Seligman 两个 66 号公路老镇</td></tr>
+        <tr><td>冬季路况</td><td>I-17 在 Flagstaff 一段海拔约 2,100 m，常下雪</td><td>I-40 在 Williams 一段海拔也有约 2,000 m，往西过了 Seligman 就低了</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="verdict">
+    <div class="notecard">
+      <h4>含大峡谷：推荐凤凰城</h4>
+      <ul>
+        <li>每人机票便宜约 CA$155（Porter 在 PHX 是基础票价，加一个登机箱后差距会小一些）。</li>
+        <li>车程短约 45 分钟，晚上 7 点半前到家，比拉斯维加斯早 2 小时多。</li>
+        <li>租车也略便宜，两边差不多。</li>
+      </ul>
+    </div>
+    <div class="notecard">
+      <h4>什么时候选拉斯维加斯</h4>
+      <ul>
+        <li>想顺路走一段 66 号公路（Williams、Seligman），也能晚 45 分钟出发。</li>
+        <li>LAS 飞多伦多的航班更多，凤凰城的直飞满了或涨价时，拉斯维加斯是好的备选。</li>
+        <li>不去大峡谷（方案 B）时，Page 到两个机场的车程都约 4h30m，回 LAS 不用摸黑那么早出发。方案 B 是 8 天，回程日期不同，用「机票」里的按钮按你的日期查价。</li>
       </ul>
     </div>
   </div>
@@ -798,7 +841,7 @@ const PARK = {
 };
 const PLANS = {
   a: {
-    key: "a", dates: "12.21–12.30", nights: 9, days: A_DAYS, miles: "≈1,700 mi", km: "约 2,740 km",
+    key: "a", home: "PHX", dates: "12.21–12.30", nights: 9, days: A_DAYS, miles: "≈1,700 mi", km: "约 2,740 km",
     eyebrow: "Toronto → LAX · road trip · PHX → Toronto",
     lede: "从洛杉矶租车出发，洛杉矶和拉斯维加斯各玩一整天，再去死亡谷、锡安、马蹄湾和大峡谷南缘，最后在凤凰城还车飞回多伦多。",
     route: [["LAX", "Los Angeles International Airport"], ["Hollywood", "Hollywood, Los Angeles, CA"], ["死亡谷", "Furnace Creek, Death Valley, CA"], ["拉斯维加斯", "Las Vegas Strip, NV"], ["锡安", "Springdale, UT"], ["马蹄湾", "Horseshoe Bend, Page, AZ"], ["大峡谷", "Grand Canyon Village, AZ"], ["PHX", "Phoenix Sky Harbor International Airport"]],
@@ -816,7 +859,7 @@ const PLANS = {
     ]
   },
   b: {
-    key: "b", dates: "12.21–12.28", nights: 7, days: B_DAYS, miles: "≈1,420 mi", km: "约 2,290 km",
+    key: "b", home: "LAS", dates: "12.21–12.28", nights: 7, days: B_DAYS, miles: "≈1,420 mi", km: "约 2,290 km",
     eyebrow: "Toronto → LAX · road trip · LAS → Toronto",
     lede: "从洛杉矶租车出发，洛杉矶和拉斯维加斯各玩一整天，再去死亡谷、锡安和马蹄湾，不去大峡谷，最后回拉斯维加斯还车飞回多伦多。",
     route: [["LAX", "Los Angeles International Airport"], ["Hollywood", "Hollywood, Los Angeles, CA"], ["死亡谷", "Furnace Creek, Death Valley, CA"], ["拉斯维加斯", "Las Vegas Strip, NV"], ["锡安", "Springdale, UT"], ["马蹄湾", "Horseshoe Bend, Page, AZ"], ["LAS", "Harry Reid International Airport"]],
@@ -831,6 +874,44 @@ const PLANS = {
     ]
   }
 };
+
+/* =====================  Return-airport variants: same days, different last day  ===================== */
+const A_LAS_LAST = { d: "30", title: "大峡谷 → 66 号公路 → 拉斯维加斯 ✈ 多伦多",
+  leg: ['<span class="shield">AZ-64</span>', '<span class="shield">I-40</span>', '<span class="shield">US-93</span>', '<span>≈280 mi · 车程约 4h30m</span>', '<span class="tzchip">−1h 回太平洋时间 · 回多伦多 +3h</span>'],
+  pts: [["Tusayan", "Tusayan, AZ"], ["Williams 早餐", "Williams, AZ"], ["Seligman · 66 号公路", "Seligman, AZ"], ["Kingman", "Kingman, AZ"], ["LAS 还车", "Harry Reid International Airport"]],
+  slots: [
+    { t: "06:30", k: "move", name: "天亮前出发，走 AZ-64 南下到 Williams", meta: "约 1 小时（山地时间）", note: "天黑路段注意鹿和结冰，前一晚查 az511.gov。大峡谷日出看不到了，前一天的 Yaki Point 日落就是压轴。" },
+    { t: "07:30", k: "meal", name: "早餐：Williams（66 号公路老镇）", meta: "约 45 分钟 · 日出 ≈07:35", g: "Williams, AZ" },
+    { t: "08:15", k: "move", name: "I-40 西行", meta: "到 Seligman 约 45 分钟" },
+    { t: "09:00", k: "sight", name: "Seligman · 66 号公路老街", meta: "约 20 分钟", note: "66 号公路保存最完整的小镇之一，老加油站和复古招牌，就在 I-40 的 123 号出口旁。", g: "Seligman, AZ" },
+    { t: "09:20", k: "move", name: "I-40 到 Kingman，转 US-93 北上去拉斯维加斯", meta: "约 2h45m · 进入内华达拨慢 1 小时", note: "会经过胡佛水坝旁边的大桥（Day 5 已经去过）。", g: "Kingman, AZ" },
+    { t: "11:00", k: "move", name: "LAS 租车中心还车（先加满油），坐接驳车到航站楼", meta: "太平洋时间 · 留 30–45 分钟", g: "Harry Reid International Airport" },
+    { t: "11:45", k: "move", name: "托运行李、过安检", meta: "起飞前约 2h50m 到航站楼" },
+    { t: "12:15", k: "meal", name: "午餐：航站楼里（过安检后）" },
+    { t: "14:35", k: "move", name: "Porter 直飞回多伦多", meta: "14:35 → 21:52 · 约 4h20m", note: "Air Canada 12:20 的直飞赶不上；晚上 23:35 / 23:50 还有红眼直飞，但贵很多。晚饭在飞机上或落地后吃。见下方「回程机场对比」。" }
+  ], stay: null };
+const B_PHX_LAST = { d: "28", title: "Page → Flagstaff → 凤凰城 ✈ 多伦多",
+  leg: ['<span class="shield">US-89</span>', '<span class="shield">I-17</span>', '<span>≈280 mi · 车程约 4h30m</span>', '<span class="tzchip">回多伦多 +2h</span>'],
+  pts: [["Page", "Page, AZ"], ["Flagstaff 早餐", "Flagstaff, AZ"], ["PHX 还车", "Phoenix Sky Harbor International Airport"]],
+  slots: [
+    { t: "05:15", k: "move", name: "天亮前从 Page 出发，走 US-89 南下", meta: "到 Flagstaff 约 2h15m", note: "纳瓦霍保留地路段晚上常有牲畜在路上，开慢一点。" },
+    { t: "07:30", k: "meal", name: "早餐 + 加油：Flagstaff", meta: "约 45 分钟 · 日出 ≈07:35", g: "Flagstaff, AZ" },
+    { t: "08:15", k: "move", name: "走 I-17 下山去凤凰城", meta: "约 2h15m", note: "I-17 冬天可能下雪或堵车，这样排比 13:25 起飞多留了约 45 分钟余量。" },
+    { t: "10:30", k: "move", name: "PHX 租车中心还车，坐 Sky Train 到航站楼", meta: "留 30–45 分钟", g: "Phoenix Sky Harbor International Airport" },
+    { t: "11:15", k: "move", name: "托运行李、过安检", meta: "起飞前约 2 小时到航站楼" },
+    { t: "12:00", k: "meal", name: "午餐：航站楼里（过安检后）" },
+    { t: "13:25", k: "move", name: "直飞回多伦多", meta: "Porter 13:25 → 19:39 或 Air Canada Rouge 13:40 → 19:45" }
+  ], stay: null };
+PLANS.a_las = Object.assign({}, PLANS.a, { key: "a_las", home: "LAS", days: A_DAYS.slice(0, -1).concat([A_LAS_LAST]), miles: "≈1,745 mi", km: "约 2,810 km",
+  eyebrow: "Toronto → LAX · road trip · LAS → Toronto",
+  lede: "从洛杉矶租车出发，洛杉矶和拉斯维加斯各玩一整天，再去死亡谷、锡安、马蹄湾和大峡谷南缘，最后经 66 号公路回拉斯维加斯还车，飞回多伦多。",
+  route: PLANS.a.route.slice(0, -1).concat([["Kingman", "Kingman, AZ"], ["LAS", "Harry Reid International Airport"]]),
+  stops: PLANS.a.stops.slice(0, -1).concat([["LAS", "拉斯维加斯机场", "Harry Reid International Airport", 12]]) });
+PLANS.b_phx = Object.assign({}, PLANS.b, { key: "b_phx", home: "PHX", days: B_DAYS.slice(0, -1).concat([B_PHX_LAST]),
+  eyebrow: "Toronto → LAX · road trip · PHX → Toronto",
+  lede: "从洛杉矶租车出发，洛杉矶和拉斯维加斯各玩一整天，再去死亡谷、锡安和马蹄湾，不去大峡谷，最后经 Flagstaff 到凤凰城还车，飞回多伦多。",
+  route: PLANS.b.route.slice(0, -1).concat([["Flagstaff", "Flagstaff, AZ"], ["PHX", "Phoenix Sky Harbor International Airport"]]),
+  stops: PLANS.b.stops.slice(0, -1).concat([["PHX", "凤凰城 PHX", "Phoenix Sky Harbor International Airport", 11]]) });
 
 /* =====================  Alternatives by destination  ===================== */
 // k: hike | sight | fun.  cost / dur / when / swap shown as facts; warn = the thing to watch out for.
@@ -922,7 +1003,7 @@ document.getElementById("alts").addEventListener("click", e => {
 });
 
 /* =====================  Coordinates for the points-only map (OpenStreetMap lookups, a few fixed by hand)  ===================== */
-const COORDS = {"Los Angeles International Airport":[33.94217,-118.42136],"Santa Monica Pier":[34.0089,-118.4974],"Venice Beach Boardwalk":[33.98671,-118.4741],"Hollywood, Los Angeles, CA":[34.098,-118.32952],"Getty Center":[34.07804,-118.47406],"Original Farmers Market Los Angeles":[34.07194,-118.36039],"TCL Chinese Theatre":[34.10207,-118.34095],"Griffith Observatory":[34.11822,-118.30029],"Koreatown, Los Angeles, CA":[34.06179,-118.30545],"Universal Studios Hollywood":[34.13923,-118.35438],"Mobius Arch Trailhead, Lone Pine, CA":[36.61132,-118.12504],"Lone Pine, CA":[36.58318,-118.07833],"Father Crowley Vista Point":[36.35198,-117.55111],"Mesquite Flat Sand Dunes, Death Valley":[36.66187,-117.09625],"Stovepipe Wells Village, CA":[36.60704,-117.14642],"Zabriskie Point, Death Valley":[36.42104,-116.80887],"Golden Canyon Trailhead, Death Valley":[36.42076,-116.84656],"Badwater Basin, Death Valley":[36.22969,-116.76792],"Artists Palette, Death Valley":[36.36669,-116.80052],"Dantes View, Death Valley":[36.26865,-116.66378],"Bellagio Fountains, Las Vegas":[36.11279,-115.17413],"Bellagio Conservatory & Botanical Gardens":[36.11201,-115.17656],"Calico Tanks Trailhead, Red Rock Canyon":[36.16244,-115.45034],"Bacchanal Buffet, Caesars Palace":[36.11596,-115.17629],"Welcome to Fabulous Las Vegas Sign":[36.08206,-115.17277],"The Venetian Resort Las Vegas":[36.12117,-115.16966],"High Roller, Las Vegas":[36.11757,-115.1682],"Fremont Street Experience":[36.17048,-115.14353],"Red Rock Canyon Scenic Drive":[36.13237,-115.42377],"Fire Wave Trailhead, Valley of Fire State Park":[36.48825,-114.529],"Zion Canyon Visitor Center":[37.20011,-112.98692],"Springdale, UT":[37.18887,-112.99855],"Canyon Overlook Trailhead, Zion National Park":[37.21349,-112.94062],"Temple of Sinawava, Zion National Park":[37.28528,-112.9475],"Zion Lodge, Zion National Park":[37.24985,-112.95709],"Watchman Trailhead, Zion National Park":[37.20092,-112.98698],"Canyon Junction Bridge, Zion National Park":[37.21757,-112.975],"Upper Antelope Canyon":[36.86257,-111.37469],"Hanging Garden Trailhead, Page, AZ":[36.93673,-111.47622],"Horseshoe Bend, Page, AZ":[36.88045,-111.51613],"Page, AZ":[36.91483,-111.45729],"Desert View Watchtower, Grand Canyon":[36.04401,-111.82621],"Lipan Point, Grand Canyon":[36.03309,-111.85301],"South Kaibab Trailhead, Grand Canyon":[36.05294,-112.08374],"Bright Angel Trailhead, Grand Canyon":[36.05728,-112.14363],"Hopi Point, Grand Canyon":[36.07452,-112.15489],"Tusayan, AZ":[35.9736,-112.12656],"Mather Point, Grand Canyon":[36.06172,-112.10903],"Phoenix Sky Harbor International Airport":[33.43285,-112.00679],"Furnace Creek, Death Valley, CA":[36.45874,-116.87139],"Las Vegas Strip, NV":[36.11942,-115.17425],"Grand Canyon Village, AZ":[36.05781,-112.12816],"Zion National Park, UT":[37.32217,-113.00479],"Hoover Dam":[36.01572,-114.73749],"Harry Reid International Airport":[36.0861,-115.1611],"Warner Bros. Studio Tour Hollywood":[34.14897,-118.33754],"Runyon Canyon Park":[34.11204,-118.3501],"Brush Canyon Trailhead, Los Angeles":[34.12539,-118.31293],"The Broad, Los Angeles":[34.05446,-118.25059],"Urban Light, LACMA":[34.06305,-118.35922],"El Matador State Beach":[34.03798,-118.87449],"Mosaic Canyon Trailhead, Death Valley":[36.57184,-117.14424],"Natural Bridge Canyon Trailhead, Death Valley":[36.2806,-116.7714],"Ubehebe Crater":[37.00997,-117.45065],"Twenty Mule Team Canyon, Death Valley":[36.39547,-116.78203],"Rhyolite Ghost Town, Nevada":[36.9009,-116.82933],"Sphere, Las Vegas":[36.12121,-115.16207],"The Neon Museum, Las Vegas":[36.17708,-115.13525],"Valley of Fire State Park":[36.49885,-114.53412],"Ice Box Canyon Trailhead, Red Rock Canyon":[36.15127,-115.48363],"Seven Magic Mountains":[35.83831,-115.27095],"The Grotto Trailhead, Zion National Park":[37.2594,-112.9509],"Kolob Canyons Visitor Center":[37.45345,-113.22538],"Sunset Point, Bryce Canyon":[37.62343,-112.16712],"Lower Antelope Canyon":[36.9027,-111.41139],"Toadstool Hoodoos Trailhead, Utah":[37.10129,-111.87317],"Wahweap Overlook, Page, AZ":[36.96897,-111.49896],"Glen Canyon Dam Overlook":[36.92364,-111.47708],"Grand Canyon Airport, Tusayan":[35.95252,-112.1452],"Shoshone Point, Grand Canyon":[36.0486,-112.055],"Hermits Rest, Grand Canyon":[36.0603,-112.2105],"Yavapai Geology Museum":[36.06606,-112.11763],"Cameron Trading Post":[35.87544,-111.41379],"Cathedral Rock Trailhead, Sedona":[34.83595,-111.7801],"Chapel of the Holy Cross, Sedona":[34.83199,-111.76676],"Montezuma Castle National Monument":[34.61309,-111.83667],"Wupatki National Monument":[35.56495,-111.40585],"Red Rock Canyon State Park, California":[35.38152, -117.97927],"Manzanar National Historic Site":[36.72787, -118.1552],"Lake Hollywood Park":[34.12689, -118.32592],"Devils Golf Course, Death Valley":[36.28583, -116.82619],"Overton, NV":[36.53807, -114.44363],"Mouse's Tank, Valley of Fire":[36.43803, -114.5121],"Elephant Rock, Valley of Fire":[36.42836, -114.46012],"Checkerboard Mesa, Zion National Park":[37.21665, -112.87855],"Navajo Bridge Interpretive Center":[36.8178, -111.63157],"Little Colorado River Gorge Navajo Tribal Park":[35.99203, -111.67947],"Yaki Point, Grand Canyon":[36.05859, -112.08378],"Flagstaff, AZ":[35.19875, -111.65182]};
+const COORDS = {"Los Angeles International Airport":[33.94217,-118.42136],"Santa Monica Pier":[34.0089,-118.4974],"Venice Beach Boardwalk":[33.98671,-118.4741],"Hollywood, Los Angeles, CA":[34.098,-118.32952],"Getty Center":[34.07804,-118.47406],"Original Farmers Market Los Angeles":[34.07194,-118.36039],"TCL Chinese Theatre":[34.10207,-118.34095],"Griffith Observatory":[34.11822,-118.30029],"Koreatown, Los Angeles, CA":[34.06179,-118.30545],"Universal Studios Hollywood":[34.13923,-118.35438],"Mobius Arch Trailhead, Lone Pine, CA":[36.61132,-118.12504],"Lone Pine, CA":[36.58318,-118.07833],"Father Crowley Vista Point":[36.35198,-117.55111],"Mesquite Flat Sand Dunes, Death Valley":[36.66187,-117.09625],"Stovepipe Wells Village, CA":[36.60704,-117.14642],"Zabriskie Point, Death Valley":[36.42104,-116.80887],"Golden Canyon Trailhead, Death Valley":[36.42076,-116.84656],"Badwater Basin, Death Valley":[36.22969,-116.76792],"Artists Palette, Death Valley":[36.36669,-116.80052],"Dantes View, Death Valley":[36.26865,-116.66378],"Bellagio Fountains, Las Vegas":[36.11279,-115.17413],"Bellagio Conservatory & Botanical Gardens":[36.11201,-115.17656],"Calico Tanks Trailhead, Red Rock Canyon":[36.16244,-115.45034],"Bacchanal Buffet, Caesars Palace":[36.11596,-115.17629],"Welcome to Fabulous Las Vegas Sign":[36.08206,-115.17277],"The Venetian Resort Las Vegas":[36.12117,-115.16966],"High Roller, Las Vegas":[36.11757,-115.1682],"Fremont Street Experience":[36.17048,-115.14353],"Red Rock Canyon Scenic Drive":[36.13237,-115.42377],"Fire Wave Trailhead, Valley of Fire State Park":[36.48825,-114.529],"Zion Canyon Visitor Center":[37.20011,-112.98692],"Springdale, UT":[37.18887,-112.99855],"Canyon Overlook Trailhead, Zion National Park":[37.21349,-112.94062],"Temple of Sinawava, Zion National Park":[37.28528,-112.9475],"Zion Lodge, Zion National Park":[37.24985,-112.95709],"Watchman Trailhead, Zion National Park":[37.20092,-112.98698],"Canyon Junction Bridge, Zion National Park":[37.21757,-112.975],"Upper Antelope Canyon":[36.86257,-111.37469],"Hanging Garden Trailhead, Page, AZ":[36.93673,-111.47622],"Horseshoe Bend, Page, AZ":[36.88045,-111.51613],"Page, AZ":[36.91483,-111.45729],"Desert View Watchtower, Grand Canyon":[36.04401,-111.82621],"Lipan Point, Grand Canyon":[36.03309,-111.85301],"South Kaibab Trailhead, Grand Canyon":[36.05294,-112.08374],"Bright Angel Trailhead, Grand Canyon":[36.05728,-112.14363],"Hopi Point, Grand Canyon":[36.07452,-112.15489],"Tusayan, AZ":[35.9736,-112.12656],"Mather Point, Grand Canyon":[36.06172,-112.10903],"Phoenix Sky Harbor International Airport":[33.43285,-112.00679],"Furnace Creek, Death Valley, CA":[36.45874,-116.87139],"Las Vegas Strip, NV":[36.11942,-115.17425],"Grand Canyon Village, AZ":[36.05781,-112.12816],"Zion National Park, UT":[37.32217,-113.00479],"Hoover Dam":[36.01572,-114.73749],"Harry Reid International Airport":[36.0861,-115.1611],"Warner Bros. Studio Tour Hollywood":[34.14897,-118.33754],"Runyon Canyon Park":[34.11204,-118.3501],"Brush Canyon Trailhead, Los Angeles":[34.12539,-118.31293],"The Broad, Los Angeles":[34.05446,-118.25059],"Urban Light, LACMA":[34.06305,-118.35922],"El Matador State Beach":[34.03798,-118.87449],"Mosaic Canyon Trailhead, Death Valley":[36.57184,-117.14424],"Natural Bridge Canyon Trailhead, Death Valley":[36.2806,-116.7714],"Ubehebe Crater":[37.00997,-117.45065],"Twenty Mule Team Canyon, Death Valley":[36.39547,-116.78203],"Rhyolite Ghost Town, Nevada":[36.9009,-116.82933],"Sphere, Las Vegas":[36.12121,-115.16207],"The Neon Museum, Las Vegas":[36.17708,-115.13525],"Valley of Fire State Park":[36.49885,-114.53412],"Ice Box Canyon Trailhead, Red Rock Canyon":[36.15127,-115.48363],"Seven Magic Mountains":[35.83831,-115.27095],"The Grotto Trailhead, Zion National Park":[37.2594,-112.9509],"Kolob Canyons Visitor Center":[37.45345,-113.22538],"Sunset Point, Bryce Canyon":[37.62343,-112.16712],"Lower Antelope Canyon":[36.9027,-111.41139],"Toadstool Hoodoos Trailhead, Utah":[37.10129,-111.87317],"Wahweap Overlook, Page, AZ":[36.96897,-111.49896],"Glen Canyon Dam Overlook":[36.92364,-111.47708],"Grand Canyon Airport, Tusayan":[35.95252,-112.1452],"Shoshone Point, Grand Canyon":[36.0486,-112.055],"Hermits Rest, Grand Canyon":[36.0603,-112.2105],"Yavapai Geology Museum":[36.06606,-112.11763],"Cameron Trading Post":[35.87544,-111.41379],"Cathedral Rock Trailhead, Sedona":[34.83595,-111.7801],"Chapel of the Holy Cross, Sedona":[34.83199,-111.76676],"Montezuma Castle National Monument":[34.61309,-111.83667],"Wupatki National Monument":[35.56495,-111.40585],"Williams, AZ":[35.25085,-112.18729],"Seligman, AZ":[35.32543,-112.85082],"Kingman, AZ":[35.18959,-114.0533],"Red Rock Canyon State Park, California":[35.38152, -117.97927],"Manzanar National Historic Site":[36.72787, -118.1552],"Lake Hollywood Park":[34.12689, -118.32592],"Devils Golf Course, Death Valley":[36.28583, -116.82619],"Overton, NV":[36.53807, -114.44363],"Mouse's Tank, Valley of Fire":[36.43803, -114.5121],"Elephant Rock, Valley of Fire":[36.42836, -114.46012],"Checkerboard Mesa, Zion National Park":[37.21665, -112.87855],"Navajo Bridge Interpretive Center":[36.8178, -111.63157],"Little Colorado River Gorge Navajo Tribal Park":[35.99203, -111.67947],"Yaki Point, Grand Canyon":[36.05859, -112.08378],"Flagstaff, AZ":[35.19875, -111.65182]};
 
 /* =====================  Rendering  ===================== */
 const WD = ["周日","周一","周二","周三","周四","周五","周六"];
@@ -978,6 +1059,9 @@ const logEl = document.getElementById("log");
 const gLink = document.getElementById("gmaps-link");
 const startInput = document.getElementById("start-date");
 let P = PLANS.a, planKey = "a";
+const NATURAL_HOME = { a: "PHX", b: "LAS" };
+const routeOf = key => key[0];
+const keyFor = (route, home) => home === NATURAL_HOME[route] ? route : route + "_" + home.toLowerCase();
 let mapTargets = {};
 let expandAll = false;
 let selDay = null;    // index of the day highlighted in the list, or null
@@ -1162,7 +1246,7 @@ const AREAS = {
   "大峡谷南缘": { re: /Grand Canyon|Tusayan|Cameron|Hermits|Yavapai|Shoshone|Little Colorado/i, alt: "大峡谷" },
   "凤凰城 PHX": { re: /Phoenix|Sedona|Montezuma|Wupatki|Chapel|Flagstaff/i, alt: "回凤凰城路上" },
   "胡佛水坝":  { re: /Hoover|Harry Reid|Bellagio/i, alt: null },
-  "拉斯维加斯机场": { re: /Hoover|Harry Reid|Bellagio/i, alt: null }
+  "拉斯维加斯机场": { re: /Harry Reid|Williams, AZ|Seligman|Kingman/i, alt: null }
 };
 let lastStop = null;
 function areaPts(stopName, withAlts) {
@@ -1213,7 +1297,7 @@ function renderLodging() {
 
 const flightUrl = (from, to, iso) => "https://www.google.com/travel/flights?q=" + enc("Flights to " + to + " from " + from + " on " + iso + " one way") + "&curr=CAD&hl=zh-CN";
 function renderFlightsNow() {
-  const end = dayIso(P.days.length - 1), home = planKey === "b" ? "LAS" : "PHX";
+  const end = dayIso(P.days.length - 1), home = P.home;
   document.getElementById("fl-now").innerHTML =
     `<span>按你选的日期：去程 <b>${fmtDate(START)}</b> YYZ → LAX，回程 <b>${fmtDate(end)}</b> ${home} → YYZ</span>
      <a class="bk" href="${flightUrl("YYZ", "LAX", START)}" target="_blank" rel="noopener">查去程 ↗</a>
@@ -1337,9 +1421,12 @@ function renderParks() {
 function render(key, keepView) {
   planKey = PLANS[key] ? key : "a";
   P = PLANS[planKey];
-  document.querySelectorAll(".segbtn[data-plan]").forEach(b => b.setAttribute("aria-pressed", b.dataset.plan === planKey ? "true" : "false"));
-  document.querySelectorAll(".cmp td:nth-child(2), .cmp th:nth-child(2)").forEach(c => c.style.fontWeight = planKey === "a" ? "600" : "");
-  document.querySelectorAll(".cmp td:nth-child(3), .cmp th:nth-child(3)").forEach(c => c.style.fontWeight = planKey === "b" ? "600" : "");
+  document.querySelectorAll(".segbtn[data-plan]").forEach(b => b.setAttribute("aria-pressed", b.dataset.plan === routeOf(planKey) ? "true" : "false"));
+  document.querySelectorAll(".segbtn[data-ret]").forEach(b => b.setAttribute("aria-pressed", b.dataset.ret === P.home ? "true" : "false"));
+  document.querySelectorAll(".cmp td:nth-child(2), .cmp th:nth-child(2)").forEach(c => c.style.fontWeight = routeOf(planKey) === "a" ? "600" : "");
+  document.querySelectorAll(".cmp td:nth-child(3), .cmp th:nth-child(3)").forEach(c => c.style.fontWeight = routeOf(planKey) === "b" ? "600" : "");
+  document.querySelectorAll(".retcmp td:nth-child(2), .retcmp th:nth-child(2)").forEach(c => c.style.fontWeight = P.home === "PHX" ? "600" : "");
+  document.querySelectorAll(".retcmp td:nth-child(3), .retcmp th:nth-child(3)").forEach(c => c.style.fontWeight = P.home === "LAS" ? "600" : "");
   renderHeader();
   renderStops();
   renderParks();
@@ -1350,11 +1437,14 @@ function render(key, keepView) {
   if (keepView && lastShow) lastShow(); else showAll();
 }
 
-document.querySelectorAll(".segbtn[data-plan]").forEach(b => b.addEventListener("click", () => {
-  if (b.dataset.plan === planKey) return;
-  history.replaceState(null, "", "#plan-" + b.dataset.plan);
-  render(b.dataset.plan);
-}));
+function switchPlan(key) {
+  if (key === planKey) return;
+  history.replaceState(null, "", "#plan-" + key.replace("_", "-"));
+  render(key);
+}
+// Switching the route keeps the chosen return airport; switching the airport keeps the route.
+document.querySelectorAll(".segbtn[data-plan]").forEach(b => b.addEventListener("click", () => switchPlan(keyFor(b.dataset.plan, P.home))));
+document.querySelectorAll(".segbtn[data-ret]").forEach(b => b.addEventListener("click", () => switchPlan(keyFor(routeOf(planKey), b.dataset.ret))));
 startInput.addEventListener("change", () => {
   if (!validIso(startInput.value)) { startInput.value = START; return; }
   START = startInput.value; store.set(START_STORE, START);
@@ -1390,7 +1480,7 @@ logEl.addEventListener("click", e => {
 });
 document.querySelector(".toplink").addEventListener("click", e => { e.preventDefault(); document.getElementById("more").scrollIntoView({ block: "start" }); });
 ["adults", "children", "rooms"].forEach(id => document.getElementById(id).addEventListener("change", renderLodging));
-const planFromHash = () => location.hash === "#plan-b" ? "b" : "a";
+const planFromHash = () => { const k = (location.hash.match(/^#plan-([ab](?:-(?:las|phx))?)$/) || [])[1]; return k && PLANS[k.replace("-", "_")] ? k.replace("-", "_") : "a"; };
 window.addEventListener("hashchange", () => { if (/^#plan-/.test(location.hash)) render(planFromHash()); });
 render(planFromHash());
 </script>
