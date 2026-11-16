@@ -336,7 +336,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
     </label>
     <span class="end-date" id="end-date"></span>
     <div class="seg" role="group" aria-label="选择路线">
-      <button type="button" class="segbtn" data-plan="a">含大峡谷 · 10 天</button>
+      <button type="button" class="segbtn" data-plan="a">含大峡谷 · 9 天</button>
       <button type="button" class="segbtn" data-plan="b">不去大峡谷 · 8 天</button>
     </div>
     <div class="seg" role="group" aria-label="回程机场">
@@ -399,7 +399,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
 
 <section aria-labelledby="budget-h" id="budget">
   <h2 id="budget-h">预算</h2>
-  <p class="sec-lede">按类别汇总，每一类里按日期排序，金额都换算成加元。两种人数：2 人租中型 SUV、住酒店一间房；4 人租全尺寸 SUV、尽量住整套 Airbnb。价格是 2026 年 11 月 14–15 日按 12/19–12/28 查的（Google Flights、Kayak、Booking.com、Airbnb），改出发日期后日期会跟着变，价格没有重新查。切换路线和回程机场，预算会跟着重算。</p>
+  <p class="sec-lede">按类别汇总，每一类里按日期排序，金额都换算成加元。两种人数：2 人租中型 SUV、住酒店一间房；4 人租全尺寸 SUV、尽量住整套 Airbnb。价格是 2026 年 11 月 14–15 日按 12/19 出发查的（Google Flights、Kayak、Booking.com、Airbnb；回程机票和租车 11/15 按 12/27 回来重查），改出发日期后日期会跟着变，价格没有重新查。切换路线和回程机场，预算会跟着重算。</p>
   <div class="bcards" id="budget-cards"></div>
   <div class="bctl">
     <span id="budget-scope"></span>
@@ -423,7 +423,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
     <table>
       <thead><tr><th>航段</th><th>推荐航班</th><th>价格</th><th>为什么选它</th><th>其他选择</th></tr></thead>
       <tbody>
-        <tr><td colspan="5"><b>12/21 出发 · 12/30 回</b>（推荐合计约 CA$1,258/人）</td></tr>
+        <tr><td colspan="5"><b>12/21 出发 · 12/30 回</b>（以前 10 天版本的日期，仅供参考；推荐合计约 CA$1,258/人）</td></tr>
         <tr>
           <td>去程<small>12/21 周一 · YYZ → LAX</small></td>
           <td>Air Canada 直飞<small>08:00 → 10:34 · 5h34m</small></td>
@@ -438,7 +438,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
           <td>下午唯一价格合理的直飞，当晚 8 点前到家。要 05:45 离开大峡谷，路上留足余量。</td>
           <td><small>United 经芝加哥 15:45 → 23:59，CA$485（只转 59 分钟，冬天延误风险大）</small><small>American 经费城 14:40 → 23:45，CA$546</small><small>Porter 直飞 13:25 → 19:39，CA$1,578</small><small><a href="https://www.google.com/travel/flights?q=Flights%20to%20YYZ%20from%20PHX%20on%202026-12-30%20one%20way&curr=CAD&hl=zh-CN" target="_blank" rel="noopener">查最新价格 ↗</a></small></td>
         </tr>
-        <tr><td colspan="5"><b>12/19 出发 · 12/28 回</b>（推荐合计约 CA$1,305/人）</td></tr>
+        <tr><td colspan="5"><b>12/19 出发 · 12/27 回</b>（现在的 9 天行程；推荐合计约 CA$1,268/人）</td></tr>
         <tr>
           <td>去程<small>12/19 周六 · YYZ → LAX</small></td>
           <td>Air Canada 直飞<small>08:00 → 10:34 · 5h34m</small></td>
@@ -447,11 +447,11 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
           <td><small>Porter 直飞 09:55 → 12:31，CA$872（含登机箱）</small><small>最便宜：United 经丹佛 16:10 → 22:56，CA$538</small><small><a href="https://www.google.com/travel/flights?q=Flights%20to%20LAX%20from%20YYZ%20on%202026-12-19%20one%20way&curr=CAD&hl=zh-CN" target="_blank" rel="noopener">查最新价格 ↗</a></small></td>
         </tr>
         <tr>
-          <td>回程<small>12/28 周一 · PHX → YYZ</small></td>
+          <td>回程<small>12/27 周日 · PHX → YYZ</small></td>
           <td>Porter 直飞<small>13:25 → 19:39 · 4h14m</small></td>
-          <td class="num">CA$472<small>不含登机箱</small></td>
-          <td>这天的直飞最便宜，和方案 A 一样要 05:45 离开大峡谷。</td>
-          <td><small>Air Canada Rouge 直飞 13:40 → 19:45，CA$502</small><small>American 经达拉斯 14:17 → 22:55，CA$485</small><small><a href="https://www.google.com/travel/flights?q=Flights%20to%20YYZ%20from%20PHX%20on%202026-12-28%20one%20way&curr=CAD&hl=zh-CN" target="_blank" rel="noopener">查最新价格 ↗</a></small></td>
+          <td class="num">CA$435<small>不含登机箱 · 11/15 查</small></td>
+          <td>这天的直飞最便宜，05:45 离开大峡谷，路上留足余量。</td>
+          <td><small>Porter 直飞 10:40 → 16:54，同价 CA$435，但要半夜从大峡谷出发</small><small>Air Canada Rouge 直飞 13:40 → 19:45，CA$666</small><small><a href="https://www.google.com/travel/flights?q=Flights%20to%20YYZ%20from%20PHX%20on%202026-12-27%20one%20way&curr=CAD&hl=zh-CN" target="_blank" rel="noopener">查最新价格 ↗</a></small></td>
         </tr>
       </tbody>
     </table>
@@ -460,7 +460,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
     <div class="notecard">
       <h4>哪一组更划算</h4>
       <ul>
-        <li>按推荐航班算，12/21 出发每人约 CA$1,258，12/19 出发约 CA$1,305，只差约 CA$50。</li>
+        <li>按推荐航班算，12/19 出发、12/27 回每人约 CA$1,268；以前 12/21–12/30 的版本约 CA$1,258，差不多。</li>
         <li>两组的去程是同一班 Air Canada 早班机，12/19 的价格已经含登机箱；如果 12/21 也加上登机箱，两组价格差不多。</li>
         <li>两组回程最合适的都是下午 1 点半左右的直飞，最后一天都要 05:45 离开大峡谷，在 Flagstaff 吃早餐，比估算多留约 1 小时。</li>
       </ul>
@@ -468,7 +468,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
     <div class="notecard">
       <h4>两个日期的行程差别</h4>
       <ul>
-        <li>12/19 出发：洛杉矶赶上周末，景点人多；拉斯维加斯在周二、周三，平日酒店通常更便宜；平安夜和圣诞节在锡安，餐厅可能关门。</li>
+        <li>12/19 出发：洛杉矶赶上周末，景点人多；拉斯维加斯在周二、周三，平日酒店通常更便宜；平安夜住锡安，圣诞节白天在锡安、晚上开到 Page，两晚的餐厅都可能关门或提早打烊。</li>
         <li>12/21 出发：圣诞节在拉斯维加斯，自助餐照常但要早订，胡佛水坝游客中心当天关闭（坝顶照常）；12/30 回来，离元旦很近。</li>
       </ul>
     </div>
@@ -485,7 +485,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
 
 <section aria-labelledby="ret-h">
   <h2 id="ret-h">回程机场对比：凤凰城 PHX vs 拉斯维加斯 LAS</h2>
-  <p class="sec-lede">按「含大峡谷」路线、12/19 出发 12/28 回来比较。机票是 2026 年 11 月 14 日在 Google Flights 查的单程价，每位成人、加元、含税；租车是同一天在 Kayak 查的 9 天单程租车总价（美元，含异地还车费，经济型到紧凑型）。最上方「回程」按钮可以直接切换，左边最后一天会跟着变。</p>
+  <p class="sec-lede">按「含大峡谷」路线、12/19 出发 12/27 回来比较。机票是 2026 年 11 月 15 日在 Google Flights 查的单程价，每位成人、加元、含税；租车是同一天在 Kayak 查的 8 天单程租车总价（美元，含异地还车费，中型 SUV）。最上方「回程」按钮可以直接切换，左边最后一天会跟着变。</p>
   <div class="table-wrap">
     <table class="retcmp">
       <thead><tr><th></th><th>凤凰城 PHX</th><th>拉斯维加斯 LAS</th></tr></thead>
@@ -493,10 +493,10 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
         <tr><td>最后一天路线</td><td>大峡谷 → Flagstaff → I-17 → PHX</td><td>大峡谷 → Williams → Seligman（66 号公路）→ Kingman → US-93 → LAS</td></tr>
         <tr><td>车程</td><td class="num">≈235 mi · 约 3h45m</td><td class="num">≈280 mi · 约 4h30m<small>进内华达拨慢 1 小时</small></td></tr>
         <tr><td>几点离开大峡谷</td><td class="num">05:45</td><td class="num">06:30</td></tr>
-        <tr><td>推荐航班</td><td>Porter 直飞 13:25 → 19:39<small>CA$435 · 不含登机箱</small><small>Air Canada Rouge 13:40 → 19:45，CA$553</small></td><td>Porter 直飞 14:35 → 21:52<small>CA$590 · 含登机箱</small><small>Air Canada 12:20 的直飞太早赶不上；23:35 / 23:50 的红眼直飞 CA$873 起</small></td></tr>
-        <tr><td>最便宜的选择</td><td>就是上面的 Porter 直飞</td><td>American 转机 CA$282 起，但都是清晨 7 点前或深夜出发</td></tr>
+        <tr><td>推荐航班</td><td>Porter 直飞 13:25 → 19:39<small>CA$435 · 不含登机箱</small><small>Air Canada Rouge 13:40 → 19:45，CA$666</small></td><td>Porter 直飞 14:35 → 21:52<small>CA$1,092 · 含登机箱</small><small>Air Canada 12:20 的直飞太早赶不上（CA$710）</small></td></tr>
+        <tr><td>最便宜的选择</td><td>就是上面的 Porter 直飞</td><td>Air Canada 23:50 红眼直飞 CA$530，次日 07:10 到多伦多</td></tr>
         <tr><td>到多伦多</td><td class="num">19:39</td><td class="num">21:52</td></tr>
-        <tr><td>9 天单程租车（LAX 取车）</td><td class="num">约 US$605–630</td><td class="num">约 US$620–700</td></tr>
+        <tr><td>8 天单程租车（LAX 取车，中型 SUV）</td><td class="num">约 US$556–608</td><td class="num">约 US$618–655</td></tr>
         <tr><td>路上能看的</td><td>Flagstaff 吃早餐，没有额外景点</td><td>Williams 和 Seligman 两个 66 号公路老镇</td></tr>
         <tr><td>冬季路况</td><td>I-17 在 Flagstaff 一段海拔约 2,100 m，常下雪</td><td>I-40 在 Williams 一段海拔也有约 2,000 m，往西过了 Seligman 就低了</td></tr>
       </tbody>
@@ -506,9 +506,9 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
     <div class="notecard">
       <h4>含大峡谷：推荐凤凰城</h4>
       <ul>
-        <li>每人机票便宜约 CA$155（Porter 在 PHX 是基础票价，加一个登机箱后差距会小一些）。</li>
+        <li>12/27 这天每人机票便宜约 CA$650：LAS 下午那班 Porter 涨到了 CA$1,092。就算改坐 LAS 的红眼航班，也还贵约 CA$95，还要熬夜。</li>
         <li>车程短约 45 分钟，晚上 7 点半前到家，比拉斯维加斯早 2 小时多。</li>
-        <li>租车也略便宜，两边差不多。</li>
+        <li>租车也便宜约 US$40–60。</li>
       </ul>
     </div>
     <div class="notecard">
@@ -529,16 +529,16 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
     <table class="cmp">
       <thead><tr><th></th><th>方案 A · 含大峡谷</th><th>方案 B · 不去大峡谷</th></tr></thead>
       <tbody>
-        <tr><td>天数</td><td>10 天 9 晚</td><td>8 天 7 晚</td></tr>
-        <tr><td>比原来 12/21–12/28 的计划多请假</td><td class="num">+2 天</td><td class="num">0 天</td></tr>
+        <tr><td>天数</td><td>9 天 8 晚</td><td>8 天 7 晚</td></tr>
+        <tr><td>比原来 12/21–12/28 的计划多请假</td><td class="num">+1 天</td><td class="num">0 天</td></tr>
         <tr><td>回程</td><td>凤凰城 PHX → 多伦多</td><td>拉斯维加斯 LAS → 多伦多</td></tr>
         <tr><td>洛杉矶</td><td>1.5 天（新增 1 天）</td><td>1.5 天（新增 1 天）</td></tr>
         <tr><td>拉斯维加斯</td><td>Day 4 晚上 + Day 5 全天</td><td>Day 4 晚上 + Day 5 全天 + 最后一天中午</td></tr>
         <tr><td>死亡谷</td><td>1 天</td><td>1 天</td></tr>
-        <tr><td>锡安</td><td>约 2 天（到达下午 + 全天）</td><td>约 1 天（到达下午 + 次日日出）</td></tr>
+        <tr><td>锡安</td><td>约 1.5 天（到达傍晚 + 全天，晚饭后开到 Page）</td><td>约 1 天（到达下午 + 次日日出）</td></tr>
         <tr><td>Page（羚羊谷、马蹄湾）</td><td>有</td><td>有</td></tr>
-        <tr><td>大峡谷南缘</td><td>约 1.5 天，含 1 次日落、1 次日出</td><td class="on">没有</td></tr>
-        <tr><td>自驾总里程 · 车程（含市内，估算）</td><td class="num">≈1,700 mi · 约 36h</td><td class="num">≈1,420 mi · 约 30h</td></tr>
+        <tr><td>大峡谷南缘</td><td>约半天：东段观景点 + Lipan Point 日落（第二天天亮前就出发）</td><td class="on">没有</td></tr>
+        <tr><td>自驾总里程 · 车程（含市内，估算）</td><td class="num">≈1,670 mi · 约 35h</td><td class="num">≈1,420 mi · 约 30h</td></tr>
         <tr><td>开车最久的一天</td><td>Day 3 洛杉矶 → 死亡谷 约 5h30m</td><td>Day 3 洛杉矶 → 死亡谷 约 5h30m</td></tr>
       </tbody>
     </table>
@@ -547,23 +547,22 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
     <div class="notecard">
       <h4>不去大峡谷，时间会更充裕吗？</h4>
       <ul>
-        <li>会，能省下约 2 天：洛杉矶和拉斯维加斯各多一天，8 天就能回家。</li>
+        <li>只能再省 1 天：方案 A 已经压到 9 天，方案 B 是 8 天。</li>
         <li>但没有想象中那么宽松。Page 在大峡谷北边，回拉斯维加斯要走回头路，开约 4.5–5 小时，比原来大峡谷去凤凰城还远。所以方案 B 总共只少开约 280 mi、6 小时左右。</li>
-        <li>为了塞进 8 天，锡安从 2 天减到约 1 天。能多请 1 天的话，方案 B 晚一天回，锡安就能保留 2 天。</li>
+        <li>为了塞进 8 天，锡安从约 1.5 天减到约 1 天。</li>
       </ul>
     </div>
     <div class="notecard warn">
       <h4>方案 B 会错过什么</h4>
       <ul>
-        <li>大峡谷南缘：Mather Point、Hopi Point 的日出日落，Desert View Watchtower。这是整趟行程里规模最大的景观。</li>
-        <li>下到峡谷里的步道：South Kaibab 到 Ooh Aah Point，Bright Angel 到 1.5 Mile Resthouse。</li>
-        <li>锡安第二天：Watchman Trail（如果重新开放），以及不赶时间地走 Emerald Pools 和 Riverside Walk。</li>
+        <li>大峡谷南缘：Desert View Watchtower、Lipan Point 日落和小科罗拉多河峡谷。这是整趟行程里规模最大的景观。</li>
+                <li>锡安第二天：Watchman Trail（如果重新开放），以及不赶时间地走 Emerald Pools 和 Riverside Walk。</li>
       </ul>
     </div>
     <div class="notecard">
       <h4>方案 B 换来什么</h4>
       <ul>
-        <li>少请 2 天假、少住 2 晚；如果出发日期接近元旦，还能避开跨年前的机票和住宿高峰。</li>
+        <li>少请 1 天假、少住 1 晚；如果出发日期接近元旦，还能避开跨年前的机票和住宿高峰。</li>
         <li>拉斯维加斯飞多伦多的航班一般比凤凰城多；LAX 取车、LAS 还车的异地还车费通常也比较低。出发前比较一下实际价格。</li>
         <li>不用上海拔 2,100 m 的大峡谷，也不走 Flagstaff 一带的 I-40 / I-17，少了冬季下雪封路的风险。</li>
       </ul>
@@ -660,13 +659,14 @@ const routeLink = pts => "https://www.google.com/maps/dir/" + pts.map(p => enc(p
 // lunch around 12:00, dinner 17:00–19:00, extra buffer on long drives and before flights. k: hike | sight | move | meal.
 const D21 = { d: "21", title: "多伦多 ✈ 洛杉矶 · 海边日落",
   leg: ['<span>YYZ → LAX 约 5h30m 航程</span>', '<span class="tzchip">−3h · 太平洋时间</span>'],
-  pts: [["LAX", "Los Angeles International Airport"], ["Santa Monica 码头", "Santa Monica Pier"], ["Venice Beach", "Venice Beach Boardwalk"], ["Hollywood 住宿", "Hollywood, Los Angeles, CA"]],
+  pts: [["LAX", "Los Angeles International Airport"], ["SpaceX 猎鹰 9 号", "SpaceX Headquarters, Hawthorne, CA"], ["Santa Monica 码头", "Santa Monica Pier"], ["Venice Beach", "Venice Beach Boardwalk"], ["Hollywood 住宿", "Hollywood, Los Angeles, CA"]],
   slots: [
     { t: "05:00", k: "move", name: "到多伦多 Pearson 机场", meta: "起飞前 3 小时", note: "飞美国要在多伦多先过美国海关（预清关），节假日排队长，所以留足 3 小时。" },
     { t: "08:00", k: "move", name: "Air Canada 直飞洛杉矶", meta: "08:00 → 10:35（洛杉矶时间）· 约 5h30m" },
     { t: "10:35", k: "move", name: "抵达 LAX，取行李，坐接驳车去租车中心取车", meta: "留 1–1.5 小时", note: "已经在多伦多过了海关，落地就是国内到达。租车点在机场外，要坐接驳车，节假日排队久。单程租车，在 PHX 或 LAS 还车。", g: "Los Angeles International Airport" },
-    { t: "12:15", k: "meal", name: "午餐：Santa Monica（3rd Street Promenade 一带）", note: "从机场开过去约 25 分钟。" },
-    { t: "13:30", k: "sight", name: "Santa Monica 码头 · 3rd Street Promenade", meta: "约 1.5 小时", note: "Route 66 的终点牌就在码头上。", g: "Santa Monica Pier" },
+    { t: "12:00", k: "sight", name: "SpaceX 总部 · 猎鹰 9 号火箭", meta: "约 20 分钟 · 免费 · 从路边看", note: "从机场租车中心开过去约 10 分钟。SpaceX 第一枚成功着陆回收的猎鹰 9 号一级火箭竖在总部东南角（Crenshaw Blvd 和 Jack Northrop Ave 路口），在人行道上就能看到。园区不对外开放，在附近街边短暂停车拍照即可。", g: "SpaceX Headquarters, Hawthorne, CA" },
+    { t: "12:45", k: "meal", name: "午餐：Santa Monica（3rd Street Promenade 一带）", note: "从 Hawthorne 开过去约 30 分钟。" },
+    { t: "13:45", k: "sight", name: "Santa Monica 码头 · 3rd Street Promenade", meta: "约 1h15m", note: "Route 66 的终点牌就在码头上。", g: "Santa Monica Pier" },
     { t: "15:00", k: "sight", name: "Venice Beach 木栈道 · Venice Canals", meta: "约 1.5 小时", note: "滑板公园、肌肉海滩，再走到安静的运河小区。", g: "Venice Beach Boardwalk" },
     { t: "16:30", k: "sight", name: "回 Santa Monica 海滩看日落", meta: "日落 ≈16:50", g: "Santa Monica Pier" },
     { t: "17:45", k: "meal", name: "晚餐：Santa Monica 或 In-N-Out", note: "In-N-Out 是加州本地汉堡连锁。饭后开约 40 分钟到 Hollywood 住宿。" }
@@ -674,15 +674,16 @@ const D21 = { d: "21", title: "多伦多 ✈ 洛杉矶 · 海边日落",
 
 const D22 = { d: "22", isNew: true, title: "洛杉矶全天 · 好莱坞标志、Getty、天文台夜景",
   leg: ['<span>市内 · 约 50 mi</span>'],
-  pts: [["Hollywood", "Hollywood, Los Angeles, CA"], ["Mount Hollywood 步道", "Griffith Observatory"], ["Getty Center", "Getty Center"], ["Original Farmers Market", "Original Farmers Market Los Angeles"], ["中国剧院", "TCL Chinese Theatre"], ["Lake Hollywood Park", "Lake Hollywood Park"], ["格里菲斯天文台", "Griffith Observatory"], ["Koreatown", "Koreatown, Los Angeles, CA"], ["Hollywood 住宿", "Hollywood, Los Angeles, CA"]],
+  pts: [["Hollywood", "Hollywood, Los Angeles, CA"], ["Mount Hollywood 步道", "Griffith Observatory"], ["Getty Center", "Getty Center"], ["Original Farmers Market", "Original Farmers Market Los Angeles"], ["RIPNDIP 旗舰店", "RIPNDIP, 441 N Fairfax Ave, Los Angeles"], ["中国剧院", "TCL Chinese Theatre"], ["Lake Hollywood Park", "Lake Hollywood Park"], ["格里菲斯天文台", "Griffith Observatory"], ["Koreatown", "Koreatown, Los Angeles, CA"], ["Hollywood 住宿", "Hollywood, Los Angeles, CA"]],
   slots: [
     { t: "07:30", k: "hike", name: "Mount Hollywood Trail", meta: "约 3 mi · 爬升 501 ft · 环线 · 约 1.5 小时 · 中等", note: "早上人少、好停车。从天文台停车场出发，山顶能同时看到好莱坞标志和市中心。步道一早就开，天文台建筑要晚些才开门。", at: "trail/us/california/mount-hollywood-trail", g: "Griffith Observatory" },
     { t: "09:15", k: "move", name: "开往 Getty Center", meta: "约 40 分钟 · I-405 早高峰会堵" },
     { t: "10:00", k: "sight", name: "Getty Center", meta: "约 2 小时 · 免费 · 停车约 $25", note: "山顶的美术馆，有梵高《鸢尾花》，花园和俯瞰洛杉矶的视野也很好。", g: "Getty Center" },
     { t: "12:15", k: "meal", name: "午餐：Original Farmers Market · The Grove", meta: "约 1 小时", note: "1934 年开张的老市场，小吃摊很多。", g: "Original Farmers Market Los Angeles" },
-    { t: "13:30", k: "sight", name: "好莱坞星光大道 · TCL 中国剧院", meta: "约 1 小时", note: "看手印和星星，从 Ovation Hollywood 的平台能看到好莱坞标志。", g: "TCL Chinese Theatre" },
-    { t: "14:45", k: "sight", name: "Lake Hollywood Park · 近看好莱坞标志", meta: "约 30 分钟 · 免费", note: "离标志最近、最好拍的草坪观景点。住宅区路窄，按路牌停车。", g: "Lake Hollywood Park" },
-    { t: "15:45", k: "sight", name: "格里菲斯天文台 · 日落和夜景", meta: "免费 · {GRIFFITH} · 日落 ≈16:50", note: "看完日落再等半小时，城市灯光亮起来最好看。", g: "Griffith Observatory" },
+    { t: "13:15", k: "sight", name: "RIPNDIP 旗舰店购物（Fairfax Ave）", meta: "约 45 分钟 · 每天 11:00–19:00", note: "中指猫 Lord Nermal 的潮牌，店在 441 N Fairfax Ave，从 Farmers Market 往北走约 10 分钟，车可以先停在市场。这一段 Fairfax Ave 潮牌和滑板店很多，可以顺便逛。", g: "RIPNDIP, 441 N Fairfax Ave, Los Angeles" },
+    { t: "14:15", k: "sight", name: "好莱坞星光大道 · TCL 中国剧院", meta: "约 1 小时", note: "看手印和星星，从 Ovation Hollywood 的平台能看到好莱坞标志。", g: "TCL Chinese Theatre" },
+    { t: "15:20", k: "sight", name: "Lake Hollywood Park · 近看好莱坞标志", meta: "约 30 分钟 · 免费", note: "离标志最近、最好拍的草坪观景点。住宅区路窄，按路牌停车。", g: "Lake Hollywood Park" },
+    { t: "16:05", k: "sight", name: "格里菲斯天文台 · 日落和夜景", meta: "免费 · {GRIFFITH} · 日落 ≈16:50", note: "看完日落再等半小时，城市灯光亮起来最好看。", g: "Griffith Observatory" },
     { t: "17:45", k: "meal", name: "晚餐：Koreatown 韩式烤肉", note: "从天文台开过去约 20 分钟。", g: "Koreatown, Los Angeles, CA" },
     { t: "备选", k: "sight", name: "或整天去环球影城 Universal Studios Hollywood", note: "圣诞周人很多，建议买 Express 快速通道。选这个的话 Getty 和好莱坞就放弃。", g: "Universal Studios Hollywood" }
   ], stay: 0 };
@@ -768,49 +769,45 @@ const A_DAYS = [D21, D22, D23, D24, D25,
       { t: "17:15", k: "move", name: "天黑后开往 Springdale", meta: "约 1 小时 · I-15 → UT-9" },
       { t: "18:30", k: "meal", name: "晚餐：Springdale", g: "Springdale, UT" }
     ], stay: 3 },
-  { d: "27", title: "锡安全天 · 从日出走到日落",
-    leg: ['<span>园内活动 · Scenic Drive 坐班车</span>'],
-    pts: [["Springdale", "Springdale, UT"], ["Canyon Overlook", "Canyon Overlook Trailhead, Zion National Park"], ["Riverside Walk", "Temple of Sinawava, Zion National Park"], ["Emerald Pools · Zion Lodge", "Zion Lodge, Zion National Park"], ["Watchman Trail", "Watchman Trailhead, Zion National Park"], ["Canyon Junction 日落", "Canyon Junction Bridge, Zion National Park"], ["Springdale 住宿", "Springdale, UT"]],
+  { d: "27", title: "锡安全天 · 晚饭后连夜开到 Page",
+    leg: ['<span>园内活动 · Scenic Drive 坐班车</span>', '<span class="shield">UT-9</span>', '<span class="shield">US-89</span>', '<span>晚上 Springdale → Page ≈115 mi · 约 2h15m</span>', '<span class="tzchip">亚利桑那冬季与犹他同为 MST</span>'],
+    pts: [["Springdale", "Springdale, UT"], ["Canyon Overlook", "Canyon Overlook Trailhead, Zion National Park"], ["Checkerboard Mesa", "Checkerboard Mesa, Zion National Park"], ["Riverside Walk", "Temple of Sinawava, Zion National Park"], ["Emerald Pools · Zion Lodge", "Zion Lodge, Zion National Park"], ["Watchman Trail", "Watchman Trailhead, Zion National Park"], ["Canyon Junction 日落", "Canyon Junction Bridge, Zion National Park"], ["Springdale 晚餐", "Springdale, UT"], ["Page 住宿", "Page, AZ"]],
     slots: [
+      { t: "07:00", k: "move", name: "退房，行李装车", note: "今晚住 Page，白天车停在游客中心，行李放后备厢遮好。" },
       { t: "07:15", k: "hike", name: "Canyon Overlook Trail 日出", meta: "1 mi · 爬升 213 ft · 往返 · 约 1 小时 · 简单", note: "在隧道东口，要自己开车。日出 ≈07:45。", at: "trail/us/utah/canyon-overlook-trail", g: "Canyon Overlook Trailhead, Zion National Park" },
-      { t: "08:30", k: "move", name: "开回游客中心停车，坐班车进 Scenic Drive", meta: "到终点站约 45 分钟", note: "节假日期间 Scenic Drive 一般只能坐班车。" },
-      { t: "09:15", k: "hike", name: "Riverside Walk", meta: "2.2 mi · 平坦铺装 · 约 1–1.5 小时 · 简单", note: "Scenic Drive 尽头，Narrows 的起点。", at: "trail/us/utah/the-zion-narrows-riverside-walk", g: "Temple of Sinawava, Zion National Park" },
-      { t: "10:45", k: "hike", name: "Emerald Pools（Lower → Upper）", meta: "3 mi · 爬升 406 ft · 约 1.5 小时 · 中等", note: "坐班车到 Zion Lodge 站，对面就是步道口。冬季可能有冰。", at: "trail/us/utah/emerald-pools-trail", g: "Zion Lodge, Zion National Park" },
-      { t: "12:15", k: "meal", name: "午餐：Zion Lodge（Red Rock Grill）", g: "Zion Lodge, Zion National Park" },
+      { t: "08:20", k: "sight", name: "Checkerboard Mesa", meta: "路边停车点 · 约 10 分钟", note: "再往东开 5 分钟，像棋盘一样有格子纹的白色砂岩山。晚上经过时天已经黑了，所以早上先来看。", g: "Checkerboard Mesa, Zion National Park" },
+      { t: "08:35", k: "move", name: "开回游客中心停车，坐班车进 Scenic Drive", meta: "到终点站约 50 分钟", note: "节假日期间 Scenic Drive 一般只能坐班车。" },
+      { t: "09:30", k: "hike", name: "Riverside Walk", meta: "2.2 mi · 平坦铺装 · 约 1–1.5 小时 · 简单", note: "Scenic Drive 尽头，Narrows 的起点。", at: "trail/us/utah/the-zion-narrows-riverside-walk", g: "Temple of Sinawava, Zion National Park" },
+      { t: "10:50", k: "hike", name: "Emerald Pools（Lower → Upper）", meta: "3 mi · 爬升 406 ft · 约 1.5 小时 · 中等", note: "坐班车到 Zion Lodge 站，对面就是步道口。冬季可能有冰。", at: "trail/us/utah/emerald-pools-trail", g: "Zion Lodge, Zion National Park" },
+      { t: "12:20", k: "meal", name: "午餐：Zion Lodge（Red Rock Grill）", g: "Zion Lodge, Zion National Park" },
       { t: "13:30", k: "hike", name: "Watchman Trail", meta: "3.3 mi · 爬升 636 ft · 约 1.5–2 小时 · 中等", note: "从游客中心出发。AllTrails 上标有「CLOSED」，先在 NPS 官网确认；关闭的话就提早走 Pa'rus Trail。", at: "trail/us/utah/the-watchman-trail", g: "Watchman Trailhead, Zion National Park" },
       { t: "15:45", k: "hike", name: "Pa'rus Trail 走到 Canyon Junction 看日落", meta: "1.7 mi 单程 · 平坦铺装 · 日落 ≈17:15", note: "沿 Virgin River 走，终点的桥上是看 Watchman 峰日落的经典位置。", at: "parks/us/utah/zion-national-park/paved", g: "Canyon Junction Bridge, Zion National Park" },
-      { t: "17:45", k: "meal", name: "晚餐：Springdale", g: "Springdale, UT" }
-    ], stay: 3 },
-  { d: "28", title: "锡安 → Page · 蘑菇石、羚羊谷、鲍威尔湖、马蹄湾",
-    leg: ['<span class="shield">UT-9</span>', '<span class="shield">US-89</span>', '<span>≈140 mi · 车程约 3h</span>', '<span class="tzchip">亚利桑那冬季与犹他同为 MST</span>'],
-    pts: [["Springdale", "Springdale, UT"], ["Checkerboard Mesa", "Checkerboard Mesa, Zion National Park"]].concat(PAGE_PTS),
+      { t: "17:45", k: "meal", name: "晚餐：Springdale", note: "这天是圣诞节，镇上部分餐厅可能关门或提早打烊，提前订位或确认营业时间。", g: "Springdale, UT" },
+      { t: "19:00", k: "move", name: "连夜开往 Page：Zion–Mt Carmel 隧道 → Mt Carmel Junction → Kanab → US-89", meta: "≈115 mi · 约 2h15m · 到达 ≈21:15", note: "隧道小轿车和 SUV 晚上也能过（大型车才需要白天护送）。东侧山路和 US-89 晚上没有路灯，常有鹿，开慢一点；出发前查 udot.utah.gov 和 az511.gov 路况，加满油（Kanab 之后加油站很少）。" }
+    ], stay: 4 },
+  { d: "28", title: "Page 马蹄湾、羚羊谷 → 大峡谷南缘",
+    leg: ['<span class="shield">US-89</span>', '<span class="shield">AZ-64</span>', '<span>≈170 mi · 车程约 3h45m（含 Page 市内）</span>'],
+    pts: [["Horseshoe Bend", "Horseshoe Bend, Page, AZ"], ["Page 早餐", "Page, AZ"], ["Glen Canyon Dam Overlook", "Glen Canyon Dam Overlook"], ["Hanging Garden", "Hanging Garden Trailhead, Page, AZ"], ["Upper Antelope Canyon", "Upper Antelope Canyon"], ["Wahweap Overlook", "Wahweap Overlook, Page, AZ"], ["Cameron", "Cameron Trading Post"], ["小科罗拉多河峡谷", "Little Colorado River Gorge Navajo Tribal Park"], ["Desert View Watchtower", "Desert View Watchtower, Grand Canyon"], ["Lipan Point 日落", "Lipan Point, Grand Canyon"], ["Tusayan 住宿", "Tusayan, AZ"]],
     slots: [
-      { t: "07:30", k: "move", name: "从 Springdale 出发，走 Zion–Mt Carmel Highway（隧道）出园", note: "日出 ≈07:45，正好在东侧的砂岩里开。" },
-      { t: "07:55", k: "sight", name: "Checkerboard Mesa", meta: "路边停车点 · 约 15 分钟", note: "像棋盘一样有格子纹的白色砂岩山。", g: "Checkerboard Mesa, Zion National Park" },
-      { t: "08:15", k: "move", name: "经 Mt Carmel Junction、Kanab 走 US-89", meta: "约 1h15m" }
-    ].concat(PAGE_SLOTS), stay: 4 },
-  { d: "29", title: "Page → 纳瓦霍大桥 → 大峡谷南缘",
-    leg: ['<span class="shield">US-89</span>', '<span class="shield">US-89A</span>', '<span class="shield">AZ-64</span>', '<span>≈175 mi · 车程约 3h30m</span>'],
-    pts: [["Page", "Page, AZ"], ["纳瓦霍大桥", "Navajo Bridge Interpretive Center"], ["Cameron 午餐", "Cameron Trading Post"], ["小科罗拉多河峡谷", "Little Colorado River Gorge Navajo Tribal Park"], ["Desert View Watchtower", "Desert View Watchtower, Grand Canyon"], ["Lipan Point", "Lipan Point, Grand Canyon"], ["South Kaibab Trailhead", "South Kaibab Trailhead, Grand Canyon"], ["Yaki Point 日落", "Yaki Point, Grand Canyon"], ["Tusayan 住宿", "Tusayan, AZ"]],
-    slots: [
-      { t: "08:30", k: "move", name: "从 Page 出发，US-89 南下，在 Bitter Springs 转 US-89A", meta: "约 45 分钟", note: "沿途是 Echo Cliffs 和 Vermilion Cliffs 红色悬崖。" },
-      { t: "09:15", k: "sight", name: "纳瓦霍大桥 · Marble Canyon", meta: "约 30–45 分钟 · 免费", note: "走上老桥的人行道，脚下约 140 m 就是科罗拉多河，运气好能看到加州神鹫。", g: "Navajo Bridge Interpretive Center" },
-      { t: "10:00", k: "move", name: "回 US-89，开往 Cameron", meta: "约 1h20m" },
-      { t: "11:20", k: "sight", name: "Cameron Trading Post · 老吊桥", meta: "约 30 分钟", note: "1916 年的贸易站，有纳瓦霍手工艺品。", g: "Cameron Trading Post" },
-      { t: "12:00", k: "meal", name: "午餐：Cameron Trading Post（纳瓦霍炸饼 Navajo Taco）", g: "Cameron Trading Post" },
-      { t: "12:45", k: "sight", name: "小科罗拉多河峡谷观景点", meta: "约 20 分钟 · 纳瓦霍部落公园，小额门票", note: "AZ-64 路边，又深又窄的峡谷，算是大峡谷的预告片。", g: "Little Colorado River Gorge Navajo Tribal Park" },
-      { t: "13:20", k: "sight", name: "Desert View Watchtower", meta: "约 45 分钟", note: "从东门进园后第一站。", g: "Desert View Watchtower, Grand Canyon" },
-      { t: "14:10", k: "sight", name: "Lipan Point", meta: "约 25 分钟", note: "南缘看科罗拉多河最清楚的观景点之一。", g: "Lipan Point, Grand Canyon" },
-      { t: "15:25", k: "hike", name: "South Kaibab Trail to Ooh Aah Point", meta: "1.8 mi · 爬升 574 ft · 往返 · 约 1–1.5 小时 · 中等", note: "游客中心停车，坐橙线班车到步道口。带冰爪，16:50 前回到步道口。", at: "trail/us/arizona/south-kaibab-trail-to-ooh-aah-point", g: "South Kaibab Trailhead, Grand Canyon" },
-      { t: "15:25", k: "hike", name: "或：Bright Angel Trail to 1.5 Mile Resthouse", meta: "3.5 mi · 爬升 1,151 ft · 往返 · 约 2–2.5 小时 · 难", note: "体力好可以选这条代替，但赶不上日落。", at: "trail/us/arizona/15-mile-resthouse-via-bright-angel-trail", g: "Bright Angel Trailhead, Grand Canyon" },
-      { t: "16:50", k: "sight", name: "Yaki Point 日落", meta: "日落 ≈17:20", note: "就在 South Kaibab 步道口旁边，同一条橙线班车。想自驾看日落就去 Hermit Road 上的 Hopi Point（12–2 月可以自驾）。", g: "Yaki Point, Grand Canyon" },
-      { t: "18:15", k: "meal", name: "晚餐：Grand Canyon Village（El Tovar）或 Tusayan", note: "El Tovar 晚餐要提前订位。", g: "Grand Canyon Village, AZ" }
+      { t: "07:00", k: "hike", name: "Horseshoe Bend Trail 日出", meta: "1.6 mi · 爬升 193 ft · 往返 · 约 1 小时 · 简单 · 日出 ≈07:30", note: "太阳从身后升起，先照亮对面的崖壁，人比傍晚少很多。停车场开放时间以官网为准。", at: "trail/us/arizona/horseshoe-bend-trail", g: "Horseshoe Bend, Page, AZ" },
+      { t: "08:10", k: "meal", name: "早餐：Page", g: "Page, AZ" },
+      { t: "09:00", k: "hike", name: "Glen Canyon Dam Overlook · Hanging Garden Trail", meta: "观景点 15 分钟 + 步道 1.4 mi · 约 45 分钟 · 简单", note: "两处都在格伦峡谷大坝旁边，离羚羊谷 10 分钟。", at: "trail/us/arizona/hanging-garden-trail", g: "Glen Canyon Dam Overlook" },
+      { t: "10:00", k: "sight", name: "Upper Antelope Canyon 向导团", meta: "约 1.5 小时 · 需提前预订 · 订 10:00 左右的团", note: "提前 15–30 分钟到集合点。冬天太阳低，几乎没有光束，但颜色一样好看；越接近中午越亮。", g: "Upper Antelope Canyon" },
+      { t: "11:40", k: "sight", name: "Wahweap Overlook · 鲍威尔湖", meta: "约 20 分钟 · 免费", note: "俯瞰 Lake Powell 和 Lone Rock。", g: "Wahweap Overlook, Page, AZ" },
+      { t: "12:15", k: "meal", name: "午餐：Page，加满油", g: "Page, AZ" },
+      { t: "13:00", k: "move", name: "US-89 南下开往 Cameron", meta: "约 1h20m", note: "沿途是 Echo Cliffs 红色悬崖。纳瓦霍保留地内常有牲畜上路。" },
+      { t: "14:20", k: "sight", name: "Cameron Trading Post · 老吊桥", meta: "约 20 分钟", note: "1916 年的贸易站，有纳瓦霍手工艺品。", g: "Cameron Trading Post" },
+      { t: "14:55", k: "sight", name: "小科罗拉多河峡谷观景点", meta: "约 20 分钟 · 纳瓦霍部落公园，小额门票", note: "AZ-64 路边，又深又窄的峡谷，算是大峡谷的预告片。", g: "Little Colorado River Gorge Navajo Tribal Park" },
+      { t: "15:35", k: "sight", name: "Desert View Watchtower", meta: "约 45 分钟", note: "从东门进园后第一站，可以上塔顶。", g: "Desert View Watchtower, Grand Canyon" },
+      { t: "16:35", k: "sight", name: "Lipan Point 日落", meta: "日落 ≈17:15", note: "南缘看科罗拉多河最清楚的观景点之一，也是看日落的好位置，就在 Desert View 西边 10 分钟。", g: "Lipan Point, Grand Canyon" },
+      { t: "17:45", k: "move", name: "沿 Desert View Drive 开往 Tusayan", meta: "约 45 分钟 · 天黑后注意路上的鹿和麋鹿" },
+      { t: "18:30", k: "meal", name: "晚餐：Tusayan 或 Grand Canyon Village（El Tovar）", note: "El Tovar 晚餐要提前订位。", g: "Tusayan, AZ" }
     ], stay: 5 },
-  { d: "30", title: "大峡谷 → 凤凰城 ✈ 多伦多",
+  { d: "29", title: "大峡谷 → 凤凰城 ✈ 多伦多",
     leg: ['<span class="shield">AZ-64</span>', '<span class="shield">I-40</span>', '<span class="shield">I-17</span>', '<span>≈235 mi · 车程约 3h45m</span>', '<span class="tzchip">回多伦多 +2h</span>'],
     pts: [["Tusayan", "Tusayan, AZ"], ["Flagstaff 早餐", "Flagstaff, AZ"], ["PHX 还车", "Phoenix Sky Harbor International Airport"]],
     slots: [
-      { t: "05:45", k: "move", name: "天亮前出发，走 AZ-64 → I-40", meta: "到 Flagstaff 约 1h30m", note: "天黑路段注意鹿和结冰。前一晚查 az511.gov，下雪就提早到 05:00 出发。大峡谷日出看不到了，前一天的 Yaki Point 日落就是压轴。" },
+      { t: "05:45", k: "move", name: "天亮前出发，走 AZ-64 → I-40", meta: "到 Flagstaff 约 1h30m", note: "天黑路段注意鹿和结冰。前一晚查 az511.gov，下雪就提早到 05:00 出发。大峡谷日出看不到了，前一天的 Lipan Point 日落就是压轴。" },
       { t: "07:15", k: "meal", name: "早餐 + 加油：Flagstaff", meta: "约 45 分钟 · 日出 ≈07:35", g: "Flagstaff, AZ" },
       { t: "08:00", k: "move", name: "走 I-17 下山去凤凰城", meta: "约 2h15m · 海拔从 2,100 m 降到 340 m", note: "I-17 冬天可能下雪或堵车，这样排比 13:25 起飞多留了约 1 小时余量。" },
       { t: "10:15", k: "move", name: "PHX 租车中心还车（先加满油），坐 Sky Train 到航站楼", meta: "留 30–45 分钟", g: "Phoenix Sky Harbor International Airport" },
@@ -872,21 +869,21 @@ const PARK = {
 };
 const PLANS = {
   a: {
-    key: "a", home: "PHX", dates: "12.21–12.30", nights: 9, days: A_DAYS, miles: "≈1,700 mi", km: "约 2,740 km",
+    key: "a", home: "PHX", dates: "12.21–12.29", nights: 8, days: A_DAYS, miles: "≈1,670 mi", km: "约 2,690 km",
     eyebrow: "Toronto → LAX · road trip · PHX → Toronto",
     lede: "从洛杉矶租车出发，洛杉矶和拉斯维加斯各玩一整天，再去死亡谷、锡安、马蹄湾和大峡谷南缘，最后在凤凰城还车飞回多伦多。",
     route: [["LAX", "Los Angeles International Airport"], ["Hollywood", "Hollywood, Los Angeles, CA"], ["死亡谷", "Furnace Creek, Death Valley, CA"], ["拉斯维加斯", "Las Vegas Strip, NV"], ["锡安", "Springdale, UT"], ["马蹄湾", "Horseshoe Bend, Page, AZ"], ["大峡谷", "Grand Canyon Village, AZ"], ["PHX", "Phoenix Sky Harbor International Airport"]],
     stops: [["LA", "洛杉矶", "Hollywood, Los Angeles, CA", 11], ["1", "死亡谷", "Furnace Creek, Death Valley, CA", 9], ["2", "拉斯维加斯", "Las Vegas Strip, NV", 12], ["3", "锡安", "Zion National Park, UT", 11], ["4", "马蹄湾", "Horseshoe Bend, Page, AZ", 13], ["5", "大峡谷南缘", "Grand Canyon Village, AZ", 11], ["PHX", "凤凰城 PHX", "Phoenix Sky Harbor International Airport", 11]],
     lodging: LODGING_SHARED.concat([
-      { in: "2026-12-26", out: "2026-12-28", where: "Springdale（锡安南门）", hint: "走路或坐镇上班车可到公园入口", ss: "Springdale, Utah" },
-      { in: "2026-12-28", out: "2026-12-29", where: "Page", hint: "离马蹄湾和羚羊谷都在 15 分钟车程内", ss: "Page, Arizona" },
-      { in: "2026-12-29", out: "2026-12-30", where: "Tusayan（大峡谷南门外）", hint: "园内 El Tovar、Bright Angel Lodge 等在官网订", ss: "Tusayan, Arizona" }
+      { in: "2026-12-26", out: "2026-12-27", where: "Springdale（锡安南门）", hint: "走路或坐镇上班车可到公园入口", ss: "Springdale, Utah" },
+      { in: "2026-12-27", out: "2026-12-28", where: "Page", hint: "晚上 9 点后才到，订可以晚到入住的酒店；离马蹄湾和羚羊谷都在 15 分钟车程内", ss: "Page, Arizona" },
+      { in: "2026-12-28", out: "2026-12-29", where: "Tusayan（大峡谷南门外）", hint: "园内 El Tovar、Bright Angel Lodge 等在官网订", ss: "Tusayan, Arizona" }
     ]),
     parks: [PARK.griffith, PARK.manz, PARK.deva, PARK.redrock, PARK.hoover,
       { name: "火焰谷州立公园", en: "Valley of Fire SP", date: "12/26 上午", on: true, desc: "大象石、古印第安岩画、Fire Wave 和 White Domes。清晨光线最好、人最少。", site: "https://parks.nv.gov/parks/valley-of-fire", at: AT("parks/us/nevada/valley-of-fire-state-park--2") },
-      Object.assign({}, PARK.zion, { date: "12/26–12/28" }),
-      Object.assign({}, PARK.glca, { date: "12/28–12/29", desc: "马蹄湾、Hanging Garden、Wahweap 观景点和纳瓦霍大桥都在这里，旁边是 Lake Powell 和格伦峡谷大坝。" }),
-      { name: "大峡谷国家公园 · 南缘", en: "Grand Canyon NP", date: "12/29–12/30", on: true, desc: "从东门 Desert View 进，沿峡谷边开到 Grand Canyon Village。北缘冬季关闭。", site: "https://www.nps.gov/grca/", at: AT("parks/us/arizona/grand-canyon-national-park") }
+      Object.assign({}, PARK.zion, { date: "12/26–12/27" }),
+      Object.assign({}, PARK.glca, { date: "12/28 上午" }),
+      { name: "大峡谷国家公园 · 南缘", en: "Grand Canyon NP", date: "12/28 下午", on: true, desc: "从东门 Desert View 进，在 Lipan Point 看日落，再沿峡谷边开到 Tusayan。北缘冬季关闭。", site: "https://www.nps.gov/grca/", at: AT("parks/us/arizona/grand-canyon-national-park") }
     ]
   },
   b: {
@@ -907,11 +904,11 @@ const PLANS = {
 };
 
 /* =====================  Return-airport variants: same days, different last day  ===================== */
-const A_LAS_LAST = { d: "30", title: "大峡谷 → 66 号公路 → 拉斯维加斯 ✈ 多伦多",
+const A_LAS_LAST = { d: "29", title: "大峡谷 → 66 号公路 → 拉斯维加斯 ✈ 多伦多",
   leg: ['<span class="shield">AZ-64</span>', '<span class="shield">I-40</span>', '<span class="shield">US-93</span>', '<span>≈280 mi · 车程约 4h30m</span>', '<span class="tzchip">−1h 回太平洋时间 · 回多伦多 +3h</span>'],
   pts: [["Tusayan", "Tusayan, AZ"], ["Williams 早餐", "Williams, AZ"], ["Seligman · 66 号公路", "Seligman, AZ"], ["Kingman", "Kingman, AZ"], ["LAS 还车", "Harry Reid International Airport"]],
   slots: [
-    { t: "06:30", k: "move", name: "天亮前出发，走 AZ-64 南下到 Williams", meta: "约 1 小时（山地时间）", note: "天黑路段注意鹿和结冰，前一晚查 az511.gov。大峡谷日出看不到了，前一天的 Yaki Point 日落就是压轴。" },
+    { t: "06:30", k: "move", name: "天亮前出发，走 AZ-64 南下到 Williams", meta: "约 1 小时（山地时间）", note: "天黑路段注意鹿和结冰，前一晚查 az511.gov。大峡谷日出看不到了，前一天的 Lipan Point 日落就是压轴。" },
     { t: "07:30", k: "meal", name: "早餐：Williams（66 号公路老镇）", meta: "约 45 分钟 · 日出 ≈07:35", g: "Williams, AZ" },
     { t: "08:15", k: "move", name: "I-40 西行", meta: "到 Seligman 约 45 分钟" },
     { t: "09:00", k: "sight", name: "Seligman · 66 号公路老街", meta: "约 20 分钟", note: "66 号公路保存最完整的小镇之一，老加油站和复古招牌，就在 I-40 的 123 号出口旁。", g: "Seligman, AZ" },
@@ -919,7 +916,7 @@ const A_LAS_LAST = { d: "30", title: "大峡谷 → 66 号公路 → 拉斯维�
     { t: "11:00", k: "move", name: "LAS 租车中心还车（先加满油），坐接驳车到航站楼", meta: "太平洋时间 · 留 30–45 分钟", g: "Harry Reid International Airport" },
     { t: "11:45", k: "move", name: "托运行李、过安检", meta: "起飞前约 2h50m 到航站楼" },
     { t: "12:15", k: "meal", name: "午餐：航站楼里（过安检后）" },
-    { t: "14:35", k: "move", name: "Porter 直飞回多伦多", meta: "14:35 → 21:52 · 约 4h20m", note: "Air Canada 12:20 的直飞赶不上；晚上 23:35 / 23:50 还有红眼直飞，但贵很多。晚饭在飞机上或落地后吃。见下方「回程机场对比」。" }
+    { t: "14:35", k: "move", name: "Porter 直飞回多伦多", meta: "14:35 → 21:52 · 约 4h20m", note: "12/27 这班 Porter 已涨到约 CA$1,092；晚上 Air Canada 23:50 的红眼直飞只要约 CA$530（次日 07:10 到）。Air Canada 12:20 的直飞赶不上。晚饭在飞机上或落地后吃。见下方「回程机场对比」。" }
   ], stay: null };
 const B_PHX_LAST = { d: "28", title: "Page → Flagstaff → 凤凰城 ✈ 多伦多",
   leg: ['<span class="shield">US-89</span>', '<span class="shield">I-17</span>', '<span>≈280 mi · 车程约 4h30m</span>', '<span class="tzchip">回多伦多 +2h</span>'],
@@ -933,7 +930,7 @@ const B_PHX_LAST = { d: "28", title: "Page → Flagstaff → 凤凰城 ✈ 多�
     { t: "12:00", k: "meal", name: "午餐：航站楼里（过安检后）" },
     { t: "13:25", k: "move", name: "直飞回多伦多", meta: "Porter 13:25 → 19:39 或 Air Canada Rouge 13:40 → 19:45" }
   ], stay: null };
-PLANS.a_las = Object.assign({}, PLANS.a, { key: "a_las", home: "LAS", days: A_DAYS.slice(0, -1).concat([A_LAS_LAST]), miles: "≈1,745 mi", km: "约 2,810 km",
+PLANS.a_las = Object.assign({}, PLANS.a, { key: "a_las", home: "LAS", days: A_DAYS.slice(0, -1).concat([A_LAS_LAST]), miles: "≈1,715 mi", km: "约 2,760 km",
   eyebrow: "Toronto → LAX · road trip · LAS → Toronto",
   lede: "从洛杉矶租车出发，洛杉矶和拉斯维加斯各玩一整天，再去死亡谷、锡安、马蹄湾和大峡谷南缘，最后经 66 号公路回拉斯维加斯还车，飞回多伦多。",
   route: PLANS.a.route.slice(0, -1).concat([["Kingman", "Kingman, AZ"], ["LAS", "Harry Reid International Airport"]]),
@@ -969,25 +966,28 @@ const ALTS = [
     { k: "hike", name: "Ice Box Canyon", en: "Ice Box Canyon, Red Rock", cost: "Red Rock 门票 $20/车 + 预约 $2", dur: "约 2 小时 · 2.2 mi", when: "上午", swap: "12/25 的 Calico Tanks", note: "Red Rock 里比较安静的峡谷，冬天偶尔能看到小瀑布。", warn: "后半段要在大石头间爬，路标不明显；峡谷里很阴冷。", at: "trail/us/nevada/ice-box-canyon-trail--3", g: "Ice Box Canyon Trailhead, Red Rock Canyon" },
     { k: "sight", name: "Seven Magic Mountains", en: "Seven Magic Mountains", cost: "免费", dur: "约 30 分钟 + 往返 1 小时车程", when: "白天", swap: "加在 12/25 下午", note: "沙漠里七根荧光色叠石柱的大地艺术装置。", warn: "在 Strip 以南约 30 分钟，周围没有遮阴和设施。", g: "Seven Magic Mountains" }
   ]},
-  { area: "锡安及周边", dates: "12/26–12/28", items: [
+  { area: "锡安及周边", dates: "12/26–12/27", items: [
     { k: "hike", name: "Angels Landing", en: "Angels Landing", cost: "抽签 $6 + 中签 $3/人", dur: "4–5 小时 · 约 5 mi · 爬升约 1,500 ft", when: "早上", swap: "12/27 上午的 Riverside Walk 和 Emerald Pools", note: "锡安最有名的步道，最后一段要抓着铁链走在悬崖边。", warn: "冬季季度抽签 10/20 已截止，只能参加“前一天抽签”。链条段结冰时非常危险，带冰爪。", at: "trail/us/utah/angels-landing-trail", site: "https://www.nps.gov/zion/planyourvisit/angelslanding.htm", g: "The Grotto Trailhead, Zion National Park" },
     { k: "hike", name: "The Narrows 河道徒步（从下往上）", en: "The Narrows, Zion", cost: "冬季要租干衣套装，约 $60 起/人", dur: "3–5 小时，可随时折返", when: "中午最暖时", swap: "12/27 的 Emerald Pools 和 Watchman", note: "在两侧几百米高的峡谷里蹚水走，从 Riverside Walk 尽头开始。", warn: "冬天水温只有几度，不穿干衣容易失温；先在 NPS 查水位和山洪风险。", g: "Temple of Sinawava, Zion National Park" },
     { k: "hike", name: "布莱斯峡谷国家公园", en: "Bryce Canyon National Park", cost: "$35/车（国家公园年票可用）", dur: "半天到一天 · 单程约 1h45m", when: "日出或日落", swap: "12/27 锡安全天", note: "成片的橙色石林，雪后最好看。Navajo Loop + Queens Garden 约 3 mi、1.5–2 小时。", warn: "海拔约 2,400 m，比锡安冷很多，步道常结冰；Wall Street 段经常关闭。", at: "trail/us/utah/navajo-loop-and-queens-garden-trail", site: "https://www.nps.gov/brca/", g: "Sunset Point, Bryce Canyon" }
   ]},
-  { area: "Page", dates: "12/28", items: [
+  { area: "Page", dates: "12/27–12/28", items: [
+    { k: "hike", name: "Toadstool Hoodoos 蘑菇石", en: "Toadstool Hoodoos", cost: "免费", dur: "约 1–1.5 小时 · 1.8 mi 往返", when: "白天", swap: "12/27 锡安下午提早约 2 小时出发，天黑前在路上看", note: "像蘑菇一样顶着石帽的岩柱，就在 US-89 路边（里程碑 19 和 20 之间）。", warn: "晚上开车经过时天已经黑了，要看就得放弃 Watchman 或 Pa'rus 日落。", at: "trail/us/utah/toadstool-hoodoos-trail", g: "Toadstool Hoodoos Trailhead, Utah" },
+    { k: "sight", name: "纳瓦霍大桥 · Marble Canyon", en: "Navajo Bridge", cost: "免费", dur: "约 30–45 分钟，加绕路共多约 1 小时", when: "白天", swap: "12/28 中午离开 Page 后绕 US-89A，Desert View 的时间相应缩短", note: "走上老桥的人行道，脚下约 140 m 就是科罗拉多河，运气好能看到加州神鹫。", warn: "会挤掉 Lipan Point 日落前的时间。", g: "Navajo Bridge Interpretive Center" },
     { k: "hike", name: "Lower Antelope Canyon", en: "Lower Antelope Canyon", cost: "约 $55–80 + 纳瓦霍许可约 $16 + 小费", dur: "约 1–1.5 小时", when: "上午 10 点到下午 1 点光线最好", swap: "12/28 的 Upper Antelope Canyon", note: "比 Upper 便宜、人少，峡谷更窄更深。", warn: "有好几段陡铁梯，不适合怕高或行动不便的人；必须跟团。", at: "trail/us/arizona/antelope-canyon", g: "Lower Antelope Canyon" },
   ]},
-  { area: "大峡谷", dates: "12/29–12/30", items: [
-    { k: "fun", name: "大峡谷直升机观光", en: "Grand Canyon helicopter tour, Tusayan", cost: "约 $260–460/人", dur: "25–50 分钟飞行", when: "上午（风小）", swap: "12/29 下午的徒步", note: "从 Tusayan 小机场起飞，飞过峡谷北边再回来。", warn: "冬季大风或下雪会取消，先订可退改的。", g: "Grand Canyon Airport, Tusayan" },
-    { k: "hike", name: "Shoshone Point", en: "Shoshone Point", cost: "含在公园门票内", dur: "约 1 小时 · 往返 2.1 mi", when: "日落", swap: "12/29 的 Yaki Point 日落", note: "游客很少的观景点，平缓的林间小路走到崖边。", warn: "路边停车位很少，入口没有明显标志。", at: "trail/us/arizona/shoshone-point-trail", g: "Shoshone Point, Grand Canyon" },
-    { k: "sight", name: "Hermit Road 自驾到 Hermits Rest", en: "Hermits Rest", cost: "含在公园门票内", dur: "约 2 小时（沿途停 6–8 个观景点）", when: "下午到日落", swap: "代替 12/29 下午的 South Kaibab 徒步，一路开到 Hopi Point 看日落", note: "只有 12–2 月能自己开车进，其他月份要坐班车。", warn: "天黑后路上没有灯，注意野生动物。", g: "Hermits Rest, Grand Canyon" },
-    { k: "sight", name: "Yavapai 地质博物馆", en: "Yavapai Geology Museum", cost: "免费", dur: "约 30–45 分钟", when: "任何时候", swap: "加在 12/29 下午，坐班车前顺路", note: "大落地窗正对峡谷，讲解岩层是怎么形成的，天冷时可以进来取暖。", warn: "节日开放时间可能缩短。", g: "Yavapai Geology Museum" },
+  { area: "大峡谷", dates: "12/28–12/29", items: [
+    { k: "hike", name: "South Kaibab Trail 到 Ooh Aah Point", en: "South Kaibab Trail", cost: "含在公园门票内", dur: "约 1–1.5 小时 · 1.8 mi · 爬升 574 ft", when: "下午", swap: "12/28 放弃 Page 上午的 Hanging Garden 和 Wahweap，提早约 1 小时出发", note: "下到峡谷里的短步道，第一个转角就能看到很开阔的景色。坐橙线班车到步道口。", warn: "冬季上段常结冰，带冰爪；要在日落前回到步道口。", at: "trail/us/arizona/south-kaibab-trail-to-ooh-aah-point", g: "South Kaibab Trailhead, Grand Canyon" },
+    { k: "fun", name: "大峡谷直升机观光", en: "Grand Canyon helicopter tour, Tusayan", cost: "约 $260–460/人", dur: "25–50 分钟飞行", when: "上午（风小）", swap: "12/29 早上（要改订晚一点的回程航班）", note: "从 Tusayan 小机场起飞，飞过峡谷北边再回来。", warn: "冬季大风或下雪会取消，先订可退改的。", g: "Grand Canyon Airport, Tusayan" },
+    { k: "hike", name: "Shoshone Point", en: "Shoshone Point", cost: "含在公园门票内", dur: "约 1 小时 · 往返 2.1 mi", when: "日落", swap: "12/28 的 Lipan Point 日落", note: "游客很少的观景点，平缓的林间小路走到崖边。", warn: "路边停车位很少，入口没有明显标志。", at: "trail/us/arizona/shoshone-point-trail", g: "Shoshone Point, Grand Canyon" },
+    { k: "sight", name: "Hermit Road 自驾到 Hermits Rest", en: "Hermits Rest", cost: "含在公园门票内", dur: "约 2 小时（沿途停 6–8 个观景点）", when: "下午到日落", swap: "代替 12/28 东段的 Desert View 和 Lipan Point，改在 Hopi Point 看日落", note: "只有 12–2 月能自己开车进，其他月份要坐班车。", warn: "天黑后路上没有灯，注意野生动物。", g: "Hermits Rest, Grand Canyon" },
+    { k: "sight", name: "Yavapai 地质博物馆", en: "Yavapai Geology Museum", cost: "免费", dur: "约 30–45 分钟", when: "任何时候", swap: "加在 12/28 傍晚，去 Tusayan 的路上", note: "大落地窗正对峡谷，讲解岩层是怎么形成的，天冷时可以进来取暖。", warn: "节日开放时间可能缩短。", g: "Yavapai Geology Museum" },
   ]},
-  { area: "回凤凰城路上", dates: "12/30", items: [
+  { area: "回凤凰城路上", dates: "12/29", items: [
     { k: "hike", name: "Sedona · Cathedral Rock", en: "Cathedral Rock, Sedona", cost: "Red Rock Pass $5/天（国家公园年票可用）", dur: "约 1.5 小时 · 1.3 mi · 爬升约 700 ft", when: "上午", swap: "改走 Sedona 路线时加上", note: "Sedona 最有代表性的红岩，最后一段要手脚并用爬岩坡。", warn: "周四到周日只能坐 Sedona 接驳车，周一到周三可以自驾，但停车场很小。下雨后岩面很滑。", at: "trail/us/arizona/cathedral-rock-trail", g: "Cathedral Rock Trailhead, Sedona" },
     { k: "sight", name: "圣十字教堂", en: "Chapel of the Holy Cross", cost: "免费", dur: "约 30 分钟", when: "白天", swap: "改走 Sedona 路线时加上", note: "嵌在红岩之间的教堂，1956 年建成。", warn: "停车位少，节假日要排队等。", g: "Chapel of the Holy Cross, Sedona" },
-    { k: "sight", name: "Montezuma Castle 国家纪念地", en: "Montezuma Castle National Monument", cost: "$10/人（国家公园年票可用）", dur: "约 45 分钟", when: "白天", swap: "加在 12/30 去凤凰城的路上", note: "建在崖壁里的五层古印第安人住所，就在 I-17 的 289 号出口。", warn: "只能从下面远看，不能进去。", site: "https://www.nps.gov/moca/", g: "Montezuma Castle National Monument" },
-    { k: "sight", name: "Sunset Crater · Wupatki 国家纪念地", en: "Wupatki National Monument", cost: "$25/车，两处通用（国家公园年票可用）", dur: "约 2 小时（单程 34 mi 景观道路）", when: "白天", swap: "12/29 从 Page 走 US-89 南下时绕一下", note: "黑色火山渣地貌加上红色石头建的古村落遗址。", warn: "要多花约 1.5–2 小时，会压缩大峡谷的时间。", site: "https://www.nps.gov/wupa/", g: "Wupatki National Monument" }
+    { k: "sight", name: "Montezuma Castle 国家纪念地", en: "Montezuma Castle National Monument", cost: "$10/人（国家公园年票可用）", dur: "约 45 分钟", when: "白天", swap: "加在 12/29 去凤凰城的路上（要改订晚一点的回程航班）", note: "建在崖壁里的五层古印第安人住所，就在 I-17 的 289 号出口。", warn: "只能从下面远看，不能进去。", site: "https://www.nps.gov/moca/", g: "Montezuma Castle National Monument" },
+    { k: "sight", name: "Sunset Crater · Wupatki 国家纪念地", en: "Wupatki National Monument", cost: "$25/车，两处通用（国家公园年票可用）", dur: "约 2 小时（单程 34 mi 景观道路）", when: "白天", swap: "12/28 从 Page 走 US-89 南下时绕一下", note: "黑色火山渣地貌加上红色石头建的古村落遗址。", warn: "要多花约 1.5–2 小时，会压缩大峡谷的时间。", site: "https://www.nps.gov/wupa/", g: "Wupatki National Monument" }
   ]}
 ];
 const ALT_KIND = { hike: "徒步", sight: "景点", fun: "体验" };
@@ -1034,7 +1034,7 @@ document.getElementById("alts").addEventListener("click", e => {
 });
 
 /* =====================  Coordinates for the points-only map (OpenStreetMap lookups, a few fixed by hand)  ===================== */
-const COORDS = {"Los Angeles International Airport":[33.94217,-118.42136],"Santa Monica Pier":[34.0089,-118.4974],"Venice Beach Boardwalk":[33.98671,-118.4741],"Hollywood, Los Angeles, CA":[34.098,-118.32952],"Getty Center":[34.07804,-118.47406],"Original Farmers Market Los Angeles":[34.07194,-118.36039],"TCL Chinese Theatre":[34.10207,-118.34095],"Griffith Observatory":[34.11822,-118.30029],"Koreatown, Los Angeles, CA":[34.06179,-118.30545],"Universal Studios Hollywood":[34.13923,-118.35438],"Mobius Arch Trailhead, Lone Pine, CA":[36.61132,-118.12504],"Lone Pine, CA":[36.58318,-118.07833],"Father Crowley Vista Point":[36.35198,-117.55111],"Mesquite Flat Sand Dunes, Death Valley":[36.66187,-117.09625],"Stovepipe Wells Village, CA":[36.60704,-117.14642],"Zabriskie Point, Death Valley":[36.42104,-116.80887],"Golden Canyon Trailhead, Death Valley":[36.42076,-116.84656],"Badwater Basin, Death Valley":[36.22969,-116.76792],"Artists Palette, Death Valley":[36.36669,-116.80052],"Dantes View, Death Valley":[36.26865,-116.66378],"Bellagio Fountains, Las Vegas":[36.11279,-115.17413],"Bellagio Conservatory & Botanical Gardens":[36.11201,-115.17656],"Calico Tanks Trailhead, Red Rock Canyon":[36.16244,-115.45034],"Bacchanal Buffet, Caesars Palace":[36.11596,-115.17629],"Welcome to Fabulous Las Vegas Sign":[36.08206,-115.17277],"The Venetian Resort Las Vegas":[36.12117,-115.16966],"High Roller, Las Vegas":[36.11757,-115.1682],"Fremont Street Experience":[36.17048,-115.14353],"Red Rock Canyon Scenic Drive":[36.13237,-115.42377],"Fire Wave Trailhead, Valley of Fire State Park":[36.48825,-114.529],"Zion Canyon Visitor Center":[37.20011,-112.98692],"Springdale, UT":[37.18887,-112.99855],"Canyon Overlook Trailhead, Zion National Park":[37.21349,-112.94062],"Temple of Sinawava, Zion National Park":[37.28528,-112.9475],"Zion Lodge, Zion National Park":[37.24985,-112.95709],"Watchman Trailhead, Zion National Park":[37.20092,-112.98698],"Canyon Junction Bridge, Zion National Park":[37.21757,-112.975],"Upper Antelope Canyon":[36.86257,-111.37469],"Hanging Garden Trailhead, Page, AZ":[36.93673,-111.47622],"Horseshoe Bend, Page, AZ":[36.88045,-111.51613],"Page, AZ":[36.91483,-111.45729],"Desert View Watchtower, Grand Canyon":[36.04401,-111.82621],"Lipan Point, Grand Canyon":[36.03309,-111.85301],"South Kaibab Trailhead, Grand Canyon":[36.05294,-112.08374],"Bright Angel Trailhead, Grand Canyon":[36.05728,-112.14363],"Hopi Point, Grand Canyon":[36.07452,-112.15489],"Tusayan, AZ":[35.9736,-112.12656],"Mather Point, Grand Canyon":[36.06172,-112.10903],"Phoenix Sky Harbor International Airport":[33.43285,-112.00679],"Furnace Creek, Death Valley, CA":[36.45874,-116.87139],"Las Vegas Strip, NV":[36.11942,-115.17425],"Grand Canyon Village, AZ":[36.05781,-112.12816],"Zion National Park, UT":[37.32217,-113.00479],"Hoover Dam":[36.01572,-114.73749],"Harry Reid International Airport":[36.0861,-115.1611],"Warner Bros. Studio Tour Hollywood":[34.14897,-118.33754],"Runyon Canyon Park":[34.11204,-118.3501],"Brush Canyon Trailhead, Los Angeles":[34.12539,-118.31293],"The Broad, Los Angeles":[34.05446,-118.25059],"Urban Light, LACMA":[34.06305,-118.35922],"El Matador State Beach":[34.03798,-118.87449],"Mosaic Canyon Trailhead, Death Valley":[36.57184,-117.14424],"Natural Bridge Canyon Trailhead, Death Valley":[36.2806,-116.7714],"Ubehebe Crater":[37.00997,-117.45065],"Twenty Mule Team Canyon, Death Valley":[36.39547,-116.78203],"Rhyolite Ghost Town, Nevada":[36.9009,-116.82933],"Sphere, Las Vegas":[36.12121,-115.16207],"The Neon Museum, Las Vegas":[36.17708,-115.13525],"Valley of Fire State Park":[36.49885,-114.53412],"Ice Box Canyon Trailhead, Red Rock Canyon":[36.15127,-115.48363],"Seven Magic Mountains":[35.83831,-115.27095],"The Grotto Trailhead, Zion National Park":[37.2594,-112.9509],"Kolob Canyons Visitor Center":[37.45345,-113.22538],"Sunset Point, Bryce Canyon":[37.62343,-112.16712],"Lower Antelope Canyon":[36.9027,-111.41139],"Toadstool Hoodoos Trailhead, Utah":[37.10129,-111.87317],"Wahweap Overlook, Page, AZ":[36.96897,-111.49896],"Glen Canyon Dam Overlook":[36.92364,-111.47708],"Grand Canyon Airport, Tusayan":[35.95252,-112.1452],"Shoshone Point, Grand Canyon":[36.0486,-112.055],"Hermits Rest, Grand Canyon":[36.0603,-112.2105],"Yavapai Geology Museum":[36.06606,-112.11763],"Cameron Trading Post":[35.87544,-111.41379],"Cathedral Rock Trailhead, Sedona":[34.83595,-111.7801],"Chapel of the Holy Cross, Sedona":[34.83199,-111.76676],"Montezuma Castle National Monument":[34.61309,-111.83667],"Wupatki National Monument":[35.56495,-111.40585],"Williams, AZ":[35.25085,-112.18729],"Seligman, AZ":[35.32543,-112.85082],"Kingman, AZ":[35.18959,-114.0533],"Red Rock Canyon State Park, California":[35.38152, -117.97927],"Manzanar National Historic Site":[36.72787, -118.1552],"Lake Hollywood Park":[34.12689, -118.32592],"Devils Golf Course, Death Valley":[36.28583, -116.82619],"Overton, NV":[36.53807, -114.44363],"Mouse's Tank, Valley of Fire":[36.43803, -114.5121],"Elephant Rock, Valley of Fire":[36.42836, -114.46012],"Checkerboard Mesa, Zion National Park":[37.21665, -112.87855],"Navajo Bridge Interpretive Center":[36.8178, -111.63157],"Little Colorado River Gorge Navajo Tribal Park":[35.99203, -111.67947],"Yaki Point, Grand Canyon":[36.05859, -112.08378],"Flagstaff, AZ":[35.19875, -111.65182]};
+const COORDS = {"Los Angeles International Airport":[33.94217,-118.42136],"Santa Monica Pier":[34.0089,-118.4974],"Venice Beach Boardwalk":[33.98671,-118.4741],"Hollywood, Los Angeles, CA":[34.098,-118.32952],"Getty Center":[34.07804,-118.47406],"Original Farmers Market Los Angeles":[34.07194,-118.36039],"TCL Chinese Theatre":[34.10207,-118.34095],"Griffith Observatory":[34.11822,-118.30029],"Koreatown, Los Angeles, CA":[34.06179,-118.30545],"Universal Studios Hollywood":[34.13923,-118.35438],"Mobius Arch Trailhead, Lone Pine, CA":[36.61132,-118.12504],"Lone Pine, CA":[36.58318,-118.07833],"Father Crowley Vista Point":[36.35198,-117.55111],"Mesquite Flat Sand Dunes, Death Valley":[36.66187,-117.09625],"Stovepipe Wells Village, CA":[36.60704,-117.14642],"Zabriskie Point, Death Valley":[36.42104,-116.80887],"Golden Canyon Trailhead, Death Valley":[36.42076,-116.84656],"Badwater Basin, Death Valley":[36.22969,-116.76792],"Artists Palette, Death Valley":[36.36669,-116.80052],"Dantes View, Death Valley":[36.26865,-116.66378],"Bellagio Fountains, Las Vegas":[36.11279,-115.17413],"Bellagio Conservatory & Botanical Gardens":[36.11201,-115.17656],"Calico Tanks Trailhead, Red Rock Canyon":[36.16244,-115.45034],"Bacchanal Buffet, Caesars Palace":[36.11596,-115.17629],"Welcome to Fabulous Las Vegas Sign":[36.08206,-115.17277],"The Venetian Resort Las Vegas":[36.12117,-115.16966],"High Roller, Las Vegas":[36.11757,-115.1682],"Fremont Street Experience":[36.17048,-115.14353],"Red Rock Canyon Scenic Drive":[36.13237,-115.42377],"Fire Wave Trailhead, Valley of Fire State Park":[36.48825,-114.529],"Zion Canyon Visitor Center":[37.20011,-112.98692],"Springdale, UT":[37.18887,-112.99855],"Canyon Overlook Trailhead, Zion National Park":[37.21349,-112.94062],"Temple of Sinawava, Zion National Park":[37.28528,-112.9475],"Zion Lodge, Zion National Park":[37.24985,-112.95709],"Watchman Trailhead, Zion National Park":[37.20092,-112.98698],"Canyon Junction Bridge, Zion National Park":[37.21757,-112.975],"Upper Antelope Canyon":[36.86257,-111.37469],"Hanging Garden Trailhead, Page, AZ":[36.93673,-111.47622],"Horseshoe Bend, Page, AZ":[36.88045,-111.51613],"Page, AZ":[36.91483,-111.45729],"Desert View Watchtower, Grand Canyon":[36.04401,-111.82621],"Lipan Point, Grand Canyon":[36.03309,-111.85301],"South Kaibab Trailhead, Grand Canyon":[36.05294,-112.08374],"Bright Angel Trailhead, Grand Canyon":[36.05728,-112.14363],"Hopi Point, Grand Canyon":[36.07452,-112.15489],"Tusayan, AZ":[35.9736,-112.12656],"Mather Point, Grand Canyon":[36.06172,-112.10903],"Phoenix Sky Harbor International Airport":[33.43285,-112.00679],"Furnace Creek, Death Valley, CA":[36.45874,-116.87139],"Las Vegas Strip, NV":[36.11942,-115.17425],"Grand Canyon Village, AZ":[36.05781,-112.12816],"Zion National Park, UT":[37.32217,-113.00479],"Hoover Dam":[36.01572,-114.73749],"Harry Reid International Airport":[36.0861,-115.1611],"Warner Bros. Studio Tour Hollywood":[34.14897,-118.33754],"Runyon Canyon Park":[34.11204,-118.3501],"Brush Canyon Trailhead, Los Angeles":[34.12539,-118.31293],"The Broad, Los Angeles":[34.05446,-118.25059],"Urban Light, LACMA":[34.06305,-118.35922],"El Matador State Beach":[34.03798,-118.87449],"Mosaic Canyon Trailhead, Death Valley":[36.57184,-117.14424],"Natural Bridge Canyon Trailhead, Death Valley":[36.2806,-116.7714],"Ubehebe Crater":[37.00997,-117.45065],"Twenty Mule Team Canyon, Death Valley":[36.39547,-116.78203],"Rhyolite Ghost Town, Nevada":[36.9009,-116.82933],"Sphere, Las Vegas":[36.12121,-115.16207],"The Neon Museum, Las Vegas":[36.17708,-115.13525],"Valley of Fire State Park":[36.49885,-114.53412],"Ice Box Canyon Trailhead, Red Rock Canyon":[36.15127,-115.48363],"Seven Magic Mountains":[35.83831,-115.27095],"The Grotto Trailhead, Zion National Park":[37.2594,-112.9509],"Kolob Canyons Visitor Center":[37.45345,-113.22538],"Sunset Point, Bryce Canyon":[37.62343,-112.16712],"Lower Antelope Canyon":[36.9027,-111.41139],"Toadstool Hoodoos Trailhead, Utah":[37.10129,-111.87317],"Wahweap Overlook, Page, AZ":[36.96897,-111.49896],"Glen Canyon Dam Overlook":[36.92364,-111.47708],"Grand Canyon Airport, Tusayan":[35.95252,-112.1452],"Shoshone Point, Grand Canyon":[36.0486,-112.055],"Hermits Rest, Grand Canyon":[36.0603,-112.2105],"Yavapai Geology Museum":[36.06606,-112.11763],"Cameron Trading Post":[35.87544,-111.41379],"Cathedral Rock Trailhead, Sedona":[34.83595,-111.7801],"Chapel of the Holy Cross, Sedona":[34.83199,-111.76676],"Montezuma Castle National Monument":[34.61309,-111.83667],"Wupatki National Monument":[35.56495,-111.40585],"Williams, AZ":[35.25085,-112.18729],"Seligman, AZ":[35.32543,-112.85082],"Kingman, AZ":[35.18959,-114.0533],"Red Rock Canyon State Park, California":[35.38152, -117.97927],"Manzanar National Historic Site":[36.72787, -118.1552],"Lake Hollywood Park":[34.12689, -118.32592],"Devils Golf Course, Death Valley":[36.28583, -116.82619],"Overton, NV":[36.53807, -114.44363],"Mouse's Tank, Valley of Fire":[36.43803, -114.5121],"Elephant Rock, Valley of Fire":[36.42836, -114.46012],"Checkerboard Mesa, Zion National Park":[37.21665, -112.87855],"Navajo Bridge Interpretive Center":[36.8178, -111.63157],"Little Colorado River Gorge Navajo Tribal Park":[35.99203, -111.67947],"Yaki Point, Grand Canyon":[36.05859, -112.08378],"Flagstaff, AZ":[35.19875, -111.65182],"SpaceX Headquarters, Hawthorne, CA":[33.92065, -118.32685],"RIPNDIP, 441 N Fairfax Ave, Los Angeles":[34.07937, -118.36168]};
 
 /* =====================  Rendering  ===================== */
 const WD = ["周日","周一","周二","周三","周四","周五","周六"];
@@ -1315,17 +1315,17 @@ function bookingUrl(l) {
     "&group_adults=" + a + "&group_children=" + c + "&no_rooms=" + r;
 }
 /* =====================  Budget: 2 people (mid-size SUV, hotel rooms) vs 4 people (full-size SUV, whole-home rentals)  ===================== */
-// Prices checked 2026-11-14/15 for a 12/19 start (12/19–12/28 with the Grand Canyon). USD unless marked cad.
+// Prices checked 2026-11-14/15 for a 12/19 start; return flights and car re-checked 11/15 for the 9-day 12/19–12/27 plan. USD unless marked cad.
 const BUDGET = {
   fxDefault: 1.41,
   flightOut: { cad: 732, label: "去程机票 · Air Canada 直飞 YYZ → LAX 08:00", note: "Google Flights，11/15 查，含登机箱" },
   flightBack: {
-    PHX: { cad: 435, label: "回程机票 · Porter 直飞 PHX → YYZ 13:25", note: "11/14 查，基础票价不含登机箱" },
-    LAS: { cad: 590, label: "回程机票 · Porter 直飞 LAS → YYZ 14:35", note: "11/14 查，含登机箱" }
+    PHX: { cad: 435, label: "回程机票 · Porter 直飞 PHX → YYZ 13:25", note: "11/15 按 12/27 查，基础票价不含登机箱" },
+    LAS: { cad: 1092, label: "回程机票 · Porter 直飞 LAS → YYZ 14:35", note: "11/15 按 12/27 查，含登机箱；当晚 Air Canada 23:50 红眼直飞约 CA$530" }
   },
   bags: { cad: 70, label: "托运行李（每人 1 件，往返）", note: "约 CA$35 一程，以航空公司为准" },
-  // Kayak one-way totals for 9 days LAX → airport, incl. drop fee and taxes, before insurance.
-  car: { PHX: { 2: 650, 4: 870 }, LAS: { 2: 710, 4: 1190 }, days: 9 },
+  // Kayak one-way totals for 8 rental days (12/19–12/27) LAX → airport, incl. drop fee and taxes, before insurance.
+  car: { PHX: { 2: 600, 4: 790 }, LAS: { 2: 640, 4: 1060 }, days: 8 },
   carName: { 2: "中型 SUV（Intermediate SUV，如 RAV4）", 4: "全尺寸 SUV（Full-size SUV，如 Tahoe）" },
   extraDriver: 13,                    // per day, 4-person option only
   mpg: { 2: 28, 4: 18 }, gas: 4.0,    // average $/gal across CA / NV / UT / AZ
@@ -1378,7 +1378,7 @@ function budgetLines() {
   // Car: scale the 9-day quote to this route's rental days
   const carDays = nDays - 1, scale = carDays / BUDGET.car.days, car = BUDGET.car[P.home];
   L.push({ cat: "car", day: 0, whole: true, label: "单程租车 LAX → " + P.home + "，" + carDays + " 天",
-    note: "2 人：" + BUDGET.carName[2] + "；4 人：" + BUDGET.carName[4] + "。Kayak 11/14 查，含异地还车费，不含保险" + (scale !== 1 ? "，按天数从 9 天报价折算" : ""),
+    note: "2 人：" + BUDGET.carName[2] + "；4 人：" + BUDGET.carName[4] + "。Kayak 11/15 查，含异地还车费，不含保险" + (scale !== 1 ? "，按天数从 8 天报价折算" : ""),
     amount: fromUsd(n => car[n] * scale), src: both(n => usd(car[n] * scale)) });
   L.push({ cat: "car", day: 0, whole: true, label: "第二位驾驶员（只算 4 人）", note: "约 $" + BUDGET.extraDriver + "/天，部分公司对配偶免费",
     amount: fromUsd(n => n === 4 ? BUDGET.extraDriver * carDays : 0), src: both(n => n === 4 ? usd(BUDGET.extraDriver * carDays) : "—") });
