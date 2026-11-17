@@ -336,8 +336,8 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
     </label>
     <span class="end-date" id="end-date"></span>
     <div class="seg" role="group" aria-label="选择路线">
-      <button type="button" class="segbtn" data-plan="a">含大峡谷 · 9 天</button>
-      <button type="button" class="segbtn" data-plan="b">不去大峡谷 · 8 天</button>
+      <button type="button" class="segbtn" data-plan="a">含大峡谷 · 周五晚 + 9 天</button>
+      <button type="button" class="segbtn" data-plan="b">不去大峡谷 · 周五晚 + 8 天</button>
     </div>
     <div class="seg" role="group" aria-label="回程机场">
       <button type="button" class="segbtn" data-ret="PHX">回程 凤凰城 PHX</button>
@@ -399,7 +399,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
 
 <section aria-labelledby="budget-h" id="budget">
   <h2 id="budget-h">预算</h2>
-  <p class="sec-lede">按类别汇总，每一类里按日期排序，金额都换算成加元。两种人数：2 人租中型 SUV、住酒店一间房；4 人租全尺寸 SUV、尽量住整套 Airbnb。价格是 2026 年 11 月 14–15 日按 12/19 出发查的（Google Flights、Kayak、Booking.com、Airbnb；回程机票和租车 11/15 按 12/27 回来重查），改出发日期后日期会跟着变，价格没有重新查。切换路线和回程机场，预算会跟着重算。</p>
+  <p class="sec-lede">按类别汇总，每一类里按日期排序，金额都换算成加元。两种人数：2 人租中型 SUV、住酒店一间房；4 人租全尺寸 SUV、尽量住整套 Airbnb。价格是 2026 年 11 月 14–16 日查的（Google Flights、Kayak、Booking.com、Airbnb；机票、租车和 LAX 那晚的酒店 11/16 按 12/18 周五晚出发、12/27 回来重查），改出发日期后日期会跟着变，价格没有重新查。切换路线和回程机场，预算会跟着重算。</p>
   <div class="bcards" id="budget-cards"></div>
   <div class="bctl">
     <span id="budget-scope"></span>
@@ -418,11 +418,26 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
 <section aria-labelledby="fl-h">
   <h2 id="fl-h">机票</h2>
   <div class="fl-now" id="fl-now"></div>
-  <p class="sec-lede">下表是 2026 年 11 月 8 日在 Google Flights 上查的单程参考价（12/19 和 12/21 出发两组日期），每位成人、加元、含税。改了出发日期的话，用上面的按钮查你那几天的价格。标着「不含登机箱」的是基础票价（Basic），只能带一个放座位下的小包。</p>
+  <p class="sec-lede">下表是在 Google Flights 上查的单程参考价：现在的行程（12/18 周五晚出发、12/27 回）是 11 月 16 日查的，下面两组旧日期是 11 月 8 日和 15 日查的，每位成人、加元、含税。改了出发日期的话，用上面的按钮查你那几天的价格。标着「不含登机箱」的是基础票价（Basic），只能带一个放座位下的小包。</p>
   <div class="table-wrap">
     <table>
       <thead><tr><th>航段</th><th>推荐航班</th><th>价格</th><th>为什么选它</th><th>其他选择</th></tr></thead>
       <tbody>
+        <tr><td colspan="5"><b>12/18 周五晚出发 · 12/27 回</b>（现在的行程；按你选的两班 Air Canada 算，含登机箱合计约 CA$1,313/人）</td></tr>
+        <tr>
+          <td>去程<small>12/18 周五 · YYZ → LAX</small></td>
+          <td>Air Canada 直飞<small>19:00 → 21:34 · 5h34m</small></td>
+          <td class="num">CA$587<small>Standard · 含登机箱 · 11/16 查</small><small>Basic 不含登机箱 CA$535</small></td>
+          <td>下班后出发，当晚在 LAX 取车住下，周六一整天都在洛杉矶，不用再请这一天假。</td>
+          <td><small>Air Canada 17:30 → 20:04，CA$544（Basic）</small><small>Air Canada 早班 08:00 → 10:34，CA$515（Basic），要请一天假</small><small><a href="https://www.google.com/travel/flights?q=Flights%20to%20LAX%20from%20YYZ%20on%202026-12-18%20one%20way&curr=CAD&hl=zh-CN" target="_blank" rel="noopener">查最新价格 ↗</a></small></td>
+        </tr>
+        <tr>
+          <td>回程<small>12/27 周日 · PHX → YYZ</small></td>
+          <td>Air Canada Rouge 直飞<small>13:40 → 19:45 · 4h05m</small></td>
+          <td class="num">CA$726<small>Standard · 含登机箱 · 11/16 查</small><small>Basic 不含登机箱 CA$665</small></td>
+          <td>你选的这班。前一晚住 Flagstaff，07:30 出发，路上看 Montezuma Castle，到机场还有约 1 小时余量。</td>
+          <td><small>Porter 直飞 13:25 → 19:39，基础票价约 CA$435，便宜很多，时间也差不多</small><small><a href="https://www.google.com/travel/flights?q=Flights%20to%20YYZ%20from%20PHX%20on%202026-12-27%20one%20way&curr=CAD&hl=zh-CN" target="_blank" rel="noopener">查最新价格 ↗</a></small></td>
+        </tr>
         <tr><td colspan="5"><b>12/21 出发 · 12/30 回</b>（以前 10 天版本的日期，仅供参考；推荐合计约 CA$1,258/人）</td></tr>
         <tr>
           <td>去程<small>12/21 周一 · YYZ → LAX</small></td>
@@ -438,7 +453,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
           <td>下午唯一价格合理的直飞，当晚 8 点前到家。要 05:45 离开大峡谷，路上留足余量。</td>
           <td><small>United 经芝加哥 15:45 → 23:59，CA$485（只转 59 分钟，冬天延误风险大）</small><small>American 经费城 14:40 → 23:45，CA$546</small><small>Porter 直飞 13:25 → 19:39，CA$1,578</small><small><a href="https://www.google.com/travel/flights?q=Flights%20to%20YYZ%20from%20PHX%20on%202026-12-30%20one%20way&curr=CAD&hl=zh-CN" target="_blank" rel="noopener">查最新价格 ↗</a></small></td>
         </tr>
-        <tr><td colspan="5"><b>12/19 出发 · 12/27 回</b>（现在的 9 天行程；推荐合计约 CA$1,268/人）</td></tr>
+        <tr><td colspan="5"><b>12/19 出发 · 12/27 回</b>（上一版：周六早班机出发；推荐合计约 CA$1,268/人）</td></tr>
         <tr>
           <td>去程<small>12/19 周六 · YYZ → LAX</small></td>
           <td>Air Canada 直飞<small>08:00 → 10:34 · 5h34m</small></td>
@@ -460,9 +475,9 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
     <div class="notecard">
       <h4>哪一组更划算</h4>
       <ul>
-        <li>按推荐航班算，12/19 出发、12/27 回每人约 CA$1,268；以前 12/21–12/30 的版本约 CA$1,258，差不多。</li>
-        <li>两组的去程是同一班 Air Canada 早班机，12/19 的价格已经含登机箱；如果 12/21 也加上登机箱，两组价格差不多。</li>
-        <li>两组回程最合适的都是下午 1 点半左右的直飞。现在前一晚开到 Flagstaff 住，最后一天 07:30 出发就够，比估算多留约 1 小时。</li>
+        <li>现在的两班 Air Canada（都含登机箱）每人约 CA$1,313；上一版周六早班去、Porter 回约 CA$1,268。</li>
+        <li>周五晚上走，去程反而比周六早班便宜约 CA$250（都含登机箱），还多出周六一整天。代价是到 LAX 已经晚上 9 点半，取车住下大约 11 点。</li>
+        <li>回程换成 Porter 13:25（基础票价 CA$435）每人能省约 CA$290，但不含登机箱；起飞时间只早 15 分钟，行程不用改。</li>
       </ul>
     </div>
     <div class="notecard">
@@ -485,7 +500,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
 
 <section aria-labelledby="ret-h">
   <h2 id="ret-h">回程机场对比：凤凰城 PHX vs 拉斯维加斯 LAS</h2>
-  <p class="sec-lede">按「含大峡谷」路线、12/19 出发 12/27 回来比较。机票是 2026 年 11 月 15 日在 Google Flights 查的单程价，每位成人、加元、含税；租车是同一天在 Kayak 查的 8 天单程租车总价（美元，含异地还车费，中型 SUV）。最上方「回程」按钮可以直接切换，左边最后一天会跟着变。</p>
+  <p class="sec-lede">按「含大峡谷」路线、12/18 周五晚出发、12/27 回来比较。机票是 2026 年 11 月 15–16 日在 Google Flights 查的单程价，每位成人、加元、含税；租车是 11 月 16 日在 Kayak 查的 9 天单程租车总价（12/18 晚上取车）（美元，含异地还车费，中型 SUV）。最上方「回程」按钮可以直接切换，左边最后一天会跟着变。</p>
   <div class="table-wrap">
     <table class="retcmp">
       <thead><tr><th></th><th>凤凰城 PHX</th><th>拉斯维加斯 LAS</th></tr></thead>
@@ -494,10 +509,10 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
         <tr><td>最后一天路线</td><td>Flagstaff → Montezuma Castle → I-17 → PHX</td><td>Williams → Seligman（66 号公路）→ Kingman → US-93 → LAS</td></tr>
         <tr><td>最后一天车程</td><td class="num">≈150 mi · 约 2h20m</td><td class="num">≈220 mi · 约 3h30m<small>进内华达拨慢 1 小时</small></td></tr>
         <tr><td>最后一天几点出发</td><td class="num">07:30</td><td class="num">08:00</td></tr>
-        <tr><td>推荐航班</td><td>Porter 直飞 13:25 → 19:39<small>CA$435 · 不含登机箱</small><small>Air Canada Rouge 13:40 → 19:45，CA$666</small></td><td>Porter 直飞 14:35 → 21:52<small>CA$1,092 · 含登机箱</small><small>Air Canada 12:20 的直飞太早赶不上（CA$710）</small></td></tr>
-        <tr><td>最便宜的选择</td><td>就是上面的 Porter 直飞</td><td>Air Canada 23:50 红眼直飞 CA$530，次日 07:10 到多伦多</td></tr>
-        <tr><td>到多伦多</td><td class="num">19:39</td><td class="num">21:52</td></tr>
-        <tr><td>8 天单程租车（LAX 取车，中型 SUV）</td><td class="num">约 US$556–608</td><td class="num">约 US$618–655</td></tr>
+        <tr><td>推荐航班</td><td>Air Canada Rouge 直飞 13:40 → 19:45<small>CA$726 · 含登机箱（Basic CA$665）</small></td><td>Porter 直飞 14:35 → 21:52<small>CA$1,092 · 含登机箱</small><small>Air Canada 12:20 的直飞太早赶不上（CA$710）</small></td></tr>
+        <tr><td>最便宜的选择</td><td>Porter 直飞 13:25 → 19:39，CA$435，不含登机箱</td><td>Air Canada 23:50 红眼直飞 CA$530，次日 07:10 到多伦多</td></tr>
+        <tr><td>到多伦多</td><td class="num">19:45</td><td class="num">21:52</td></tr>
+        <tr><td>9 天单程租车（LAX 周五晚取车，中型 SUV）</td><td class="num">约 US$619–678</td><td class="num">约 US$753–800</td></tr>
         <tr><td>路上能看的</td><td>Montezuma Castle 崖壁古村落</td><td>Williams 和 Seligman 两个 66 号公路老镇</td></tr>
         <tr><td>冬季路况</td><td>I-17 在 Flagstaff 一段海拔约 2,100 m，常下雪</td><td>I-40 在 Williams 一段海拔也有约 2,000 m，往西过了 Seligman 就低了</td></tr>
       </tbody>
@@ -507,9 +522,9 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
     <div class="notecard">
       <h4>含大峡谷：推荐凤凰城</h4>
       <ul>
-        <li>12/27 这天每人机票便宜约 CA$650：LAS 下午那班 Porter 涨到了 CA$1,092。就算改坐 LAS 的红眼航班，也还贵约 CA$95，还要熬夜。</li>
-        <li>最后一天车程短约 1 小时，晚上 7 点半前到家，比拉斯维加斯早 2 小时多。</li>
-        <li>租车也便宜约 US$40–60。</li>
+        <li>12/27 每人机票便宜约 CA$370：PHX 的 Air Canada 13:40 是 CA$726，LAS 下午那班 Porter 涨到了 CA$1,092（都含登机箱）。LAS 的 Air Canada 23:50 红眼只要 CA$530，但要在机场等到半夜，次日早上 7 点才到。</li>
+        <li>最后一天车程短约 1 小时，晚上 8 点前到家，比拉斯维加斯早 2 小时。</li>
+        <li>租车也便宜约 US$120–135。</li>
       </ul>
     </div>
     <div class="notecard">
@@ -530,16 +545,16 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
     <table class="cmp">
       <thead><tr><th></th><th>方案 A · 含大峡谷</th><th>方案 B · 不去大峡谷</th></tr></thead>
       <tbody>
-        <tr><td>天数</td><td>9 天 8 晚</td><td>8 天 7 晚</td></tr>
+        <tr><td>天数</td><td>周五晚出发 + 9 天，9 晚</td><td>周五晚出发 + 8 天，8 晚</td></tr>
         <tr><td>比原来 12/21–12/28 的计划多请假</td><td class="num">+1 天</td><td class="num">0 天</td></tr>
         <tr><td>回程</td><td>凤凰城 PHX → 多伦多</td><td>拉斯维加斯 LAS → 多伦多</td></tr>
-        <tr><td>洛杉矶</td><td>1.5 天（新增 1 天）</td><td>1.5 天（新增 1 天）</td></tr>
+        <tr><td>洛杉矶</td><td>2 整天（周五晚到）</td><td>2 整天（周五晚到）</td></tr>
         <tr><td>拉斯维加斯</td><td>Day 4 晚上 + Day 5 全天</td><td>Day 4 晚上 + Day 5 全天 + 最后一天中午</td></tr>
         <tr><td>死亡谷</td><td>1 天</td><td>1 天</td></tr>
         <tr><td>锡安</td><td>约 1.5 天（到达傍晚 + 全天，晚饭后开到 Page）</td><td>约 1 天（到达下午 + 次日日出）</td></tr>
         <tr><td>Page（羚羊谷、马蹄湾）</td><td>有</td><td>有</td></tr>
         <tr><td>大峡谷南缘</td><td>约半天：东段观景点 + Lipan Point 日落（晚饭后开到 Flagstaff 住）</td><td class="on">没有</td></tr>
-        <tr><td>自驾总里程 · 车程（含市内，估算）</td><td class="num">≈1,670 mi · 约 35h</td><td class="num">≈1,420 mi · 约 30h</td></tr>
+        <tr><td>自驾总里程 · 车程（含市内，估算）</td><td class="num">≈1,715 mi · 约 36h</td><td class="num">≈1,465 mi · 约 31h</td></tr>
         <tr><td>开车最久的一天</td><td>Day 3 洛杉矶 → 死亡谷 约 5h30m</td><td>Day 3 洛杉矶 → 死亡谷 约 5h30m</td></tr>
       </tbody>
     </table>
@@ -658,20 +673,31 @@ const routeLink = pts => "https://www.google.com/maps/dir/" + pts.map(p => enc(p
 /* =====================  Shared days (identical in both plans)  ===================== */
 // Planned to the travel style: early starts and driving after dark are fine, stop at everything worth seeing on the way,
 // lunch around 12:00, dinner 17:00–19:00, extra buffer on long drives and before flights. k: hike | sight | move | meal.
-const D21 = { d: "21", title: "多伦多 ✈ 洛杉矶 · 海边日落",
+const D20 = { d: "20", evening: true, isNew: true, title: "周五下班 · 多伦多 ✈ 洛杉矶",
   leg: ['<span>YYZ → LAX 约 5h30m 航程</span>', '<span class="tzchip">−3h · 太平洋时间</span>'],
-  pts: [["LAX", "Los Angeles International Airport"], ["SpaceX 猎鹰 9 号", "SpaceX Headquarters, Hawthorne, CA"], ["Santa Monica 码头", "Santa Monica Pier"], ["Venice Beach", "Venice Beach Boardwalk"], ["Hollywood 住宿", "Hollywood, Los Angeles, CA"]],
+  pts: [["LAX", "Los Angeles International Airport"], ["El Segundo 住宿", "El Segundo, CA"]],
   slots: [
-    { t: "05:00", k: "move", name: "到多伦多 Pearson 机场", meta: "起飞前 3 小时", note: "飞美国要在多伦多先过美国海关（预清关），节假日排队长，所以留足 3 小时。" },
-    { t: "08:00", k: "move", name: "Air Canada 直飞洛杉矶", meta: "08:00 → 10:35（洛杉矶时间）· 约 5h30m" },
-    { t: "10:35", k: "move", name: "抵达 LAX，取行李，坐接驳车去租车中心取车", meta: "留 1–1.5 小时", note: "已经在多伦多过了海关，落地就是国内到达。租车点在机场外，要坐接驳车，节假日排队久。单程租车，在 PHX 或 LAS 还车。", g: "Los Angeles International Airport" },
-    { t: "12:00", k: "sight", name: "SpaceX 总部 · 猎鹰 9 号火箭", meta: "约 20 分钟 · 免费 · 从路边看", note: "从机场租车中心开过去约 10 分钟。SpaceX 第一枚成功着陆回收的猎鹰 9 号一级火箭竖在总部东南角（Crenshaw Blvd 和 Jack Northrop Ave 路口），在人行道上就能看到。园区不对外开放，在附近街边短暂停车拍照即可。", g: "SpaceX Headquarters, Hawthorne, CA" },
-    { t: "12:45", k: "meal", name: "午餐：Santa Monica（3rd Street Promenade 一带）", note: "从 Hawthorne 开过去约 30 分钟。" },
-    { t: "13:45", k: "sight", name: "Santa Monica 码头 · 3rd Street Promenade", meta: "约 1h15m", note: "Route 66 的终点牌就在码头上。", g: "Santa Monica Pier" },
-    { t: "15:00", k: "sight", name: "Venice Beach 木栈道 · Venice Canals", meta: "约 1.5 小时", note: "滑板公园、肌肉海滩，再走到安静的运河小区。", g: "Venice Beach Boardwalk" },
-    { t: "16:30", k: "sight", name: "回 Santa Monica 海滩看日落", meta: "日落 ≈16:50", g: "Santa Monica Pier" },
-    { t: "17:45", k: "meal", name: "晚餐：Santa Monica 或 In-N-Out", note: "In-N-Out 是加州本地汉堡连锁。饭后开约 40 分钟到 Hollywood 住宿。" }
+    { t: "16:00", k: "move", name: "到多伦多 Pearson 机场", meta: "起飞前 3 小时", note: "飞美国要在多伦多先过美国海关（预清关），周五晚上加上圣诞前出行高峰，排队会很长，所以留足 3 小时。过关后在航站楼吃晚饭。" },
+    { t: "19:00", k: "move", name: "Air Canada 直飞洛杉矶", meta: "19:00 → 21:34（洛杉矶时间）· 约 5h34m" },
+    { t: "21:35", k: "move", name: "抵达 LAX，取行李，去租车中心取车", meta: "留约 1 小时", note: "已经在多伦多过了海关，落地就是国内到达。租车中心在机场外，要坐接驳车。LAX 的大租车公司大多 24 小时营业，订车时确认一下，并填上航班号，晚点也会给你留车。单程租车，在 PHX 或 LAS 还车。", g: "Los Angeles International Airport" },
+    { t: "22:45", k: "move", name: "开到 El Segundo 的酒店住下", meta: "约 10–15 分钟", note: "机场南边的小城，安静、连锁酒店多，离明天第一站 SpaceX 和海边都近。", g: "El Segundo, CA" }
   ], stay: 0 };
+
+const D21 = { d: "21", title: "洛杉矶海边一日 · SpaceX、曼哈顿海滩、Venice、Malibu 日落",
+  leg: ['<span class="shield">CA-1</span>', '<span>市内和海边 · 约 70 mi</span>'],
+  pts: [["El Segundo", "El Segundo, CA"], ["SpaceX 猎鹰 9 号", "SpaceX Headquarters, Hawthorne, CA"], ["Manhattan Beach 码头", "Manhattan Beach Pier"], ["Venice Beach", "Venice Beach Boardwalk"], ["Santa Monica 码头", "Santa Monica Pier"], ["Malibu 码头", "Malibu Pier"], ["Hollywood 住宿", "Hollywood, Los Angeles, CA"]],
+  slots: [
+    { t: "08:00", k: "meal", name: "早餐：酒店或 El Segundo 镇上，退房", note: "昨晚到得晚，今天不用太早出门。", g: "El Segundo, CA" },
+    { t: "08:45", k: "sight", name: "SpaceX 总部 · 猎鹰 9 号火箭", meta: "约 20 分钟 · 免费 · 从路边看", note: "从 El Segundo 开过去约 10 分钟。SpaceX 第一枚成功着陆回收的猎鹰 9 号一级火箭竖在总部东南角（Crenshaw Blvd 和 Jack Northrop Ave 路口），在人行道上就能看到。园区不对外开放，在附近街边短暂停车拍照即可。周六早上路上车少，好停。", g: "SpaceX Headquarters, Hawthorne, CA" },
+    { t: "09:30", k: "sight", name: "Manhattan Beach 码头 · The Strand 海滨步道", meta: "约 1 小时 · 免费 · 停车按表计费", note: "从 SpaceX 开过去约 15 分钟。南湾最漂亮的海滩小镇，上午人少，能看到冲浪的人；沿 The Strand 步道走一段，看海边的房子。", g: "Manhattan Beach Pier" },
+    { t: "10:45", k: "move", name: "沿海边往北开到 Venice", meta: "约 25 分钟" },
+    { t: "11:15", k: "sight", name: "Venice Beach 木栈道 · Venice Canals", meta: "约 1.5 小时", note: "滑板公园、肌肉海滩，再走到安静的运河小区。上午比下午人少。", g: "Venice Beach Boardwalk" },
+    { t: "12:45", k: "meal", name: "午餐：Santa Monica（3rd Street Promenade 一带）", note: "从 Venice 开过去约 10 分钟。" },
+    { t: "13:45", k: "sight", name: "Santa Monica 码头 · 3rd Street Promenade", meta: "约 1h15m", note: "Route 66 的终点牌就在码头上。", g: "Santa Monica Pier" },
+    { t: "15:15", k: "move", name: "沿太平洋海岸公路（PCH）开到 Malibu", meta: "约 40 分钟 · 一路沿海", note: "PCH 经过 2025 年山火烧过的 Pacific Palisades 一段，还在重建，可能有临时封道或限速，出发前看一下 Google Maps 路况。" },
+    { t: "16:00", k: "sight", name: "Malibu 码头 · Surfrider Beach 看日落", meta: "日落 ≈16:50 · 免费 · 停车约 $10–20", note: "有名的冲浪海滩，木头码头上看日落很好。想去更远的 Point Dume 崖顶的话，先查停车场是否开放（2026 年 8 月有报道说因冲刷损坏关闭）。", g: "Malibu Pier" },
+    { t: "17:30", k: "meal", name: "晚餐：Malibu（码头一带）或回 Santa Monica", note: "饭后开约 1 小时到 Hollywood 住宿。" }
+  ], stay: 1 };
 
 const D22 = { d: "22", isNew: true, title: "洛杉矶全天 · 好莱坞标志、Getty、天文台夜景",
   leg: ['<span>市内 · 约 50 mi</span>'],
@@ -687,7 +713,7 @@ const D22 = { d: "22", isNew: true, title: "洛杉矶全天 · 好莱坞标志�
     { t: "16:05", k: "sight", name: "格里菲斯天文台 · 日落和夜景", meta: "免费 · {GRIFFITH} · 日落 ≈16:50", note: "看完日落再等半小时，城市灯光亮起来最好看。", g: "Griffith Observatory" },
     { t: "17:45", k: "meal", name: "晚餐：Koreatown 韩式烤肉", note: "从天文台开过去约 20 分钟。", g: "Koreatown, Los Angeles, CA" },
     { t: "备选", k: "sight", name: "或整天去环球影城 Universal Studios Hollywood", note: "圣诞周人很多，建议买 Express 快速通道。选这个的话 Getty 和好莱坞就放弃。", g: "Universal Studios Hollywood" }
-  ], stay: 0 };
+  ], stay: 1 };
 
 const D23 = { d: "23", title: "洛杉矶 → 395 公路 → 死亡谷",
   leg: ['<span class="shield">CA-14</span>', '<span class="shield">US-395</span>', '<span class="shield">CA-190</span>', '<span>≈320 mi · 车程约 5h30m</span>'],
@@ -703,7 +729,7 @@ const D23 = { d: "23", title: "洛杉矶 → 395 公路 → 死亡谷",
     { t: "16:00", k: "hike", name: "Mesquite Flat Sand Dunes", meta: "约 1–2 mi · 走多少都行 · 约 1 小时 · 中等（软沙）", note: "日落 ≈16:40。没有固定路线，走到想停就停。", at: "trail/us/california/mesquite-flat-sand-dunes-trail", g: "Mesquite Flat Sand Dunes, Death Valley" },
     { t: "17:30", k: "meal", name: "晚餐：Stovepipe Wells（Toll Road Restaurant）", g: "Stovepipe Wells Village, CA" },
     { t: "19:00", k: "sight", name: "看星空", note: "死亡谷是国际暗夜公园。" }
-  ], stay: 1 };
+  ], stay: 2 };
 
 const D24 = { d: "24", title: "死亡谷全景 → 拉斯维加斯",
   leg: ['<span class="shield">CA-190</span>', '<span class="shield">NV-160</span>', '<span>≈150 mi · 车程约 3h</span>'],
@@ -720,7 +746,7 @@ const D24 = { d: "24", title: "死亡谷全景 → 拉斯维加斯",
     { t: "14:30", k: "move", name: "经 Pahrump 开往拉斯维加斯", meta: "约 2 小时，到达 ≈16:30" },
     { t: "17:45", k: "meal", name: "晚餐：Strip 上", note: "Strip 上的热门餐厅提前订位。", g: "Las Vegas Strip, NV" },
     { t: "19:15", k: "sight", name: "Bellagio 温室花园 · 音乐喷泉 · Strip 夜游", note: "温室按季节换主题（12 月是圣诞布景），免费；喷泉晚上每 15 分钟一场。", g: "Bellagio Conservatory & Botanical Gardens" }
-  ], stay: 2 };
+  ], stay: 3 };
 
 const D25 = { d: "25", isNew: true, title: "拉斯维加斯全天 · 红岩、胡佛水坝、夜景",
   leg: ['<span class="shield">NV-159</span>', '<span class="shield">I-11</span>', '<span>Red Rock + 胡佛水坝 + 市内 · 约 120 mi</span>'],
@@ -738,7 +764,7 @@ const D25 = { d: "25", isNew: true, title: "拉斯维加斯全天 · 红岩、�
     { t: "19:15", k: "sight", name: "Venetian 威尼斯运河 · Wynn 冬季花园", meta: "约 1 小时", note: "室内运河和花园晚上也开。", g: "The Venetian Resort Las Vegas" },
     { t: "20:15", k: "sight", name: "High Roller 摩天轮看夜景", meta: "约 30 分钟一圈", note: "晚上能看到整条 Strip 的灯光。", g: "High Roller, Las Vegas" },
     { t: "21:30", k: "sight", name: "Fremont Street 老城区灯光秀", note: "头顶的 LED 天幕每小时整点放映。", g: "Fremont Street Experience" }
-  ], stay: 2 };
+  ], stay: 3 };
 
 /* Zion → Page, shared by A (Day 8) and B (Day 7); B starts with the Canyon Overlook sunrise. */
 const PAGE_SLOTS = [
@@ -754,7 +780,7 @@ const PAGE_SLOTS = [
 const PAGE_PTS = [["Toadstool Hoodoos", "Toadstool Hoodoos Trailhead, Utah"], ["Page 午餐", "Page, AZ"], ["Upper Antelope Canyon", "Upper Antelope Canyon"], ["Wahweap Overlook", "Wahweap Overlook, Page, AZ"], ["Hanging Garden", "Hanging Garden Trailhead, Page, AZ"], ["Glen Canyon Dam Overlook", "Glen Canyon Dam Overlook"], ["Horseshoe Bend", "Horseshoe Bend, Page, AZ"], ["Page 住宿", "Page, AZ"]];
 
 /* =====================  Plan A: with Grand Canyon, home via PHX  ===================== */
-const A_DAYS = [D21, D22, D23, D24, D25,
+const A_DAYS = [D20, D21, D22, D23, D24, D25,
   { d: "26", title: "拉斯维加斯 → 火焰谷 → Kolob Canyons → 锡安",
     leg: ['<span class="shield">I-15</span>', '<span class="shield">NV-169</span>', '<span class="shield">UT-9</span>', '<span>≈270 mi · 车程约 5h</span>', '<span class="tzchip">+1h · 进入山地时间</span>'],
     pts: [["Las Vegas", "Bellagio Fountains, Las Vegas"], ["Elephant Rock", "Elephant Rock, Valley of Fire"], ["Mouse's Tank 岩画", "Mouse's Tank, Valley of Fire"], ["Fire Wave · White Domes", "Fire Wave Trailhead, Valley of Fire State Park"], ["Overton 午餐", "Overton, NV"], ["Kolob Canyons", "Kolob Canyons Visitor Center"], ["Springdale 住宿", "Springdale, UT"]],
@@ -769,7 +795,7 @@ const A_DAYS = [D21, D22, D23, D24, D25,
       { t: "16:00", k: "hike", name: "Kolob Canyons 景观道路 · Timber Creek Overlook", meta: "5 mi 景观道路 + 步道 1 mi 往返 · 约 1 小时 · 日落 ≈17:10", note: "锡安西北角，红色的「手指峡谷」傍晚最好看，游客比主峡谷少得多。下雪时这条路可能临时封闭。", at: "trail/us/utah/timber-creek-overlook-trail--2", g: "Kolob Canyons Visitor Center" },
       { t: "17:15", k: "move", name: "天黑后开往 Springdale", meta: "约 1 小时 · I-15 → UT-9" },
       { t: "18:30", k: "meal", name: "晚餐：Springdale", g: "Springdale, UT" }
-    ], stay: 3 },
+    ], stay: 4 },
   { d: "27", title: "锡安全天 · 晚饭后连夜开到 Page",
     leg: ['<span>园内活动 · Scenic Drive 坐班车</span>', '<span class="shield">UT-9</span>', '<span class="shield">US-89</span>', '<span>晚上 Springdale → Page ≈115 mi · 约 2h15m</span>', '<span class="tzchip">亚利桑那冬季与犹他同为 MST</span>'],
     pts: [["Springdale", "Springdale, UT"], ["Canyon Overlook", "Canyon Overlook Trailhead, Zion National Park"], ["Checkerboard Mesa", "Checkerboard Mesa, Zion National Park"], ["Riverside Walk", "Temple of Sinawava, Zion National Park"], ["Emerald Pools · Zion Lodge", "Zion Lodge, Zion National Park"], ["Watchman Trail", "Watchman Trailhead, Zion National Park"], ["Canyon Junction 日落", "Canyon Junction Bridge, Zion National Park"], ["Springdale 晚餐", "Springdale, UT"], ["Page 住宿", "Page, AZ"]],
@@ -785,7 +811,7 @@ const A_DAYS = [D21, D22, D23, D24, D25,
       { t: "15:45", k: "hike", name: "Pa'rus Trail 走到 Canyon Junction 看日落", meta: "1.7 mi 单程 · 平坦铺装 · 日落 ≈17:15", note: "沿 Virgin River 走，终点的桥上是看 Watchman 峰日落的经典位置。", at: "parks/us/utah/zion-national-park/paved", g: "Canyon Junction Bridge, Zion National Park" },
       { t: "17:45", k: "meal", name: "晚餐：Springdale", note: "这天是圣诞节，镇上部分餐厅可能关门或提早打烊，提前订位或确认营业时间。", g: "Springdale, UT" },
       { t: "19:00", k: "move", name: "连夜开往 Page：Zion–Mt Carmel 隧道 → Mt Carmel Junction → Kanab → US-89", meta: "≈115 mi · 约 2h15m · 到达 ≈21:15", note: "隧道小轿车和 SUV 晚上也能过（大型车才需要白天护送）。东侧山路和 US-89 晚上没有路灯，常有鹿，开慢一点；出发前查 udot.utah.gov 和 az511.gov 路况，加满油（Kanab 之后加油站很少）。" }
-    ], stay: 4 },
+    ], stay: 5 },
   { d: "28", title: "Page 马蹄湾、羚羊谷 → 大峡谷南缘",
     leg: ['<span class="shield">US-89</span>', '<span class="shield">AZ-64</span>', '<span class="shield">I-40</span>', '<span>≈260 mi · 车程约 5h10m（含 Page 市内和晚上到 Flagstaff）</span>'],
     pts: [["Horseshoe Bend", "Horseshoe Bend, Page, AZ"], ["Page 早餐", "Page, AZ"], ["Glen Canyon Dam Overlook", "Glen Canyon Dam Overlook"], ["Hanging Garden", "Hanging Garden Trailhead, Page, AZ"], ["Upper Antelope Canyon", "Upper Antelope Canyon"], ["Wahweap Overlook", "Wahweap Overlook, Page, AZ"], ["Cameron", "Cameron Trading Post"], ["小科罗拉多河峡谷", "Little Colorado River Gorge Navajo Tribal Park"], ["Desert View Watchtower", "Desert View Watchtower, Grand Canyon"], ["Lipan Point 日落", "Lipan Point, Grand Canyon"], ["Tusayan 晚餐", "Tusayan, AZ"], ["Flagstaff 住宿", "Flagstaff, AZ"]],
@@ -804,7 +830,7 @@ const A_DAYS = [D21, D22, D23, D24, D25,
       { t: "17:45", k: "move", name: "沿 Desert View Drive 开往 Tusayan", meta: "约 45 分钟 · 天黑后注意路上的鹿和麋鹿" },
       { t: "18:30", k: "meal", name: "晚餐：Tusayan 或 Grand Canyon Village（El Tovar）", note: "El Tovar 晚餐要提前订位。", g: "Tusayan, AZ" },
       { t: "19:30", k: "move", name: "晚饭后开到 Flagstaff 住：AZ-64 南下到 Williams，转 I-40 东行", meta: "≈90 mi · 约 1h25m · 到达 ≈21:00", note: "第二天不用天没亮就出发，I-17 下山最容易下雪的一段也改在白天开。不要走 US-180 直插 Flagstaff：那条穿过森林，晚上麋鹿多，下雪时更容易结冰。出发前查 az511.gov，晚上下雪就在 Tusayan 或 Williams 住下。", g: "Flagstaff, AZ" }
-    ], stay: 5 },
+    ], stay: 6 },
   { d: "29", title: "Flagstaff → Montezuma Castle → 凤凰城 ✈ 多伦多",
     leg: ['<span class="shield">I-17</span>', '<span>≈150 mi · 车程约 2h20m</span>', '<span class="tzchip">回多伦多 +2h</span>'],
     pts: [["Flagstaff", "Flagstaff, AZ"], ["Montezuma Castle", "Montezuma Castle National Monument"], ["PHX 还车", "Phoenix Sky Harbor International Airport"]],
@@ -812,16 +838,16 @@ const A_DAYS = [D21, D22, D23, D24, D25,
       { t: "06:45", k: "meal", name: "早餐：酒店或 Flagstaff 市区，加满油", g: "Flagstaff, AZ" },
       { t: "07:30", k: "move", name: "从 Flagstaff 出发，走 I-17 南下", meta: "到 Montezuma Castle 约 50 分钟 · 日出 ≈07:35", note: "出发前查 az511.gov。I-17 在 Flagstaff 一段海拔约 2,100 m，下雪或路况不好就跳过 Montezuma，直接去机场。" },
       { t: "08:20", k: "sight", name: "Montezuma Castle 国家纪念地", meta: "约 40 分钟 · $10/人，国家公园年票可用 · 8:00 开门", note: "建在崖壁里的五层古印第安人住所，就在 I-17 的 289 号出口，下高速 5 分钟。只能从下面看，不能进去。", g: "Montezuma Castle National Monument" },
-      { t: "09:00", k: "move", name: "I-17 继续南下去凤凰城", meta: "约 1h30m · 海拔从约 1,000 m 降到 340 m", note: "凤凰城北边上午可能堵车，这样排比 13:25 起飞多留了约 1 小时余量。" },
+      { t: "09:00", k: "move", name: "I-17 继续南下去凤凰城", meta: "约 1h30m · 海拔从约 1,000 m 降到 340 m", note: "凤凰城北边上午可能堵车，这样排比 13:40 起飞多留了约 1 小时余量。" },
       { t: "10:30", k: "move", name: "PHX 租车中心还车（先加满油），坐 Sky Train 到航站楼", meta: "留 30–45 分钟", g: "Phoenix Sky Harbor International Airport" },
       { t: "11:15", k: "move", name: "托运行李、过安检", meta: "起飞前约 2 小时到航站楼" },
       { t: "12:00", k: "meal", name: "午餐：航站楼里（过安检后）" },
-      { t: "13:25", k: "move", name: "直飞回多伦多", meta: "Porter 13:25 → 19:39 或 Air Canada Rouge 13:40 → 19:45 · 约 4 小时", note: "晚饭在飞机上或落地后吃。见下方「机票」。" }
+      { t: "13:40", k: "move", name: "Air Canada Rouge 直飞回多伦多", meta: "13:40 → 19:45 · 约 4h05m", note: "晚饭在飞机上或落地后吃。同一天 Porter 13:25 的直飞更便宜（基础票价约 CA$435），见下方「机票」。" }
     ], stay: null }
 ];
 
 /* =====================  Plan B: no Grand Canyon, home via LAS  ===================== */
-const B_DAYS = [D21, D22, D23, D24, D25,
+const B_DAYS = [D20, D21, D22, D23, D24, D25,
   { d: "26", title: "拉斯维加斯 → Kolob Canyons → 锡安 · 下午峡谷步道",
     leg: ['<span class="shield">I-15</span>', '<span class="shield">UT-9</span>', '<span>≈190 mi · 车程约 3h15m</span>', '<span class="tzchip">+1h · 进入山地时间</span>'],
     pts: [["Las Vegas", "Bellagio Fountains, Las Vegas"], ["Kolob Canyons", "Kolob Canyons Visitor Center"], ["Springdale 午餐", "Springdale, UT"], ["Riverside Walk", "Temple of Sinawava, Zion National Park"], ["Emerald Pools", "Zion Lodge, Zion National Park"], ["Canyon Junction 日落", "Canyon Junction Bridge, Zion National Park"], ["Springdale 住宿", "Springdale, UT"]],
@@ -835,7 +861,7 @@ const B_DAYS = [D21, D22, D23, D24, D25,
       { t: "15:15", k: "hike", name: "Emerald Pools（Lower → Upper）", meta: "3 mi · 爬升 406 ft · 约 1.5 小时 · 中等", note: "从 Zion Lodge 对面出发，冬季可能有冰。", at: "trail/us/utah/emerald-pools-trail", g: "Zion Lodge, Zion National Park" },
       { t: "17:00", k: "sight", name: "Canyon Junction 桥 · Watchman 峰日落", meta: "坐班车到 Canyon Junction 站 · 日落 ≈17:15", g: "Canyon Junction Bridge, Zion National Park" },
       { t: "17:45", k: "meal", name: "晚餐：Springdale", g: "Springdale, UT" }
-    ], stay: 3 },
+    ], stay: 4 },
   { d: "27", title: "锡安日出 → Page · 蘑菇石、羚羊谷、鲍威尔湖、马蹄湾",
     leg: ['<span class="shield">UT-9</span>', '<span class="shield">US-89</span>', '<span>≈140 mi · 车程约 3h</span>', '<span class="tzchip">亚利桑那冬季与犹他同为 MST</span>'],
     pts: [["Springdale", "Springdale, UT"], ["Canyon Overlook", "Canyon Overlook Trailhead, Zion National Park"], ["Checkerboard Mesa", "Checkerboard Mesa, Zion National Park"]].concat(PAGE_PTS),
@@ -843,7 +869,7 @@ const B_DAYS = [D21, D22, D23, D24, D25,
       { t: "07:15", k: "hike", name: "Canyon Overlook Trail 日出", meta: "1 mi · 爬升 213 ft · 往返 · 约 1 小时 · 简单", note: "就在去 Page 的路上（隧道东口），日出 ≈07:45。", at: "trail/us/utah/canyon-overlook-trail", g: "Canyon Overlook Trailhead, Zion National Park" },
       { t: "08:20", k: "sight", name: "Checkerboard Mesa", meta: "路边停车点 · 约 10 分钟", note: "像棋盘一样有格子纹的白色砂岩山。", g: "Checkerboard Mesa, Zion National Park" },
       { t: "08:30", k: "move", name: "经 Mt Carmel Junction、Kanab 走 US-89", meta: "约 1h15m" }
-    ].concat(PAGE_SLOTS.map(s => s.t === "09:45" ? Object.assign({}, s, { t: "10:00" }) : s)), stay: 4 },
+    ].concat(PAGE_SLOTS.map(s => s.t === "09:45" ? Object.assign({}, s, { t: "10:00" }) : s)), stay: 5 },
   { d: "28", title: "Page → 拉斯维加斯 ✈ 多伦多",
     leg: ['<span class="shield">US-89</span>', '<span class="shield">I-15</span>', '<span>≈275 mi · 车程约 4h30m</span>', '<span class="tzchip">−1h 回太平洋时间 · 回多伦多 +3h</span>'],
     pts: [["Page", "Page, AZ"], ["LAS 还车", "Harry Reid International Airport"]],
@@ -857,6 +883,7 @@ const B_DAYS = [D21, D22, D23, D24, D25,
 
 /* =====================  Plan metadata  ===================== */
 const LODGING_SHARED = [
+  { in: "2026-12-20", out: "2026-12-21", where: "LAX 机场附近（El Segundo）", hint: "晚上 11 点左右才到，选可以晚到入住、停车方便的连锁酒店；离 SpaceX 和海边都近", ss: "El Segundo, California" },
   { in: "2026-12-21", out: "2026-12-23", where: "Hollywood", hint: "去 Getty、天文台和好莱坞都方便，第三天北上出城也顺", ss: "Hollywood, Los Angeles" },
   { in: "2026-12-23", out: "2026-12-24", where: "死亡谷", hint: "园内 Stovepipe Wells / The Oasis 可在官网订；园外备选 Beatty, NV", ss: "Death Valley, California" },
   { in: "2026-12-24", out: "2026-12-26", where: "拉斯维加斯 Strip", hint: "住 Bellagio、Caesars 一带最方便步行；注意 resort fee 和停车费", ss: "Las Vegas Strip, Las Vegas" }
@@ -872,7 +899,7 @@ const PARK = {
 };
 const PLANS = {
   a: {
-    key: "a", home: "PHX", dates: "12.21–12.29", nights: 8, days: A_DAYS, miles: "≈1,670 mi", km: "约 2,690 km",
+    key: "a", home: "PHX", dates: "12.20–12.29", nights: 9, days: A_DAYS, miles: "≈1,715 mi", km: "约 2,760 km",
     eyebrow: "Toronto → LAX · road trip · PHX → Toronto",
     lede: "从洛杉矶租车出发，洛杉矶和拉斯维加斯各玩一整天，再去死亡谷、锡安、马蹄湾和大峡谷南缘，最后在凤凰城还车飞回多伦多。",
     route: [["LAX", "Los Angeles International Airport"], ["Hollywood", "Hollywood, Los Angeles, CA"], ["死亡谷", "Furnace Creek, Death Valley, CA"], ["拉斯维加斯", "Las Vegas Strip, NV"], ["锡安", "Springdale, UT"], ["马蹄湾", "Horseshoe Bend, Page, AZ"], ["大峡谷", "Grand Canyon Village, AZ"], ["PHX", "Phoenix Sky Harbor International Airport"]],
@@ -890,7 +917,7 @@ const PLANS = {
     ]
   },
   b: {
-    key: "b", home: "LAS", dates: "12.21–12.28", nights: 7, days: B_DAYS, miles: "≈1,420 mi", km: "约 2,290 km",
+    key: "b", home: "LAS", dates: "12.20–12.28", nights: 8, days: B_DAYS, miles: "≈1,465 mi", km: "约 2,360 km",
     eyebrow: "Toronto → LAX · road trip · LAS → Toronto",
     lede: "从洛杉矶租车出发，洛杉矶和拉斯维加斯各玩一整天，再去死亡谷、锡安和马蹄湾，不去大峡谷，最后回拉斯维加斯还车飞回多伦多。",
     route: [["LAX", "Los Angeles International Airport"], ["Hollywood", "Hollywood, Los Angeles, CA"], ["死亡谷", "Furnace Creek, Death Valley, CA"], ["拉斯维加斯", "Las Vegas Strip, NV"], ["锡安", "Springdale, UT"], ["马蹄湾", "Horseshoe Bend, Page, AZ"], ["LAS", "Harry Reid International Airport"]],
@@ -926,11 +953,11 @@ const B_PHX_LAST = { d: "28", title: "Page → Flagstaff → 凤凰城 ✈ 多�
   slots: [
     { t: "05:15", k: "move", name: "天亮前从 Page 出发，走 US-89 南下", meta: "到 Flagstaff 约 2h15m", note: "纳瓦霍保留地路段晚上常有牲畜在路上，开慢一点。" },
     { t: "07:30", k: "meal", name: "早餐 + 加油：Flagstaff", meta: "约 45 分钟 · 日出 ≈07:35", g: "Flagstaff, AZ" },
-    { t: "08:15", k: "move", name: "走 I-17 下山去凤凰城", meta: "约 2h15m", note: "I-17 冬天可能下雪或堵车，这样排比 13:25 起飞多留了约 45 分钟余量。" },
+    { t: "08:15", k: "move", name: "走 I-17 下山去凤凰城", meta: "约 2h15m", note: "I-17 冬天可能下雪或堵车，这样排比 13:40 起飞多留了约 1 小时余量。" },
     { t: "10:30", k: "move", name: "PHX 租车中心还车，坐 Sky Train 到航站楼", meta: "留 30–45 分钟", g: "Phoenix Sky Harbor International Airport" },
     { t: "11:15", k: "move", name: "托运行李、过安检", meta: "起飞前约 2 小时到航站楼" },
     { t: "12:00", k: "meal", name: "午餐：航站楼里（过安检后）" },
-    { t: "13:25", k: "move", name: "直飞回多伦多", meta: "Porter 13:25 → 19:39 或 Air Canada Rouge 13:40 → 19:45" }
+    { t: "13:40", k: "move", name: "Air Canada Rouge 直飞回多伦多", meta: "13:40 → 19:45 · 约 4h05m" }
   ], stay: null };
 const A_D8 = A_DAYS[A_DAYS.length - 2];
 const A_D8_LAS = Object.assign({}, A_D8, {
@@ -938,7 +965,7 @@ const A_D8_LAS = Object.assign({}, A_D8, {
   pts: A_D8.pts.slice(0, -1).concat([["Williams 住宿", "Williams, AZ"]]),
   slots: A_D8.slots.slice(0, -1).concat([{ t: "19:30", k: "move", name: "晚饭后开到 Williams 住：AZ-64 南下", meta: "≈60 mi · 约 1 小时 · 到达 ≈20:30", note: "第二天直接从 Williams 沿 66 号公路往西，不用天没亮就出发。天黑后注意路上的鹿和麋鹿；出发前查 az511.gov，晚上下雪就在 Tusayan 住下。", g: "Williams, AZ" }]) });
 PLANS.a_las = Object.assign({}, PLANS.a, { key: "a_las", home: "LAS", days: A_DAYS.slice(0, -2).concat([A_D8_LAS, A_LAS_LAST]),
-  lodging: PLANS.a.lodging.slice(0, -1).concat([{ in: "2026-12-28", out: "2026-12-29", where: "Williams（66 号公路老镇）", hint: "晚上 8 点半左右到，第二天沿 66 号公路往西去拉斯维加斯", ss: "Williams, Arizona" }]), miles: "≈1,715 mi", km: "约 2,760 km",
+  lodging: PLANS.a.lodging.slice(0, -1).concat([{ in: "2026-12-28", out: "2026-12-29", where: "Williams（66 号公路老镇）", hint: "晚上 8 点半左右到，第二天沿 66 号公路往西去拉斯维加斯", ss: "Williams, Arizona" }]), miles: "≈1,760 mi", km: "约 2,830 km",
   eyebrow: "Toronto → LAX · road trip · LAS → Toronto",
   lede: "从洛杉矶租车出发，洛杉矶和拉斯维加斯各玩一整天，再去死亡谷、锡安、马蹄湾和大峡谷南缘，最后经 66 号公路回拉斯维加斯还车，飞回多伦多。",
   route: PLANS.a.route.slice(0, -1).concat([["Kingman", "Kingman, AZ"], ["LAS", "Harry Reid International Airport"]]),
@@ -1041,15 +1068,15 @@ document.getElementById("alts").addEventListener("click", e => {
 });
 
 /* =====================  Coordinates for the points-only map (OpenStreetMap lookups, a few fixed by hand)  ===================== */
-const COORDS = {"Los Angeles International Airport":[33.94217,-118.42136],"Santa Monica Pier":[34.0089,-118.4974],"Venice Beach Boardwalk":[33.98671,-118.4741],"Hollywood, Los Angeles, CA":[34.098,-118.32952],"Getty Center":[34.07804,-118.47406],"Original Farmers Market Los Angeles":[34.07194,-118.36039],"TCL Chinese Theatre":[34.10207,-118.34095],"Griffith Observatory":[34.11822,-118.30029],"Koreatown, Los Angeles, CA":[34.06179,-118.30545],"Universal Studios Hollywood":[34.13923,-118.35438],"Mobius Arch Trailhead, Lone Pine, CA":[36.61132,-118.12504],"Lone Pine, CA":[36.58318,-118.07833],"Father Crowley Vista Point":[36.35198,-117.55111],"Mesquite Flat Sand Dunes, Death Valley":[36.66187,-117.09625],"Stovepipe Wells Village, CA":[36.60704,-117.14642],"Zabriskie Point, Death Valley":[36.42104,-116.80887],"Golden Canyon Trailhead, Death Valley":[36.42076,-116.84656],"Badwater Basin, Death Valley":[36.22969,-116.76792],"Artists Palette, Death Valley":[36.36669,-116.80052],"Dantes View, Death Valley":[36.26865,-116.66378],"Bellagio Fountains, Las Vegas":[36.11279,-115.17413],"Bellagio Conservatory & Botanical Gardens":[36.11201,-115.17656],"Calico Tanks Trailhead, Red Rock Canyon":[36.16244,-115.45034],"Bacchanal Buffet, Caesars Palace":[36.11596,-115.17629],"Welcome to Fabulous Las Vegas Sign":[36.08206,-115.17277],"The Venetian Resort Las Vegas":[36.12117,-115.16966],"High Roller, Las Vegas":[36.11757,-115.1682],"Fremont Street Experience":[36.17048,-115.14353],"Red Rock Canyon Scenic Drive":[36.13237,-115.42377],"Fire Wave Trailhead, Valley of Fire State Park":[36.48825,-114.529],"Zion Canyon Visitor Center":[37.20011,-112.98692],"Springdale, UT":[37.18887,-112.99855],"Canyon Overlook Trailhead, Zion National Park":[37.21349,-112.94062],"Temple of Sinawava, Zion National Park":[37.28528,-112.9475],"Zion Lodge, Zion National Park":[37.24985,-112.95709],"Watchman Trailhead, Zion National Park":[37.20092,-112.98698],"Canyon Junction Bridge, Zion National Park":[37.21757,-112.975],"Upper Antelope Canyon":[36.86257,-111.37469],"Hanging Garden Trailhead, Page, AZ":[36.93673,-111.47622],"Horseshoe Bend, Page, AZ":[36.88045,-111.51613],"Page, AZ":[36.91483,-111.45729],"Desert View Watchtower, Grand Canyon":[36.04401,-111.82621],"Lipan Point, Grand Canyon":[36.03309,-111.85301],"South Kaibab Trailhead, Grand Canyon":[36.05294,-112.08374],"Bright Angel Trailhead, Grand Canyon":[36.05728,-112.14363],"Hopi Point, Grand Canyon":[36.07452,-112.15489],"Tusayan, AZ":[35.9736,-112.12656],"Mather Point, Grand Canyon":[36.06172,-112.10903],"Phoenix Sky Harbor International Airport":[33.43285,-112.00679],"Furnace Creek, Death Valley, CA":[36.45874,-116.87139],"Las Vegas Strip, NV":[36.11942,-115.17425],"Grand Canyon Village, AZ":[36.05781,-112.12816],"Zion National Park, UT":[37.32217,-113.00479],"Hoover Dam":[36.01572,-114.73749],"Harry Reid International Airport":[36.0861,-115.1611],"Warner Bros. Studio Tour Hollywood":[34.14897,-118.33754],"Runyon Canyon Park":[34.11204,-118.3501],"Brush Canyon Trailhead, Los Angeles":[34.12539,-118.31293],"The Broad, Los Angeles":[34.05446,-118.25059],"Urban Light, LACMA":[34.06305,-118.35922],"El Matador State Beach":[34.03798,-118.87449],"Mosaic Canyon Trailhead, Death Valley":[36.57184,-117.14424],"Natural Bridge Canyon Trailhead, Death Valley":[36.2806,-116.7714],"Ubehebe Crater":[37.00997,-117.45065],"Twenty Mule Team Canyon, Death Valley":[36.39547,-116.78203],"Rhyolite Ghost Town, Nevada":[36.9009,-116.82933],"Sphere, Las Vegas":[36.12121,-115.16207],"The Neon Museum, Las Vegas":[36.17708,-115.13525],"Valley of Fire State Park":[36.49885,-114.53412],"Ice Box Canyon Trailhead, Red Rock Canyon":[36.15127,-115.48363],"Seven Magic Mountains":[35.83831,-115.27095],"The Grotto Trailhead, Zion National Park":[37.2594,-112.9509],"Kolob Canyons Visitor Center":[37.45345,-113.22538],"Sunset Point, Bryce Canyon":[37.62343,-112.16712],"Lower Antelope Canyon":[36.9027,-111.41139],"Toadstool Hoodoos Trailhead, Utah":[37.10129,-111.87317],"Wahweap Overlook, Page, AZ":[36.96897,-111.49896],"Glen Canyon Dam Overlook":[36.92364,-111.47708],"Grand Canyon Airport, Tusayan":[35.95252,-112.1452],"Shoshone Point, Grand Canyon":[36.0486,-112.055],"Hermits Rest, Grand Canyon":[36.0603,-112.2105],"Yavapai Geology Museum":[36.06606,-112.11763],"Cameron Trading Post":[35.87544,-111.41379],"Cathedral Rock Trailhead, Sedona":[34.83595,-111.7801],"Chapel of the Holy Cross, Sedona":[34.83199,-111.76676],"Montezuma Castle National Monument":[34.61309,-111.83667],"Wupatki National Monument":[35.56495,-111.40585],"Williams, AZ":[35.25085,-112.18729],"Seligman, AZ":[35.32543,-112.85082],"Kingman, AZ":[35.18959,-114.0533],"Red Rock Canyon State Park, California":[35.38152, -117.97927],"Manzanar National Historic Site":[36.72787, -118.1552],"Lake Hollywood Park":[34.12689, -118.32592],"Devils Golf Course, Death Valley":[36.28583, -116.82619],"Overton, NV":[36.53807, -114.44363],"Mouse's Tank, Valley of Fire":[36.43803, -114.5121],"Elephant Rock, Valley of Fire":[36.42836, -114.46012],"Checkerboard Mesa, Zion National Park":[37.21665, -112.87855],"Navajo Bridge Interpretive Center":[36.8178, -111.63157],"Little Colorado River Gorge Navajo Tribal Park":[35.99203, -111.67947],"Yaki Point, Grand Canyon":[36.05859, -112.08378],"Flagstaff, AZ":[35.19875, -111.65182],"SpaceX Headquarters, Hawthorne, CA":[33.92065, -118.32685],"RIPNDIP, 441 N Fairfax Ave, Los Angeles":[34.07937, -118.36168]};
+const COORDS = {"Los Angeles International Airport":[33.94217,-118.42136],"Santa Monica Pier":[34.0089,-118.4974],"Venice Beach Boardwalk":[33.98671,-118.4741],"Hollywood, Los Angeles, CA":[34.098,-118.32952],"Getty Center":[34.07804,-118.47406],"Original Farmers Market Los Angeles":[34.07194,-118.36039],"TCL Chinese Theatre":[34.10207,-118.34095],"Griffith Observatory":[34.11822,-118.30029],"Koreatown, Los Angeles, CA":[34.06179,-118.30545],"Universal Studios Hollywood":[34.13923,-118.35438],"Mobius Arch Trailhead, Lone Pine, CA":[36.61132,-118.12504],"Lone Pine, CA":[36.58318,-118.07833],"Father Crowley Vista Point":[36.35198,-117.55111],"Mesquite Flat Sand Dunes, Death Valley":[36.66187,-117.09625],"Stovepipe Wells Village, CA":[36.60704,-117.14642],"Zabriskie Point, Death Valley":[36.42104,-116.80887],"Golden Canyon Trailhead, Death Valley":[36.42076,-116.84656],"Badwater Basin, Death Valley":[36.22969,-116.76792],"Artists Palette, Death Valley":[36.36669,-116.80052],"Dantes View, Death Valley":[36.26865,-116.66378],"Bellagio Fountains, Las Vegas":[36.11279,-115.17413],"Bellagio Conservatory & Botanical Gardens":[36.11201,-115.17656],"Calico Tanks Trailhead, Red Rock Canyon":[36.16244,-115.45034],"Bacchanal Buffet, Caesars Palace":[36.11596,-115.17629],"Welcome to Fabulous Las Vegas Sign":[36.08206,-115.17277],"The Venetian Resort Las Vegas":[36.12117,-115.16966],"High Roller, Las Vegas":[36.11757,-115.1682],"Fremont Street Experience":[36.17048,-115.14353],"Red Rock Canyon Scenic Drive":[36.13237,-115.42377],"Fire Wave Trailhead, Valley of Fire State Park":[36.48825,-114.529],"Zion Canyon Visitor Center":[37.20011,-112.98692],"Springdale, UT":[37.18887,-112.99855],"Canyon Overlook Trailhead, Zion National Park":[37.21349,-112.94062],"Temple of Sinawava, Zion National Park":[37.28528,-112.9475],"Zion Lodge, Zion National Park":[37.24985,-112.95709],"Watchman Trailhead, Zion National Park":[37.20092,-112.98698],"Canyon Junction Bridge, Zion National Park":[37.21757,-112.975],"Upper Antelope Canyon":[36.86257,-111.37469],"Hanging Garden Trailhead, Page, AZ":[36.93673,-111.47622],"Horseshoe Bend, Page, AZ":[36.88045,-111.51613],"Page, AZ":[36.91483,-111.45729],"Desert View Watchtower, Grand Canyon":[36.04401,-111.82621],"Lipan Point, Grand Canyon":[36.03309,-111.85301],"South Kaibab Trailhead, Grand Canyon":[36.05294,-112.08374],"Bright Angel Trailhead, Grand Canyon":[36.05728,-112.14363],"Hopi Point, Grand Canyon":[36.07452,-112.15489],"Tusayan, AZ":[35.9736,-112.12656],"Mather Point, Grand Canyon":[36.06172,-112.10903],"Phoenix Sky Harbor International Airport":[33.43285,-112.00679],"Furnace Creek, Death Valley, CA":[36.45874,-116.87139],"Las Vegas Strip, NV":[36.11942,-115.17425],"Grand Canyon Village, AZ":[36.05781,-112.12816],"Zion National Park, UT":[37.32217,-113.00479],"Hoover Dam":[36.01572,-114.73749],"Harry Reid International Airport":[36.0861,-115.1611],"Warner Bros. Studio Tour Hollywood":[34.14897,-118.33754],"Runyon Canyon Park":[34.11204,-118.3501],"Brush Canyon Trailhead, Los Angeles":[34.12539,-118.31293],"The Broad, Los Angeles":[34.05446,-118.25059],"Urban Light, LACMA":[34.06305,-118.35922],"El Matador State Beach":[34.03798,-118.87449],"Mosaic Canyon Trailhead, Death Valley":[36.57184,-117.14424],"Natural Bridge Canyon Trailhead, Death Valley":[36.2806,-116.7714],"Ubehebe Crater":[37.00997,-117.45065],"Twenty Mule Team Canyon, Death Valley":[36.39547,-116.78203],"Rhyolite Ghost Town, Nevada":[36.9009,-116.82933],"Sphere, Las Vegas":[36.12121,-115.16207],"The Neon Museum, Las Vegas":[36.17708,-115.13525],"Valley of Fire State Park":[36.49885,-114.53412],"Ice Box Canyon Trailhead, Red Rock Canyon":[36.15127,-115.48363],"Seven Magic Mountains":[35.83831,-115.27095],"The Grotto Trailhead, Zion National Park":[37.2594,-112.9509],"Kolob Canyons Visitor Center":[37.45345,-113.22538],"Sunset Point, Bryce Canyon":[37.62343,-112.16712],"Lower Antelope Canyon":[36.9027,-111.41139],"Toadstool Hoodoos Trailhead, Utah":[37.10129,-111.87317],"Wahweap Overlook, Page, AZ":[36.96897,-111.49896],"Glen Canyon Dam Overlook":[36.92364,-111.47708],"Grand Canyon Airport, Tusayan":[35.95252,-112.1452],"Shoshone Point, Grand Canyon":[36.0486,-112.055],"Hermits Rest, Grand Canyon":[36.0603,-112.2105],"Yavapai Geology Museum":[36.06606,-112.11763],"Cameron Trading Post":[35.87544,-111.41379],"Cathedral Rock Trailhead, Sedona":[34.83595,-111.7801],"Chapel of the Holy Cross, Sedona":[34.83199,-111.76676],"Montezuma Castle National Monument":[34.61309,-111.83667],"Wupatki National Monument":[35.56495,-111.40585],"Williams, AZ":[35.25085,-112.18729],"Seligman, AZ":[35.32543,-112.85082],"Kingman, AZ":[35.18959,-114.0533],"Red Rock Canyon State Park, California":[35.38152, -117.97927],"Manzanar National Historic Site":[36.72787, -118.1552],"Lake Hollywood Park":[34.12689, -118.32592],"Devils Golf Course, Death Valley":[36.28583, -116.82619],"Overton, NV":[36.53807, -114.44363],"Mouse's Tank, Valley of Fire":[36.43803, -114.5121],"Elephant Rock, Valley of Fire":[36.42836, -114.46012],"Checkerboard Mesa, Zion National Park":[37.21665, -112.87855],"Navajo Bridge Interpretive Center":[36.8178, -111.63157],"Little Colorado River Gorge Navajo Tribal Park":[35.99203, -111.67947],"Yaki Point, Grand Canyon":[36.05859, -112.08378],"Flagstaff, AZ":[35.19875, -111.65182],"SpaceX Headquarters, Hawthorne, CA":[33.92065, -118.32685],"El Segundo, CA":[33.91918, -118.41647],"Manhattan Beach Pier":[33.88416, -118.41161],"Malibu Pier":[34.03785, -118.67766],"RIPNDIP, 441 N Fairfax Ave, Los Angeles":[34.07937, -118.36168]};
 
 /* =====================  Rendering  ===================== */
 const WD = ["周日","周一","周二","周三","周四","周五","周六"];
 const KIND = { hike: "徒步", sight: "景点", move: "交通", meal: "用餐" };
 
 /* ---- Dates: the data above was written with Day 1 = 12/21; everything shown is shifted to the chosen start date ---- */
-const BASE = "2026-12-21";
-const START_STORE = "start_date", DEFAULT_START = "2026-12-19";
+const BASE = "2026-12-20";
+const START_STORE = "start_date_fri", DEFAULT_START = "2026-12-18";
 const pad = n => String(n).padStart(2, "0");
 const toDate = iso => new Date(iso + "T12:00:00");
 const isoOf = d => d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
@@ -1065,7 +1092,9 @@ let START = validIso(store.get(START_STORE)) ? store.get(START_STORE) : DEFAULT_
 const dayIso = i => addDays(START, i);
 const baseIdx = x => nights(BASE, "2026-12-" + pad(x));          // "12/22" in the data → index 1 (Day 2)
 const datesIn = s => (s || "").replace(/12\/(\d{1,2})/g, (_, x) => md(dayIso(baseIdx(+x))));
-const daysIn = s => (s || "").replace(/12\/(\d{1,2})/g, (_, x) => { const i = baseIdx(+x); return "Day " + (i + 1) + "（" + fmtDate(dayIso(i)) + "）"; });
+const dayName = i => P.days[0].evening ? (i === 0 ? "出发夜" : "Day " + i) : "Day " + (i + 1);
+const tripLen = () => P.days[0].evening ? WD[toDate(START).getDay()] + "晚 + " + (P.days.length - 1) + " 天" : P.days.length + " 天";
+const daysIn = s => (s || "").replace(/12\/(\d{1,2})/g, (_, x) => { const i = baseIdx(+x); return dayName(i) + "（" + fmtDate(dayIso(i)) + "）"; });
 const lodgingAt = l => Object.assign({}, l, { in: dayIso(nights(BASE, l.in)), out: dayIso(nights(BASE, l.out)) });
 
 /* Opening hours and holiday notes that depend on the actual date. */
@@ -1267,7 +1296,7 @@ function showDay(i, scroll) {
   const day = P.days[i];
   selectDay(i, scroll);
   const pp = dayPoints(day);
-  const label = "Day " + (i + 1) + "（" + fmtDate(dayIso(i)) + "）";
+  const label = dayName(i) + "（" + fmtDate(dayIso(i)) + "）";
   showOnMap(routeEmbed(day.pts), mode === "points"
       ? label + " " + pp.length + " 个点：" + pp.map(p => p[0]).join(" → ")
       : label + " 路线：" + day.pts.map(p => p[0]).join(" → "),
@@ -1325,19 +1354,20 @@ function bookingUrl(l) {
 // Prices checked 2026-11-14/15 for a 12/19 start; return flights and car re-checked 11/15 for the 9-day 12/19–12/27 plan. USD unless marked cad.
 const BUDGET = {
   fxDefault: 1.41,
-  flightOut: { cad: 732, label: "去程机票 · Air Canada 直飞 YYZ → LAX 08:00", note: "Google Flights，11/15 查，含登机箱" },
+  flightOut: { cad: 587, label: "去程机票 · Air Canada 直飞 YYZ → LAX 19:00（周五晚）", note: "Google Flights，11/16 按 12/18 查，Standard 含登机箱；Basic 不含登机箱 CA$535" },
   flightBack: {
-    PHX: { cad: 435, label: "回程机票 · Porter 直飞 PHX → YYZ 13:25", note: "11/15 按 12/27 查，基础票价不含登机箱" },
+    PHX: { cad: 726, label: "回程机票 · Air Canada Rouge 直飞 PHX → YYZ 13:40", note: "11/16 按 12/27 查，Standard 含登机箱；Basic CA$665；同天 Porter 13:25 基础票价约 CA$435" },
     LAS: { cad: 1092, label: "回程机票 · Porter 直飞 LAS → YYZ 14:35", note: "11/15 按 12/27 查，含登机箱；当晚 Air Canada 23:50 红眼直飞约 CA$530" }
   },
   bags: { cad: 70, label: "托运行李（每人 1 件，往返）", note: "约 CA$35 一程，以航空公司为准" },
-  // Kayak one-way totals for 8 rental days (12/19–12/27) LAX → airport, incl. drop fee and taxes, before insurance.
-  car: { PHX: { 2: 600, 4: 790 }, LAS: { 2: 640, 4: 1060 }, days: 8 },
+  // Kayak one-way totals for 9 rental days (12/18 22:00 – 12/27 10:00) LAX → airport, incl. drop fee and taxes, before insurance.
+  car: { PHX: { 2: 670, 4: 880 }, LAS: { 2: 790, 4: 1200 }, days: 9, checked: "11/16" },
   carName: { 2: "中型 SUV（Intermediate SUV，如 RAV4）", 4: "全尺寸 SUV（Full-size SUV，如 Tahoe）" },
   extraDriver: 13,                    // per day, 4-person option only
   mpg: { 2: 28, 4: 18 }, gas: 4.0,    // average $/gal across CA / NV / UT / AZ
   // Per-night price incl. taxes and resort fees: [2 people (one hotel room), 4 people], with what was found.
   lodging: {
+    "El Segundo, California":    { 2: [150, "LAX 附近连锁酒店（如 Hampton Inn El Segundo），评分 8 分左右"], 4: [200, "套房或两张 Queen 床房（如 Embassy Suites）；只住一晚、到得晚，不值得订 Airbnb"], park: { 2: 25, 4: 25 } },
     "Hollywood, Los Angeles":    { 2: [190, "3 星酒店，Booking 评分 8 分左右"], 4: [345, "Airbnb 整套 2 卧 2 卫，评分 4.7+"], park: { 2: 30, 4: 0 } },
     "Death Valley, California":  { 2: [290, "Stovepipe Wells 酒店"], 4: [480, "Stovepipe Wells 两张 Queen 床房（园内没有 Airbnb）"], park: { 2: 0, 4: 0 } },
     "Las Vegas Strip, Las Vegas": { 2: [100, "Strip 上 4 星酒店，含 resort fee（平日很便宜）"], 4: [200, "Airbnb 整套 2 卧公寓，Strip 附近"], park: { 2: 20, 4: 20 } },
@@ -1348,6 +1378,7 @@ const BUDGET = {
   },
   mealPerDay: 80,      // per person: breakfast ~15, lunch ~25, dinner ~40
   lastDayMeals: 40,
+  eveningMeals: 30,    // departure evening: dinner at Pearson after customs
   miscPerDay: 15,      // per person: tips, snacks, souvenirs
   // Fees tied to a stop: the item lands on the first day whose schedule includes that stop, and is skipped if the route doesn't go there.
   items: [
@@ -1386,7 +1417,7 @@ function budgetLines() {
   // Car: scale the 9-day quote to this route's rental days
   const carDays = nDays - 1, scale = carDays / BUDGET.car.days, car = BUDGET.car[P.home];
   L.push({ cat: "car", day: 0, whole: true, label: "单程租车 LAX → " + P.home + "，" + carDays + " 天",
-    note: "2 人：" + BUDGET.carName[2] + "；4 人：" + BUDGET.carName[4] + "。Kayak 11/15 查，含异地还车费，不含保险" + (scale !== 1 ? "，按天数从 8 天报价折算" : ""),
+    note: "2 人：" + BUDGET.carName[2] + "；4 人：" + BUDGET.carName[4] + "。Kayak " + BUDGET.car.checked + " 查，含异地还车费，不含保险" + (scale !== 1 ? "，按天数从 " + BUDGET.car.days + " 天报价折算" : ""),
     amount: fromUsd(n => car[n] * scale), src: both(n => usd(car[n] * scale)) });
   L.push({ cat: "car", day: 0, whole: true, label: "第二位驾驶员（只算 4 人）", note: "约 $" + BUDGET.extraDriver + "/天，部分公司对配偶免费",
     amount: fromUsd(n => n === 4 ? BUDGET.extraDriver * carDays : 0), src: both(n => n === 4 ? usd(BUDGET.extraDriver * carDays) : "—") });
@@ -1414,12 +1445,13 @@ function budgetLines() {
       amount: fromUsd(n => it.per === "car" ? it.usd : it.usd * n), src: both(n => usd(it.per === "car" ? it.usd : it.usd * n)) });
   });
   // Meals and misc, per person per day
-  const mealUsd = BUDGET.mealPerDay * (nDays - 1) + BUDGET.lastDayMeals;
-  L.push({ cat: "meal", day: 0, whole: true, label: "每天三餐，" + nDays + " 天",
-    note: "每人每天约 $" + BUDGET.mealPerDay + "（早餐 ~$15、午餐 ~$25、晚餐 ~$40，含税和小费），最后一天约 $" + BUDGET.lastDayMeals + "。4 人住 Airbnb 可以自己做早餐省一点",
+  const eve = P.days[0].evening ? 1 : 0, fullDays = nDays - eve;
+  const mealUsd = BUDGET.mealPerDay * (fullDays - 1) + BUDGET.lastDayMeals + eve * BUDGET.eveningMeals;
+  L.push({ cat: "meal", day: 0, whole: true, label: "每天三餐，" + fullDays + " 天" + (eve ? "，加出发当晚" : ""),
+    note: "每人每天约 $" + BUDGET.mealPerDay + "（早餐 ~$15、午餐 ~$25、晚餐 ~$40，含税和小费），最后一天约 $" + BUDGET.lastDayMeals + (eve ? "，出发当晚在机场吃晚饭约 $" + BUDGET.eveningMeals : "") + "。4 人住 Airbnb 可以自己做早餐省一点",
     amount: fromUsd(n => mealUsd * n), src: both(n => usd(mealUsd * n)) });
   L.push({ cat: "misc", day: 0, whole: true, label: "小费、零食、纪念品", note: "每人每天约 $" + BUDGET.miscPerDay,
-    amount: fromUsd(n => BUDGET.miscPerDay * nDays * n), src: both(n => usd(BUDGET.miscPerDay * nDays * n)) });
+    amount: fromUsd(n => BUDGET.miscPerDay * fullDays * n), src: both(n => usd(BUDGET.miscPerDay * fullDays * n)) });
   return L;
 }
 
@@ -1436,7 +1468,7 @@ function renderBudget() {
     total[2] += sub[2]; total[4] += sub[4];
     html += `<tr class="bcat"><th scope="rowgroup" colspan="2">${name}</th><td class="num">${cad(sub[2])}</td><td class="num">${cad(sub[4])}</td></tr>` +
       rows.map(r => `<tr>
-        <td class="num bday">${r.whole ? "全程" : "Day " + (r.day + 1)}<small>${r.whole ? md(START) + "–" + md(dayIso(P.days.length - 1)) : fmtDate(dayIso(r.day))}</small></td>
+        <td class="num bday">${r.whole ? "全程" : dayName(r.day)}<small>${r.whole ? md(START) + "–" + md(dayIso(P.days.length - 1)) : fmtDate(dayIso(r.day))}</small></td>
         <td>${r.label}<small>${r.note}</small></td>
         <td class="num">${r.amount[2] ? cad(r.amount[2]) : "—"}${r.src && r.amount[2] ? `<small>${r.src[2]}</small>` : ""}</td>
         <td class="num">${r.amount[4] ? cad(r.amount[4]) : "—"}${r.src && r.amount[4] ? `<small>${r.src[4]}</small>` : ""}</td>
@@ -1449,7 +1481,7 @@ function renderBudget() {
   document.getElementById("budget-cards").innerHTML = [[2, "2 人", BUDGET.carName[2] + " · 酒店"], [4, "4 人", BUDGET.carName[4] + " · 整套 Airbnb"]].map(([n, t, s]) => `
     <div class="bcard"><span class="bcard-t">${t}</span><b>${cad(total[n])}</b><span>每人约 ${cad(total[n] / n)} · ${s}</span></div>`).join("");
   const nDays = P.days.length;
-  document.getElementById("budget-scope").textContent = `当前：${P.days.length} 天 ${P.nights} 晚 · ${fmtDate(START)} – ${fmtDate(dayIso(nDays - 1))} · 回程 ${P.home}`;
+  document.getElementById("budget-scope").textContent = `当前：${tripLen()} · ${P.nights} 晚 · ${fmtDate(START)} – ${fmtDate(dayIso(nDays - 1))} · 回程 ${P.home}`;
 }
 document.getElementById("fx").addEventListener("change", e => {
   const v = +e.target.value;
@@ -1490,7 +1522,7 @@ function renderDays() {
   const allN = allPoints().length;
   const allItem = `<li class="dayitem">
       <button type="button" class="dayhead" id="day-all" data-sel data-all>
-        <span class="dn"><b>ALL</b><small>${P.days.length} DAYS</small></span>
+        <span class="dn"><b>ALL</b><small>${tripLen()}</small></span>
         <span class="dd">${fmtDate(START)} – ${fmtDate(dayIso(P.days.length - 1))}</span>
         <span class="dt">全部景点 · ${allN} 个点</span>
       </button>
@@ -1527,7 +1559,7 @@ function renderDays() {
     }
     return `<li class="dayitem" id="dcard-${i}" data-i="${i}">
       <button type="button" class="dayhead" id="day-${i}" data-sel data-day="${i}" aria-expanded="false" aria-controls="dbody-${i}">
-        <span class="dn"><b>DAY ${i + 1}</b><small>${dayPoints(day).length} 个点</small></span>
+        <span class="dn"><b>${day.evening && i === 0 ? "出发" : dayName(i).toUpperCase()}</b><small>${dayPoints(day).length} 个点</small></span>
         <span class="dd">${fmtDate(iso)}${tags}</span>
         <span class="dt">${day.title}</span>
       </button>
@@ -1551,7 +1583,7 @@ function renderHeader() {
   document.getElementById("end-date").textContent = "→ " + fmtDate(end) + " 回到多伦多";
   document.getElementById("lede").textContent = P.lede;
   document.getElementById("stats").innerHTML = `
-    <li><b>${P.days.length} 天 / ${P.nights} 晚</b><span>${fmtDate(START)} – ${fmtDate(end)}</span></li>
+    <li><b>${tripLen()} / ${P.nights} 晚</b><span>${fmtDate(START)} – ${fmtDate(end)}</span></li>
     <li><b>${P.miles}</b><span>${P.km} 自驾</span></li>
     <li><b>${P.parks.length} 处</b><span>沿途公园</span></li>
     <li><b>${hikes} 条</b><span>徒步路线</span></li>`;
