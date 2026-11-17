@@ -550,7 +550,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
         <tr><td>比原来 12/21–12/28 的计划多请假</td><td class="num">+1 天</td><td>+1 天</td><td class="num">0 天</td></tr>
         <tr><td>回程</td><td>凤凰城 PHX → 多伦多</td><td>凤凰城 PHX → 多伦多</td><td>拉斯维加斯 LAS → 多伦多</td></tr>
         <tr><td>洛杉矶</td><td>2 整天（周五晚到）：海边一天，市中心、Beverly Hills、日落大道、好莱坞和夜景一天</td><td>1 整天（周五晚到）：SpaceX、Venice、Santa Monica、Beverly Hills、日落大道、RIPNDIP、好莱坞、天文台和 Mulholland 夜景</td><td>2 整天（周五晚到）</td></tr>
-        <tr><td>拉斯维加斯</td><td>Day 4 晚上（只住一晚）</td><td>Day 3 晚上 + Day 4 全天（红岩、Bacchanal、胡佛水坝、High Roller）</td><td>Day 4 晚上 + Day 5 全天 + 最后一天中午</td></tr>
+        <tr><td>拉斯维加斯</td><td>Day 4 晚上（只住一晚：Bacchanal 自助晚餐、Bellagio、High Roller）</td><td>Day 3 晚上 + Day 4 全天（红岩、胡佛水坝、Bacchanal 自助晚餐、High Roller）</td><td>Day 4 晚上 + Day 5 全天 + 最后一天中午</td></tr>
         <tr><td>死亡谷</td><td>1 天</td><td>1 天</td><td>1 天</td></tr>
         <tr><td>锡安</td><td>约 1.5 天（Day 5 傍晚 Kolob + Day 6 平安夜全天，晚饭后开到 Page）</td><td>同方案 A</td><td>约 1 天（到达下午 + 次日日出）</td></tr>
         <tr><td>Page（羚羊谷、马蹄湾）</td><td>有（Day 7 圣诞节，羚羊谷要确认开团）</td><td>同方案 A</td><td>有</td></tr>
@@ -574,7 +574,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
       <h4>方案 C：洛杉矶少一天，换回拉斯维加斯全天</h4>
       <ul>
         <li>Day 3 起和方案 A 一样的大峡谷、纪念碑谷路线，只是前半段换了比例：洛杉矶压成 1 天，拉斯维加斯恢复整天。</li>
-        <li>多了：Red Rock 的 Calico Tanks 步道和景观道路、Bacchanal 自助餐、胡佛水坝和大桥日落、High Roller 和 Fremont Street。</li>
+        <li>多了：Red Rock 的 Calico Tanks 步道和景观道路、胡佛水坝和大桥日落、Venetian 运河和 Fremont Street（两个方案都有 Bacchanal 自助晚餐）。</li>
         <li>少了：Malibu 日落、Mount Hollywood 步道、市中心老城（Angels Flight 一带）和 Melrose（市中心可以换掉上午的海边）。</li>
         <li>预算差不多：Hollywood 少住一晚，拉斯维加斯多住一晚（平日便宜），但多了自助餐、水坝和摩天轮的票。</li>
       </ul>
@@ -766,26 +766,26 @@ const D24 = { d: "24", title: "死亡谷全景 → 拉斯维加斯",
 
 const D25 = { d: "25", isNew: true, title: "拉斯维加斯全天 · 红岩、胡佛水坝、夜景",
   leg: ['<span class="shield">NV-159</span>', '<span class="shield">I-11</span>', '<span>Red Rock + 胡佛水坝 + 市内 · 约 120 mi</span>'],
-  pts: [["Las Vegas Strip", "Bellagio Fountains, Las Vegas"], ["Calico Tanks（Red Rock）", "Calico Tanks Trailhead, Red Rock Canyon"], ["Bacchanal Buffet", "Bacchanal Buffet, Caesars Palace"], ["胡佛水坝", "Hoover Dam"], ["Las Vegas 标志", "Welcome to Fabulous Las Vegas Sign"], ["Venetian", "The Venetian Resort Las Vegas"], ["High Roller", "High Roller, Las Vegas"], ["Fremont Street", "Fremont Street Experience"]],
+  pts: [["Las Vegas Strip", "Bellagio Fountains, Las Vegas"], ["Calico Tanks（Red Rock）", "Calico Tanks Trailhead, Red Rock Canyon"], ["胡佛水坝", "Hoover Dam"], ["Las Vegas 标志", "Welcome to Fabulous Las Vegas Sign"], ["Bacchanal 自助晚餐", "Bacchanal Buffet, Caesars Palace"], ["Venetian", "The Venetian Resort Las Vegas"], ["High Roller", "High Roller, Las Vegas"], ["Fremont Street", "Fremont Street Experience"]],
   slots: [
     { t: "07:15", k: "move", name: "开往 Red Rock Canyon（约 30 分钟）", note: "8 点前进入景观道路不用预约；8 点以后要提前在 recreation.gov 预约。" },
     { t: "08:00", k: "hike", name: "Calico Tanks Trail", meta: "2.4 mi · 爬升 436 ft · 往返 · 约 1.5–2 小时 · 中等", note: "红白相间的砂岩，终点有一小段攀爬，天气好时能远眺 Strip。", at: "trail/us/nevada/calico-tanks-trail", g: "Calico Tanks Trailhead, Red Rock Canyon" },
     { t: "10:15", k: "sight", name: "Red Rock 13 英里景观道路", meta: "约 1 小时 · 单向环路", g: "Red Rock Canyon Scenic Drive" },
-    { t: "12:00", k: "meal", name: "午餐：Bacchanal Buffet（Caesars Palace）", meta: "约 1.5 小时", note: "拉斯维加斯最有名的自助餐之一，节假日务必提前订。", g: "Bacchanal Buffet, Caesars Palace" },
+    { t: "12:00", k: "meal", name: "午餐：简单吃（Red Rock 回来路上的 Summerlin，或 Strip 上的美食广场）", meta: "约 45 分钟", note: "晚上吃自助餐，中午吃少一点。" },
     { t: "13:30", k: "move", name: "开往胡佛水坝，走 I-11", meta: "约 35 mi · 45 分钟" },
     { t: "14:15", k: "sight", name: "胡佛水坝 · 坝顶 + 游客中心", meta: "约 1.5 小时 · 停车 $10 · 游客中心约 $15 · 发电站导览约 $25", note: "沿坝顶走到对岸就是亚利桑那（冬天比内华达快 1 小时）。游客中心约 17:00 关门，导览票下午较早停售，以官网为准。", g: "Hoover Dam" },
     { t: "16:00", k: "hike", name: "Mike O'Callaghan–Pat Tillman 大桥 · 俯瞰水坝看日落", meta: "步道往返约 30–40 分钟 · 简单 · 日落 ≈16:30", note: "回程路边有专门的停车场，沿坡道走上桥的人行道，能看到整座水坝和黑峡谷。", g: "Hoover Dam" },
     { t: "17:15", k: "sight", name: "“Welcome to Fabulous Las Vegas” 标志", meta: "约 20 分钟 · 晚上亮灯", note: "就在回 Strip 的路上（Strip 南端）。", g: "Welcome to Fabulous Las Vegas Sign" },
-    { t: "18:00", k: "meal", name: "晚餐：Venetian / Wynn 一带", g: "The Venetian Resort Las Vegas" },
-    { t: "19:15", k: "sight", name: "Venetian 威尼斯运河 · Wynn 冬季花园", meta: "约 1 小时", note: "室内运河和花园晚上也开。", g: "The Venetian Resort Las Vegas" },
-    { t: "20:15", k: "sight", name: "High Roller 摩天轮看夜景", meta: "约 30 分钟一圈", note: "晚上能看到整条 Strip 的灯光。", g: "High Roller, Las Vegas" },
+    { t: "17:45", k: "meal", name: "自助晚餐：Bacchanal Buffet（Caesars Palace）", meta: "约 1.5 小时", note: "拉斯维加斯最有名的自助餐，蟹腿、牛排、各国菜和甜点都有。晚餐时段约 15:30 开始，平日约 $87/人、周末约 $92/人（税前），节日前后可能更贵；在 OpenTable 或 Caesars 官网提前订位，到了还是可能要排一会儿队。从 Las Vegas 标志开过去约 15 分钟。", g: "Bacchanal Buffet, Caesars Palace" },
+    { t: "19:20", k: "sight", name: "Venetian 威尼斯运河 · Wynn 冬季花园", meta: "约 1 小时", note: "从 Caesars 沿 Strip 往北走约 10 分钟。室内运河和花园晚上也开。", g: "The Venetian Resort Las Vegas" },
+    { t: "20:30", k: "sight", name: "High Roller 摩天轮看夜景", meta: "约 30 分钟一圈", note: "晚上能看到整条 Strip 的灯光。", g: "High Roller, Las Vegas" },
     { t: "21:30", k: "sight", name: "Fremont Street 老城区灯光秀", note: "头顶的 LED 天幕每小时整点放映。", g: "Fremont Street Experience" }
   ], stay: 3 };
 
 /* Plan A has only one night in Las Vegas (the full day went to Monument Valley), so add the night views here. */
-const D24_A = Object.assign({}, D24, { title: "死亡谷全景 → 拉斯维加斯夜景",
-  pts: D24.pts.concat([["High Roller", "High Roller, Las Vegas"]]),
-  slots: D24.slots.concat([
+const D24_A = Object.assign({}, D24, { title: "死亡谷全景 → 拉斯维加斯 · 自助晚餐和夜景",
+  pts: D24.pts.slice(0, -1).concat([["Bacchanal 自助晚餐", "Bacchanal Buffet, Caesars Palace"], D24.pts[D24.pts.length - 1], ["High Roller", "High Roller, Las Vegas"]]),
+  slots: D24.slots.map(x => x.t === "17:45" ? { t: "17:45", k: "meal", name: "自助晚餐：Bacchanal Buffet（Caesars Palace）", meta: "约 1.5 小时", note: "拉斯维加斯最有名的自助餐，蟹腿、牛排、各国菜和甜点都有。晚餐时段约 15:30 开始，平日约 $87/人、周末约 $92/人（税前），节日前后可能更贵；在 OpenTable 或 Caesars 官网提前订位，到了还是可能要排一会儿队。吃完过马路就是 Bellagio。", g: "Bacchanal Buffet, Caesars Palace" } : x).concat([
     { t: "20:30", k: "sight", name: "High Roller 摩天轮看夜景", meta: "约 30 分钟一圈", note: "晚上能看到整条 Strip 的灯光。拉斯维加斯只住这一晚，想看 Sphere 或 Fremont Street 的话二选一换掉它。", g: "High Roller, Las Vegas" }
   ]) });
 
@@ -1475,7 +1475,7 @@ const BUDGET = {
     { cat: "park", re: /Griffith Observatory/, label: "格里菲斯天文台停车（按小时，约 2 小时）", usd: 20, per: "car" },
     { cat: "fee",  re: /Death Valley/, label: "美国国家公园非居民年票", usd: 250, per: "car", note: "一辆车一张。覆盖死亡谷、红岩、锡安、大峡谷的门票，也免掉锡安和大峡谷每人 $100 的非居民附加费；不买的话 2 人约 $525、4 人约 $925。以 NPS 官网为准" },
     { cat: "fee",  re: /Valley of Fire/, label: "火焰谷州立公园（外州车）", usd: 15, per: "car" },
-    { cat: "meal", re: /Bacchanal/, label: "Bacchanal 自助餐（比普通午餐多出的部分）", usd: 55, per: "person" },
+    { cat: "meal", re: /Bacchanal/, label: "Bacchanal 自助晚餐（比普通晚餐多出的部分）", usd: 60, per: "person", note: "晚餐约 $87/人（平日，税前），节日前后可能更贵" },
     { cat: "fee",  re: /Hoover Dam/, label: "胡佛水坝游客中心", usd: 15, per: "person" },
     { cat: "park", re: /Hoover Dam/, label: "胡佛水坝停车", usd: 10, per: "car" },
     { cat: "fee",  re: /High Roller/, label: "High Roller 摩天轮（夜场）", usd: 40, per: "person" },
