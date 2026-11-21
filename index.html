@@ -606,7 +606,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
 
 <section aria-labelledby="lodging-h">
   <h2 id="lodging-h">住宿</h2>
-  <p class="sec-lede">每晚的入住和退房日期已经填进 Booking.com（酒店）和 Airbnb（整套房子）的搜索链接。改一下人数和房间数，链接会跟着更新。4 个人建议优先看 Airbnb：一套 2 卧 2 卫通常比两间酒店房便宜，还能做早餐；死亡谷园内和 Tusayan 没有整套出租，订两张 Queen 床的酒店房。</p>
+  <p class="sec-lede">每晚的入住和退房日期已经填进 Booking.com（酒店）和 Airbnb（整套房子）的搜索链接。Booking 链接已经筛好：评分 8 分以上、每晚不超过 US$400、免费停车，打开后可以在左边取消。改一下人数和房间数，链接会跟着更新。4 个人建议优先看 Airbnb：一套 2 卧 2 卫通常比两间酒店房便宜，还能做早餐；死亡谷园内和 Tusayan 没有整套出租，订两张 Queen 床的酒店房。</p>
   <div class="party">
     <label for="adults">成人
       <select id="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
@@ -1398,7 +1398,9 @@ document.getElementById("with-alts").addEventListener("change", () => { if (last
 function bookingUrl(l) {
   const a = document.getElementById("adults").value, c = document.getElementById("children").value, r = document.getElementById("rooms").value;
   return "https://www.booking.com/searchresults.html?ss=" + enc(l.ss) + "&checkin=" + l.in + "&checkout=" + l.out +
-    "&group_adults=" + a + "&group_children=" + c + "&no_rooms=" + r;
+    "&group_adults=" + a + "&group_children=" + c + "&no_rooms=" + r +
+    // Filters: guest rating 8+, US$400 or less per night, free parking (Booking facility id 46)
+    "&selected_currency=USD&nflt=" + enc("review_score=80;price=USD-min-400-1;hotelfacility=46");
 }
 /* =====================  Budget: 2 people (mid-size SUV, hotel rooms) vs 4 people (full-size SUV, whole-home rentals)  ===================== */
 // Prices checked 2026-11-14/15 for a 12/19 start; return flights and car re-checked 11/15 for the 9-day 12/19–12/27 plan. USD unless marked cad.
