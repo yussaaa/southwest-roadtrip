@@ -606,7 +606,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
 
 <section aria-labelledby="lodging-h">
   <h2 id="lodging-h">住宿</h2>
-  <p class="sec-lede">每晚的入住和退房日期已经填进 Booking.com（酒店）和 Airbnb（整套房子）的搜索链接。Booking 链接已经筛好：评分 8 分以上、每晚不超过 US$400、免费停车，打开后可以在左边取消。改一下人数和房间数，链接会跟着更新。4 个人建议优先看 Airbnb：一套 2 卧 2 卫通常比两间酒店房便宜，还能做早餐；死亡谷园内和 Tusayan 没有整套出租，订两张 Queen 床的酒店房。</p>
+  <p class="sec-lede">每晚的入住和退房日期已经填进 Booking.com（酒店）和 Airbnb（整套房子）的搜索链接。Booking 链接已经筛好：评分 8 分以上、每晚不超过 US$400、免费停车；Airbnb 链接已经筛好：整套房子、2 张床以上、每晚不超过 CA$664、免费停车。打开后都可以手动取消。改一下人数和房间数，链接会跟着更新。4 个人建议优先看 Airbnb：一套 2 卧 2 卫通常比两间酒店房便宜，还能做早餐；死亡谷园内和 Tusayan 没有整套出租，订两张 Queen 床的酒店房。</p>
   <div class="party">
     <label for="adults">成人
       <select id="adults"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select>
@@ -1545,7 +1545,9 @@ document.getElementById("fx").addEventListener("change", e => {
 function airbnbUrl(l) {
   const a = document.getElementById("adults").value, c = document.getElementById("children").value;
   return "https://www.airbnb.com/s/" + enc(l.ss) + "/homes?checkin=" + l.in + "&checkout=" + l.out + "&adults=" + a + "&children=" + c +
-    "&room_types%5B%5D=" + enc("Entire home/apt");
+    "&room_types%5B%5D=" + enc("Entire home/apt") +
+    // Filters: 2+ beds, up to CA$664 per night, free parking (Airbnb amenity id 9)
+    "&min_beds=2&currency=CAD&price_max=664&price_filter_input_type=2&price_filter_num_nights=1&amenities%5B%5D=9";
 }
 function renderLodging() {
   document.getElementById("lodging").innerHTML = P.lodging.map(lodgingAt).map(l => `
