@@ -696,20 +696,23 @@ const D20 = { d: "20", evening: true, isNew: true, title: "周五下班 · 多�
     { t: "22:45", k: "move", name: "开到 El Segundo 的酒店住下", meta: "约 10–15 分钟", note: "机场南边的小城，安静、连锁酒店多，离明天第一站 SpaceX 和海边都近。", g: "El Segundo, CA" }
   ], stay: 0 };
 
-const D21 = { d: "21", title: "洛杉矶海边一日 · SpaceX、大华超市、Venice、Santa Monica、Malibu 日落",
-  leg: ['<span class="shield">CA-1</span>', '<span>市内和海边 · 约 60 mi</span>'],
-  pts: [["El Segundo", "El Segundo, CA"], ["SpaceX 猎鹰 9 号", "SpaceX Headquarters, Hawthorne, CA"], ["大华超市 99 Ranch", "99 Ranch Market, 1340 W Artesia Blvd, Gardena, CA"], ["Venice Beach", "Venice Beach Boardwalk"], ["Santa Monica 码头", "Santa Monica Pier"], ["Malibu 码头", "Malibu Pier"], ["Hollywood 住宿", "Hollywood, Los Angeles, CA"]],
+const D21 = { d: "21", title: "洛杉矶海边一日 · SpaceX、大华超市、Venice、Malibu → 晚上 Santa Monica 码头日落和过山车",
+  leg: ['<span class="shield">CA-1</span>', '<span>市内和海边 · 约 70 mi</span>'],
+  pts: [["El Segundo", "El Segundo, CA"], ["SpaceX 猎鹰 9 号", "SpaceX Headquarters, Hawthorne, CA"], ["大华超市 99 Ranch", "99 Ranch Market, 1340 W Artesia Blvd, Gardena, CA"], ["Venice Beach", "Venice Beach Boardwalk"], ["Malibu 码头", "Malibu Pier"], ["Santa Monica 码头", "Santa Monica Pier"], ["Hollywood 住宿", "Hollywood, Los Angeles, CA"]],
   slots: [
     { t: "08:30", k: "meal", name: "早餐：酒店或 El Segundo 镇上，退房", note: "昨晚 11 点左右才住下，今天睡晚一点。", g: "El Segundo, CA" },
     { t: "09:15", k: "sight", name: "SpaceX 总部 · 猎鹰 9 号火箭", meta: "约 20 分钟 · 免费 · 从路边看", note: "从 El Segundo 开过去约 10 分钟。SpaceX 第一枚成功着陆回收的猎鹰 9 号一级火箭竖在总部东南角（Crenshaw Blvd 和 Jack Northrop Ave 路口），在人行道上就能看到。园区不对外开放，在附近街边短暂停车拍照即可。周六早上路上车少，好停。", g: "SpaceX Headquarters, Hawthorne, CA" },
     { t: "09:45", k: "sight", name: "大华超市 99 Ranch Market（Gardena 店）· 采购零食和路上物资", meta: "约 1 小时 · 从 SpaceX 开过去约 10 分钟", note: "接下来几天在死亡谷、纳瓦霍保留地里买东西很不方便，在这里一次买齐：零食、方便面、水果、瓶装水和饮料，再买个便宜的泡沫保温箱放后备厢。东西白天放后备厢遮好，别留在车里显眼的地方。营业时间以官网为准（网上多写 9:00 开门）。", g: "99 Ranch Market, 1340 W Artesia Blvd, Gardena, CA" },
     { t: "10:50", k: "move", name: "开到 Venice", meta: "约 30 分钟 · 走 I-405" },
     { t: "11:20", k: "sight", name: "Venice Beach 木栈道 · Venice Canals", meta: "约 1h15m", note: "滑板公园、肌肉海滩，再走到安静的运河小区。上午比下午人少。", g: "Venice Beach Boardwalk" },
-    { t: "12:45", k: "meal", name: "午餐：Santa Monica（3rd Street Promenade 一带）", note: "从 Venice 开过去约 10 分钟。" },
-    { t: "13:45", k: "sight", name: "Santa Monica 码头 · 3rd Street Promenade", meta: "约 1h15m", note: "Route 66 的终点牌就在码头上；Promenade 是步行街，可以慢慢逛。", g: "Santa Monica Pier" },
-    { t: "15:00", k: "move", name: "沿太平洋海岸公路（PCH）开到 Malibu", meta: "约 40 分钟 · 一路沿海", note: "PCH 经过 2025 年山火烧过的 Pacific Palisades 一段，还在重建，可能有临时封道或限速，出发前看一下 Google Maps 路况。" },
-    { t: "15:45", k: "sight", name: "Malibu 码头 · Surfrider Beach 看日落", meta: "日落 ≈16:50 · 免费 · 停车约 $10–20", note: "有名的冲浪海滩，木头码头上看日落很好。想去更远的 Point Dume 崖顶的话，先查停车场是否开放（2026 年 8 月有报道说因冲刷损坏关闭）。", g: "Malibu Pier" },
-    { t: "17:30", k: "meal", name: "晚餐：Malibu（码头一带）或回 Santa Monica", note: "饭后开约 1 小时到 Hollywood 住宿。" }
+    { t: "12:35", k: "meal", name: "午餐：Venice（Abbot Kinney Blvd 一带）", note: "Venice 最热闹的一条街，咖啡店和小餐馆多。" },
+    { t: "13:30", k: "move", name: "沿太平洋海岸公路（PCH）开到 Malibu", meta: "约 40 分钟 · 一路沿海", note: "PCH 经过 2025 年山火烧过的 Pacific Palisades 一段，还在重建，可能有临时封道或限速，出发前看一下 Google Maps 路况。" },
+    { t: "14:10", k: "sight", name: "Malibu 码头 · Surfrider Beach", meta: "约 1 小时 · 免费 · 停车约 $10–20", note: "有名的冲浪海滩，下午光线好，在木头码头上看冲浪的人。想去更远的 Point Dume 崖顶的话，先查停车场是否开放（2026 年 8 月有报道说因冲刷损坏关闭）。", g: "Malibu Pier" },
+    { t: "15:15", k: "move", name: "沿 PCH 开回 Santa Monica，停车", meta: "约 35 分钟", note: "码头桥在重建，码头上的停车场进出路线有变化。停码头北边的海滩停车场（Lot 1 North），或者停市中心的公共停车楼（离码头步行 10 分钟，前 90 分钟免费，之后按小时收，比较便宜）。车里别留东西。", g: "Santa Monica Pier" },
+    { t: "15:55", k: "sight", name: "Santa Monica 码头 · Route 66 终点牌 · 坐 West Coaster 过山车", meta: "约 50 分钟 · 过山车 $14/人（网上买）", note: "过山车不用提前预约，到了在售票亭买就行。网上买便宜：单次 $14（现场 $20），无限次手环 $40（现场 $50）。网上买的票要到售票亭换，售票亭在乐园关门前 1 小时关。游乐设施一般 11:00 左右开始运营、晚上 9 点前后停，12 月的时间表官网还没出，下雨或风大会停开，出发前看一下 pacpark.com/hours。趁天亮先坐，在过山车上能看到整片海滩。", g: "Santa Monica Pier" },
+    { t: "16:45", k: "sight", name: "码头看日落 · Pacific Wheel 摩天轮亮灯", meta: "日落 ≈16:47 · 免费", note: "太阳落进海里之后摩天轮开始亮灯，码头西头或者旁边的沙滩上拍最好。想坐摩天轮也是 $14/人（网上买）。", g: "Santa Monica Pier" },
+    { t: "17:30", k: "sight", name: "3rd Street Promenade 步行街", meta: "约 45 分钟", note: "从码头走过去约 5 分钟，晚上有街头表演，圣诞前会挂灯。" },
+    { t: "18:15", k: "meal", name: "晚餐：Santa Monica（Promenade 或 Main Street 一带）", note: "周六晚上人多，热门餐厅最好先在 OpenTable 或 Resy 订位。饭后开约 40 分钟到 Hollywood 住宿（约 20:15 到）。" }
   ], stay: 1 };
 
 const D22 = { d: "22", isNew: true, title: "洛杉矶经典自驾 · Getty 美术馆、Beverly Hills、好莱坞、天文台 → 晚上开到 Ridgecrest",
@@ -1020,7 +1023,7 @@ const ALTS = [
     { k: "hike", name: "走到好莱坞标志背后", en: "Hollywood Sign via Brush Canyon", cost: "免费", dur: "约 3–3.5 小时 · 6.1 mi", when: "早上（全程暴晒）", swap: "12/22 下午（时间要多留 1.5 小时）", note: "比天文台那条更长，但能走到标志正后方的山顶。", warn: "标志本身围起来了，不能靠近摸到。", at: "poi/us/california/los-angeles/hollywood-sign-4", g: "Brush Canyon Trailhead, Los Angeles" },
     { k: "sight", name: "The Broad 当代艺术馆", en: "The Broad", cost: "常设展免费（需在线预约）", dur: "约 1.5 小时", when: "周二到周日", swap: "和市中心老城一起，换掉 12/22 上午的 Getty（就在迪士尼音乐厅旁边）", note: "草间弥生的《无限镜屋》在这里，另外排队登记。旁边是迪士尼音乐厅和 Grand Central Market。", warn: "周一闭馆，热门时段要提前几天预约。", site: "https://www.thebroad.org/", g: "The Broad, Los Angeles" },
     { k: "sight", name: "LACMA 美术馆", en: "LACMA", cost: "Urban Light 免费 · 馆内约 $28/人", dur: "30 分钟–2 小时", when: "傍晚灯亮以后", swap: "12/22 下午在 Urban Light 时进馆（放弃 Melrose 和 RIPNDIP）", note: "202 盏老路灯组成的装置，洛杉矶最常见的拍照点之一。", warn: "博物馆周三闭馆；路灯装置全天开放。", site: "https://www.lacma.org/", g: "Urban Light, LACMA" },
-    { k: "sight", name: "马里布海岸 · El Matador 海滩", en: "El Matador State Beach", cost: "免费 · 小停车场少量收费", dur: "2–3 小时（含开车）", when: "日落", swap: "12/21 下午的 Venice Beach", note: "沿 PCH 一号公路开过去，海边有大礁石和海蚀洞。", warn: "下到海滩是陡坡和台阶，涨潮时能走的沙滩很少。", g: "El Matador State Beach" },
+    { k: "sight", name: "马里布海岸 · El Matador 海滩", en: "El Matador State Beach", cost: "免费 · 小停车场少量收费", dur: "2–3 小时（含开车）", when: "日落", swap: "12/21 下午的 Malibu 码头", note: "沿 PCH 一号公路开过去，海边有大礁石和海蚀洞。", warn: "下到海滩是陡坡和台阶，涨潮时能走的沙滩很少。", g: "El Matador State Beach" },
     { k: "sight", name: "Pasadena · 《回到未来》Doc 的家", en: "Gamble House · Old Pasadena", cost: "外观免费 · 室内只能跟导览，约 $40", dur: "约 2 小时（含 Colorado Street Bridge 和 Old Pasadena）", when: "白天", swap: "12/22 上午的 Getty（Pasadena 在市中心东北约 20 分钟）", note: "Gamble House 是 1908 年的工艺美术运动住宅，《回到未来》里 Doc Brown 的家。附近的 Colorado Street Bridge 是老拱桥，Old Pasadena 是红砖老街。", warn: "室内导览周二、周四到周日开放，要提前订；节日前后时间可能变。", site: "https://gamblehouse.org/", g: "Gamble House, Pasadena" },
     { k: "sight", name: "Silver Lake · Los Feliz 文艺街区", en: "Silver Lake · Music Box Steps", cost: "免费", dur: "约 1.5 小时", when: "下午", swap: "12/22 下午、去天文台之前（就在格里菲斯公园南边）", note: "Sunset Junction 一带的咖啡店和小店、Silver Lake 水库环湖步道，还有 1932 年劳莱与哈台喜剧《The Music Box》里搬钢琴的 Music Box Steps 台阶。", warn: "坡多路窄，路边停车看清标牌。", g: "Music Box Steps, 923 Vendome St, Los Angeles, CA" },
     { k: "fun", name: "派拉蒙片场之旅", en: "Paramount Pictures Studio Tour", cost: "约 $69–71/人", dur: "约 2 小时", when: "白天（每天开团）", swap: "12/22 上午的 Getty", note: "好莱坞唯一还在原址的老牌大片厂，坐电瓶车看摄影棚、纽约街景布景和有名的 Bronson 大门。离 Hollywood 住处约 10 分钟。", warn: "要提前在官网订；节假日场次可能减少。", site: "https://www.paramountstudiotour.com/", g: "Paramount Pictures, Melrose Avenue, Los Angeles" },
@@ -1435,6 +1438,8 @@ const BUDGET = {
   miscPerDay: 15,      // per person: tips, snacks, souvenirs
   // Fees tied to a stop: the item lands on the first day whose schedule includes that stop, and is skipped if the route doesn't go there.
   items: [
+    { cat: "fee",  re: /West Coaster/, label: "Santa Monica 码头 West Coaster 过山车（网上买，现场 $20）", usd: 14, per: "person" },
+    { cat: "park", re: /开回 Santa Monica，停车/, label: "Santa Monica 停车（约 3 小时）", usd: 15, per: "car" },
     { cat: "park", re: /Getty Center/, label: "Getty Center 停车", usd: 25, per: "car" },
     { cat: "park", re: /Griffith Observatory/, label: "格里菲斯天文台停车（按小时，约 2 小时）", usd: 20, per: "car" },
     { cat: "fee",  re: /Death Valley/, label: "美国国家公园非居民年票", usd: 250, per: "car", note: "一辆车一张。覆盖死亡谷、米德湖、红岩、锡安、布莱斯、大峡谷的门票，也免掉锡安、布莱斯和大峡谷每人 $100 的非居民附加费；不买的话方案 A 2 人约 $765、4 人约 $1,365。以 NPS 官网为准" },
