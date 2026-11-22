@@ -166,6 +166,8 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 .daybody .leg { font-size: 12px; }
 .alert { font-size: 13px; line-height: 1.55; padding: 7px 10px; border-radius: 6px; background: var(--tz-bg); }
 .alert.warn { background: var(--accent-soft); border-left: 3px solid var(--accent); }
+.slot.hl { background: var(--accent-soft); border-left: 3px solid var(--accent); padding-left: 8px; padding-right: 8px; border-radius: 6px; }
+.slot.hl .title { font-weight: 700; }
 .alert b { font-weight: 600; }
 .daybody .sched .slot { grid-template-columns: 46px minmax(0, 1fr); gap: 0 10px; font-size: 14px; }
 .daybody .slot .tm { font-size: 12px; }
@@ -783,9 +785,11 @@ const D23_A = Object.assign({}, D23, { title: "Ridgecrest → 死亡谷全景 �
 /* =====================  Plan A: with Grand Canyon, home via PHX  ===================== */
 const A_DAYS = [D20, D21, D22, D23_A,
   { d: "24", isNew: true, title: "胡佛水坝 → 米德湖北岸 → 火焰谷 → 锡安",
+    alerts: [{ warn: true, tag: "抽签", text: "<b>今天要抽明天的 Angels Landing 许可：拉斯维加斯时间 14:00（山地时间 15:00）前在 recreation.gov 提交。</b>每人用自己的账号申请，结果在拉斯维加斯时间 15:00（山地时间 16:00）后发邮件。" }],
     leg: ['<span class="shield">I-11</span>', '<span class="shield">NV-167</span>', '<span class="shield">I-15</span>', '<span class="shield">UT-9</span>', '<span>≈250 mi · 车程约 5h</span>', '<span class="tzchip">+1h · 进入山地时间</span>'],
     pts: [["Las Vegas", "Bellagio Fountains, Las Vegas"], ["胡佛水坝", "Hoover Dam"], ["Elephant Rock", "Elephant Rock, Valley of Fire"], ["Mouse's Tank 岩画", "Mouse's Tank, Valley of Fire"], ["Fire Wave · White Domes", "Fire Wave Trailhead, Valley of Fire State Park"], ["Overton 午餐", "Overton, NV"], ["Springdale 住宿", "Springdale, UT"]],
     slots: [
+      { t: "06:15", k: "sight", hl: true, name: "🎟 Angels Landing 前一天抽签 · 出发前提交", meta: "截止：拉斯维加斯时间 14:00 = 山地时间 15:00 · 每份申请 $6，中签再付 $3/人", note: "抽的是明天（锡安全天）的许可。抽签从山地时间 0:01 开始，也就是拉斯维加斯前一天晚上 23:01，所以昨晚睡前或今早出发前就交，别拖到路上：火焰谷和米德湖一带手机信号很差。每人用自己的 recreation.gov 账号各交一份（提前注册好、绑好信用卡），一份申请最多带 6 个人。注意 recreation.gov 规定同一账号交多份会全部作废；同一个人能不能同时出现在几份申请里，提交前看清楚申请页上的规则。<a href=\"https://www.recreation.gov/permits/4675324\" target=\"_blank\" rel=\"noopener\">recreation.gov 抽签页 ↗</a>" },
       { t: "06:45", k: "move", name: "退房，走 I-11 开往胡佛水坝", meta: "约 40 分钟 · 日出 ≈06:50", note: "早餐在酒店附近买了带上车。" },
       { t: "07:30", k: "hike", name: "Mike O'Callaghan–Pat Tillman 大桥步道 · 俯瞰胡佛水坝", meta: "往返约 30–40 分钟 · 简单 · 停车免费", note: "早上太阳从东边照进黑峡谷，水坝正面是顺光，人也少。从大桥专用停车场沿坡道走上桥的人行道，能看到整座水坝和米德湖下游。", g: "Hoover Dam" },
       { t: "08:15", k: "sight", name: "胡佛水坝 · 坝顶走一段", meta: "约 30 分钟 · 坝下停车楼 $10", note: "沿坝顶走到对岸就是亚利桑那（冬天比内华达快 1 小时）。游客中心 9:00 才开门，这次只看外面，不进馆。", g: "Hoover Dam" },
@@ -796,6 +800,7 @@ const A_DAYS = [D20, D21, D22, D23_A,
       { t: "13:40", k: "move", name: "从北门出园，开往 Overton", meta: "约 25 分钟" },
       { t: "14:05", k: "meal", name: "午餐：Overton 小镇", note: "火焰谷里没有餐厅，午饭比较晚，上午在车上垫点零食。", g: "Overton, NV" },
       { t: "14:50", k: "move", name: "回 I-15 北上，经 St. George 到 Springdale", meta: "≈120 mi · 约 2 小时 · 进入犹他后拨快 1 小时，到达 ≈17:50 山地时间", note: "日落 ≈17:10 时大概在 St. George 附近，进 UT-9 之后天就黑了。原来傍晚的 Kolob Canyons 这次不去（见「备选」）。" },
+      { t: "16:00", k: "sight", hl: true, name: "🎟 查 Angels Landing 抽签结果（邮件）", meta: "山地时间 16:00 后（拉斯维加斯时间 15:00）", note: "大概在 St. George 附近收到。中签的话许可会发到申请人的账号里，明天上山前要能出示（截图或打印），而且不能改日期、不能换人。没中签就照原计划只走到 Scout Lookout。" },
       { t: "18:00", k: "meal", name: "晚餐：Springdale", g: "Springdale, UT" }
     ], stay: 4 },
   { d: "25", isNew: true, title: "锡安全天 · Riverside Walk、Scout Lookout、Emerald Pools 和 Watchman 日落",
@@ -805,7 +810,7 @@ const A_DAYS = [D20, D21, D22, D23_A,
       { t: "07:45", k: "meal", name: "早餐：Springdale", g: "Springdale, UT" },
       { t: "08:15", k: "move", name: "游客中心停车，坐班车进 Scenic Drive", meta: "到终点站约 45 分钟", note: "节假日期间 Scenic Drive 一般只能坐班车，冬季班次少，以 NPS 当天的时刻表为准。游客中心停车场早上 9 点前容易找到位子。" },
       { t: "09:00", k: "hike", name: "Riverside Walk", meta: "2.2 mi · 平坦铺装 · 约 1–1.5 小时 · 简单", note: "Scenic Drive 尽头，Narrows 的起点。", at: "trail/us/utah/the-zion-narrows-riverside-walk", g: "Temple of Sinawava, Zion National Park" },
-      { t: "10:30", k: "hike", name: "West Rim Trail 到 Scout Lookout", meta: "约 4 mi · 爬升约 1,100 ft · 往返 · 约 2.5–3 小时 · 较难", note: "从 The Grotto 班车站出发，沿着之字形的 Walter's Wiggles 爬上去，终点正对 Angels Landing 的铁链段，到这里不用抽签。冬天背阴处常结冰，带冰爪（microspikes）。", g: "The Grotto Trailhead, Zion National Park" },
+      { t: "10:30", k: "hike", name: "West Rim Trail 到 Scout Lookout（中签就上 Angels Landing）", meta: "约 4 mi · 爬升约 1,100 ft · 往返 · 约 2.5–3 小时 · 较难", hl: true, note: "<b>昨天中签的话，从 Scout Lookout 接着走铁链段上 Angels Landing 顶</b>（多 1 mi 往返、约 1–1.5 小时，午饭推到 14:30，后面 Emerald Pools 改走 Lower 一段）。没中签就到 Scout Lookout 折返。从 The Grotto 班车站出发，沿着之字形的 Walter's Wiggles 爬上去，终点正对 Angels Landing 的铁链段，到这里不用抽签。冬天背阴处常结冰，带冰爪（microspikes）。", g: "The Grotto Trailhead, Zion National Park" },
       { t: "13:15", k: "meal", name: "午餐：Zion Lodge（Red Rock Grill）", note: "从 The Grotto 沿河边小路走过去约 10 分钟，或坐一站班车。", g: "Zion Lodge, Zion National Park" },
       { t: "14:15", k: "hike", name: "Emerald Pools（Lower → Upper）", meta: "3 mi · 爬升 406 ft · 约 1.5 小时 · 中等", note: "午饭后从 Zion Lodge 对面出发。冬季可能有冰。", at: "trail/us/utah/emerald-pools-trail", g: "Zion Lodge, Zion National Park" },
       { t: "15:50", k: "hike", name: "Pa'rus Trail 走到 Canyon Junction 看日落", meta: "1.7 mi 单程 · 平坦铺装 · 日落 ≈17:15", note: "沿 Virgin River 走，终点的桥上是看 Watchman 峰日落的经典位置。", at: "parks/us/utah/zion-national-park/paved", g: "Canyon Junction Bridge, Zion National Park" },
@@ -1044,7 +1049,7 @@ const ALTS = [
   ]},
   { area: "锡安及周边", dates: "12/24–12/26", items: [
     { k: "sight", name: "Kolob Canyons 景观道路", en: "Kolob Canyons", cost: "含在公园门票内", dur: "约 1 小时 · 5 mi 景观道路 + 步道 1 mi 往返", when: "傍晚", swap: "方案 A 12/24 下午：火焰谷少走 Fire Wave 环线，提早约 1.5 小时出发", note: "锡安西北角，红色的「手指峡谷」傍晚最好看，就在 I-15 的 40 号出口，游客比主峡谷少得多。", warn: "下雪时这条路可能临时封闭。", at: "trail/us/utah/timber-creek-overlook-trail--2", g: "Kolob Canyons Visitor Center" },
-    { k: "hike", name: "Angels Landing", en: "Angels Landing", cost: "抽签 $6 + 中签 $3/人", dur: "4–5 小时 · 约 5 mi · 爬升约 1,500 ft", when: "早上", swap: "12/25 的 Scout Lookout（同一条路，中签就从 Scout Lookout 接着走铁链段）", note: "锡安最有名的步道，最后一段要抓着铁链走在悬崖边。", warn: "冬季季度抽签 10/20 已截止，只能参加“前一天抽签”。链条段结冰时非常危险，带冰爪。", at: "trail/us/utah/angels-landing-trail", site: "https://www.nps.gov/zion/planyourvisit/angelslanding.htm", g: "The Grotto Trailhead, Zion National Park" },
+    { k: "hike", name: "Angels Landing", en: "Angels Landing", cost: "抽签 $6 + 中签 $3/人", dur: "4–5 小时 · 约 5 mi · 爬升约 1,500 ft", when: "早上", swap: "12/25 的 Scout Lookout（同一条路，中签就从 Scout Lookout 接着走铁链段）", note: "锡安最有名的步道，最后一段要抓着铁链走在悬崖边。", warn: "冬季季度抽签 10/20 已截止，只能参加“前一天抽签”（行程里已安排在前一天早上提交）。链条段结冰时非常危险，带冰爪。", at: "trail/us/utah/angels-landing-trail", site: "https://www.nps.gov/zion/planyourvisit/angelslanding.htm", g: "The Grotto Trailhead, Zion National Park" },
     { k: "hike", name: "The Narrows 河道徒步（从下往上）", en: "The Narrows, Zion", cost: "冬季要租干衣套装，约 $60 起/人", dur: "3–5 小时，可随时折返", when: "中午最暖时", swap: "12/25 下午的 Emerald Pools", note: "在两侧几百米高的峡谷里蹚水走，从 Riverside Walk 尽头开始。", warn: "冬天水温只有几度，不穿干衣容易失温；先在 NPS 查水位和山洪风险。", g: "Temple of Sinawava, Zion National Park" },
   ]},
   { area: "Page 和纪念碑谷", dates: "12/26–12/28", items: [
@@ -1159,6 +1164,7 @@ const HOLIDAY = {
 function dayAlerts(day, iso) {
   const out = [], wd = toDate(iso).getDay(), mmdd = iso.slice(5);
   const has = re => day.slots.some(s => re.test((s.g || "") + " " + s.name));
+  if (day.alerts) out.push(...day.alerts);
   if (HOLIDAY[mmdd]) out.push({ tag: HOLIDAY[mmdd][0], text: HOLIDAY[mmdd][1] });
   if (wd === 1 && has(/Getty|Griffith/)) out.push({ warn: true, tag: "周一闭馆", text: "<b>Getty Center 和格里菲斯天文台周一都闭馆。</b>换一个出发日期，或者这天改去环球影城（每天开放）。" });
   if ((mmdd === "12-25" || mmdd === "01-01") && has(/Getty|Griffith/)) out.push({ warn: true, tag: "闭馆", text: "<b>Getty Center 和格里菲斯天文台圣诞节、元旦闭馆。</b>换一个出发日期，或者这天改去别处。" });
@@ -1440,6 +1446,7 @@ const BUDGET = {
   items: [
     { cat: "fee",  re: /West Coaster/, label: "Santa Monica 码头 West Coaster 过山车（网上买，现场 $20）", usd: 14, per: "person" },
     { cat: "park", re: /开回 Santa Monica，停车/, label: "Santa Monica 停车（约 3 小时）", usd: 15, per: "car" },
+    { cat: "fee",  re: /前一天抽签/, label: "Angels Landing 前一天抽签申请费（每人交一份）", usd: 6, per: "person", note: "中签再付 $3/人" },
     { cat: "park", re: /Getty Center/, label: "Getty Center 停车", usd: 25, per: "car" },
     { cat: "park", re: /Griffith Observatory/, label: "格里菲斯天文台停车（按小时，约 2 小时）", usd: 20, per: "car" },
     { cat: "fee",  re: /Death Valley/, label: "美国国家公园非居民年票", usd: 250, per: "car", note: "一辆车一张。覆盖死亡谷、米德湖、红岩、锡安、布莱斯、大峡谷的门票，也免掉锡安、布莱斯和大峡谷每人 $100 的非居民附加费；不买的话方案 A 2 人约 $765、4 人约 $1,365。以 NPS 官网为准" },
@@ -1603,7 +1610,7 @@ function renderDays() {
       }
       const meta = s.meta ? s.meta.replace("{GRIFFITH}", griffithHours(wd)) : "";
       const pic = slotPic(s);
-      return `<li class="slot ${s.k}${pic ? " has-pic" : ""}">
+      return `<li class="slot ${s.k}${s.hl ? " hl" : ""}${pic ? " has-pic" : ""}">
         <span class="tm">${s.t}</span>
         <div class="what">
           <div class="title"><span class="kind">${KIND[s.k]}</span>${s.name}</div>
