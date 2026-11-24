@@ -482,9 +482,10 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
       <h4>洛杉矶 · 路边短停和住宿</h4>
       <ul>
         <li><b>SpaceX · Rocket Lab</b>：都是路边短停拍照，留一个人在车上，几分钟就走。 <a href="https://www.google.com/maps/search/?api=1&amp;query=SpaceX%20Headquarters%2C%20Hawthorne%2C%20CA" target="_blank" rel="noopener">地图 ↗</a></li>
-        <li><b>Signal Hill · Hilltop Park</b>：公园只有几个车位，旁边住宅街可以短停；晚上去留一个人在车上，注意禁停时段。 <a href="https://www.google.com/maps/search/?api=1&amp;query=Hilltop%20Park%2C%20Signal%20Hill%2C%20CA" target="_blank" rel="noopener">地图 ↗</a></li>
+        <li><b>Signal Hill · Hilltop Park</b>：公园只有几个车位，旁边住宅街白天停一会儿问题不大，注意禁停时段。 <a href="https://www.google.com/maps/search/?api=1&amp;query=Hilltop%20Park%2C%20Signal%20Hill%2C%20CA" target="_blank" rel="noopener">地图 ↗</a></li>
         <li><b>Melrose 粉墙 · RIPNDIP</b>：只能停路边，留一个人在车上，或者轮流下车拍照。 <a href="https://www.google.com/maps/search/?api=1&amp;query=8221%20Melrose%20Avenue%2C%20Los%20Angeles%2C%20CA" target="_blank" rel="noopener">地图 ↗</a></li>
-        <li><b>住宿（El Segundo、长滩）</b>：订有自家封闭车库的酒店（Booking 链接已经筛了免费停车），行李全部拿进房间。 <a href="https://www.google.com/maps/search/?api=1&amp;query=Long%20Beach%2C%20CA" target="_blank" rel="noopener">地图 ↗</a></li>
+        <li><b>Hollywood Bowl 观景台</b>：小停车场，晚上去最好留一个人在车上。 <a href="https://www.google.com/maps/search/?api=1&amp;query=Hollywood%20Bowl%20Overlook%2C%20Mulholland%20Dr%2C%20Los%20Angeles%2C%20CA" target="_blank" rel="noopener">地图 ↗</a></li>
+        <li><b>住宿（长滩、Hollywood）</b>：订有自家封闭车库的酒店（Booking 链接已经筛了免费停车），行李全部拿进房间。 <a href="https://www.google.com/maps/search/?api=1&amp;query=Long%20Beach%2C%20CA" target="_blank" rel="noopener">地图 ↗</a></li>
       </ul>
     </div>
     <div class="notecard">
@@ -757,55 +758,56 @@ const routeLink = pts => "https://www.google.com/maps/dir/" +
 // lunch around 12:00, dinner 17:00–19:00, extra buffer on long drives and before flights. k: hike | sight | move | meal.
 const D20 = { d: "20", evening: true, isNew: true, title: "周五下班 · 多伦多 ✈ 洛杉矶",
   leg: ['<span>YYZ → LAX 约 5h30m 航程</span>', '<span class="tzchip">−3h · 太平洋时间</span>'],
-  pts: [["LAX", "Los Angeles International Airport"], ["El Segundo 住宿", "El Segundo, CA"]],
+  pts: [["LAX", "Los Angeles International Airport"], ["长滩住宿", "Long Beach, CA"]],
   slots: [
     { t: "16:00", k: "move", name: "到多伦多 Pearson 机场", meta: "起飞前 3 小时", note: "飞美国要在多伦多先过美国海关（预清关），周五晚上加上圣诞前出行高峰，排队会很长，所以留足 3 小时。过关后在航站楼吃晚饭。" },
     { t: "19:00", k: "move", name: "Air Canada 直飞洛杉矶", meta: "19:00 → 21:34（洛杉矶时间）· 约 5h34m" },
     { t: "21:35", k: "move", name: "抵达 LAX，取行李，去租车中心取车", meta: "留约 1 小时", note: "已经在多伦多过了海关，落地就是国内到达。租车中心在机场外，要坐接驳车。LAX 的大租车公司大多 24 小时营业，订车时确认一下，并填上航班号，晚点也会给你留车。单程租车，在 PHX 或 LAS 还车。", g: "Los Angeles International Airport" },
-    { t: "22:45", k: "move", name: "开到 El Segundo 的酒店住下", meta: "约 10–15 分钟", note: "机场南边的小城，安静、连锁酒店多，离明天第一站 SpaceX 和海边都近。", g: "El Segundo, CA" }
+    { t: "22:45", k: "move", name: "开到长滩的酒店住下", meta: "约 30 分钟 · I-405 南下 · 到达 ≈23:15", note: "晚上路上不堵。住长滩机场一带或市中心都行，明天一早从长滩出发一路往北玩。选可以晚到入住、带停车场的酒店，行李拿进房间。", g: "Long Beach, CA" }
   ], stay: 0 };
 
-const D21 = { d: "21", title: "洛杉矶海边一日 · SpaceX → Venice → Malibu → Santa Monica 日落 → 夜游长滩港，住长滩",
-  leg: ['<span class="shield">I-405</span>', '<span class="shield">CA-1</span>', '<span class="shield">I-110</span>', '<span>市内、海边和港口 · 约 100 mi</span>'],
-  pts: [["El Segundo", "El Segundo, CA"], ["SpaceX 猎鹰 9 号", "SpaceX Headquarters, Hawthorne, CA"], ["大华超市 99 Ranch", "99 Ranch Market, 1340 W Artesia Blvd, Gardena, CA"], ["Venice Beach", "Venice Beach Boardwalk"], ["Malibu 码头", "Malibu Pier"], ["Santa Monica 码头", "Santa Monica Pier"], ["Vincent Thomas 大桥", "Vincent Thomas Bridge, San Pedro, CA"], ["长滩国际门户大桥", "Long Beach International Gateway Bridge"], ["Signal Hill 夜景", "Hilltop Park, Signal Hill, CA"], ["长滩住宿", "Long Beach, CA"]],
+const D21 = { d: "21", title: "长滩一路向北 · Rocket Lab、长滩港 → SpaceX → Venice → Malibu → Santa Monica 日落 → 好莱坞夜景",
+  leg: ['<span class="shield">I-710</span>', '<span class="shield">I-405</span>', '<span class="shield">CA-1</span>', '<span>港口、海边和市内 · 约 100 mi</span>'],
+  pts: [["长滩", "Long Beach, CA"], ["Rocket Lab 总部", "Rocket Lab, 3881 McGowen St, Long Beach, CA"], ["Signal Hill 俯瞰长滩港", "Hilltop Park, Signal Hill, CA"], ["长滩国际门户大桥", "Long Beach International Gateway Bridge"], ["Vincent Thomas 大桥", "Vincent Thomas Bridge, San Pedro, CA"], ["大华超市 99 Ranch", "99 Ranch Market, 1340 W Artesia Blvd, Gardena, CA"], ["SpaceX 猎鹰 9 号", "SpaceX Headquarters, Hawthorne, CA"], ["Venice Beach", "Venice Beach Boardwalk"], ["Malibu 码头", "Malibu Pier"], ["Santa Monica 码头", "Santa Monica Pier"], ["Sunset Strip", "Sunset Strip, West Hollywood, CA"], ["Hollywood Bowl 观景台", "Hollywood Bowl Overlook, Mulholland Dr, Los Angeles, CA"], ["Hollywood 住宿", "Hollywood, Los Angeles, CA"]],
   slots: [
-    { t: "08:15", k: "meal", name: "早餐：酒店或 El Segundo 镇上，退房", note: "昨晚 11 点左右才住下，今天行程满，早点吃完出发。", g: "El Segundo, CA" },
-    { t: "08:50", k: "sight", name: "SpaceX 总部 · 猎鹰 9 号火箭", meta: "约 20 分钟 · 免费 · 从路边看", note: "从 El Segundo 开过去约 10 分钟。SpaceX 第一枚成功着陆回收的猎鹰 9 号一级火箭竖在总部东南角（Crenshaw Blvd 和 Jack Northrop Ave 路口），在人行道上就能看到。园区不对外开放，在附近街边短暂停车拍照即可。周六早上路上车少，好停。", g: "SpaceX Headquarters, Hawthorne, CA" },
-    { t: "09:10", k: "move", name: "开到 Gardena", meta: "约 15 分钟" },
-    { t: "09:30", k: "sight", name: "大华超市 99 Ranch Market（Gardena 店）· 采购零食和路上物资", meta: "约 45 分钟", note: "接下来几天在死亡谷、纳瓦霍保留地里买东西很不方便，在这里一次买齐：零食、方便面、水果、瓶装水和饮料，再买个便宜的泡沫保温箱放后备厢。网上的营业时间说法不一（早上 8 点或 9 点开门），出发前看一下 Google 地图或打 310-323-3399 确认。东西放后备厢遮好。", g: "99 Ranch Market, 1340 W Artesia Blvd, Gardena, CA" },
-    { t: "10:15", k: "move", name: "开到 Venice", meta: "约 35 分钟 · 走 I-405" },
-    { t: "10:50", k: "sight", name: "Venice Beach 木栈道 · Venice Canals", meta: "约 1h15m", note: "滑板公园、肌肉海滩，再走到安静的运河小区。车停 Venice Blvd 西端的海滩收费停车场。", g: "Venice Beach Boardwalk" },
-    { t: "12:05", k: "meal", name: "午餐：Venice（Abbot Kinney Blvd 一带）", note: "Venice 最热闹的一条街，咖啡店和小餐馆多。" },
-    { t: "13:00", k: "move", name: "沿 PCH 海岸公路开到 Malibu", meta: "约 40 分钟 · CA-1 一路靠海", note: "过了 Santa Monica 就是一路贴着海的 Pacific Coast Highway。中间经过 2025 年山火烧过的 Pacific Palisades 一段，可能有临时封道或限速，出发前看一下 Google 地图的路况。" },
-    { t: "13:40", k: "sight", name: "Malibu 码头 · Surfrider Beach", meta: "约 1 小时 · 免费 · 停车约 $10–20", note: "有名的冲浪海滩，木头码头上看冲浪的人，码头头上有家 Malibu Farm 咖啡馆。车停码头旁边的收费停车场，别停 PCH 路边。", g: "Malibu Pier" },
-    { t: "14:45", k: "move", name: "开回 Santa Monica，停车", meta: "约 30 分钟", note: "码头桥在重建，码头上的停车场进出路线有变化。停市中心的公共停车楼（离码头步行 10 分钟，前 90 分钟免费，之后按小时收），见下方「停车建议」。车里别留东西。", g: "Santa Monica Pier" },
-    { t: "15:20", k: "sight", name: "Santa Monica 码头 · Route 66 终点牌 · 坐 West Coaster 过山车", meta: "约 1h20m · 过山车 $14/人（网上买）", note: "过山车不用提前预约，到了在售票亭买就行。网上买便宜：单次 $14（现场 $20），无限次手环 $40（现场 $50）。网上买的票要到售票亭换，售票亭在乐园关门前 1 小时关。游乐设施一般 11:00 左右开始运营、晚上 9 点前后停，12 月的时间表官网还没出，下雨或风大会停开，出发前看一下 pacpark.com/hours。趁天亮先坐，在过山车上能看到整片海滩。", g: "Santa Monica Pier" },
+    { t: "07:45", k: "meal", name: "早餐：长滩酒店或附近，退房", note: "昨晚 11 点多才住下，今天一路往北、行程满，早点吃完出发。", g: "Long Beach, CA" },
+    { t: "08:30", k: "sight", name: "Rocket Lab 总部（长滩 Douglas Park）", meta: "约 10 分钟 · 免费 · 只能从外面看", note: "地址 3881 McGowen St，挨着长滩机场，是 Rocket Lab 的总部、任务控制中心和生产厂房。没有对外参观，大门口拍照就好，别进停车场和厂区。周六基本没人，路边短暂停车，留一个人在车上。", g: "Rocket Lab, 3881 McGowen St, Long Beach, CA" },
+    { t: "08:50", k: "sight", name: "Signal Hill · Hilltop Park 俯瞰长滩港", meta: "约 25 分钟 · 免费 · 开过去约 10 分钟", note: "小山顶的公园，能看到长滩港一排排集装箱龙门吊、港里的 THUMS 人造石油岛、长滩市中心，天气好能看到 Catalina 岛。停车场只有几个位，旁边住宅街上可以停，注意路牌上的禁停时段。", g: "Hilltop Park, Signal Hill, CA" },
+    { t: "09:15", k: "move", name: "开车穿过长滩港集装箱区：国际门户大桥 → Terminal Island → Vincent Thomas 大桥", meta: "约 35 分钟 · 一路在车上看", note: "从市中心上 Ocean Blvd 往西，开上新的长滩国际门户大桥（高处能俯看整片码头和堆场），下桥进 Terminal Island，再从绿色的 Vincent Thomas 吊桥过到 San Pedro。码头和堆场都是管制区，不能开进去，桥上不能停车。周六大货车少一些，但仍然多，跟车别太近。", g: "Long Beach International Gateway Bridge" },
+    { t: "09:50", k: "move", name: "从 San Pedro 开到 Gardena", meta: "约 20 分钟 · I-110 北上" },
+    { t: "10:10", k: "sight", name: "大华超市 99 Ranch Market（Gardena 店）· 采购零食和路上物资", meta: "约 45 分钟", note: "接下来几天在死亡谷、纳瓦霍保留地里买东西很不方便，在这里一次买齐：零食、方便面、水果、瓶装水和饮料，再买个便宜的泡沫保温箱放后备厢。东西放后备厢遮好，别留在车里显眼的地方。", g: "99 Ranch Market, 1340 W Artesia Blvd, Gardena, CA" },
+    { t: "10:55", k: "move", name: "开到 Hawthorne", meta: "约 10 分钟" },
+    { t: "11:05", k: "sight", name: "SpaceX 总部 · 猎鹰 9 号火箭", meta: "约 20 分钟 · 免费 · 从路边看", note: "SpaceX 第一枚成功着陆回收的猎鹰 9 号一级火箭竖在总部东南角（Crenshaw Blvd 和 Jack Northrop Ave 路口），在人行道上就能看到。园区不对外开放，在附近街边短暂停车拍照即可，留一个人在车上（车里已经有刚买的东西）。", g: "SpaceX Headquarters, Hawthorne, CA" },
+    { t: "11:25", k: "move", name: "开到 Venice", meta: "约 25 分钟 · 走 I-405 或 Lincoln Blvd" },
+    { t: "11:50", k: "meal", name: "午餐：Venice（Abbot Kinney Blvd 一带）", note: "Venice 最热闹的一条街，咖啡店和小餐馆多。" },
+    { t: "12:45", k: "sight", name: "Venice Beach 木栈道 · Venice Canals", meta: "约 1 小时", note: "滑板公园、肌肉海滩，再走到安静的运河小区。车停 Venice Blvd 西端的海滩收费停车场。", g: "Venice Beach Boardwalk" },
+    { t: "13:45", k: "move", name: "沿 PCH 海岸公路开到 Malibu", meta: "约 40 分钟 · CA-1 一路靠海", note: "过了 Santa Monica 就是一路贴着海的 Pacific Coast Highway。中间经过 2025 年山火烧过的 Pacific Palisades 一段，可能有临时封道或限速，出发前看一下 Google 地图的路况。" },
+    { t: "14:25", k: "sight", name: "Malibu 码头 · Surfrider Beach", meta: "约 50 分钟 · 免费 · 停车约 $10–20", note: "有名的冲浪海滩，木头码头上看冲浪的人，码头头上有家 Malibu Farm 咖啡馆。车停码头旁边的收费停车场，别停 PCH 路边。", g: "Malibu Pier" },
+    { t: "15:15", k: "move", name: "开回 Santa Monica，停车", meta: "约 30 分钟", note: "码头桥在重建，码头上的停车场进出路线有变化。停市中心的公共停车楼（离码头步行 10 分钟，前 90 分钟免费，之后按小时收），见下方「停车建议」。车里别留东西。", g: "Santa Monica Pier" },
+    { t: "15:45", k: "sight", name: "Santa Monica 码头 · Route 66 终点牌 · 坐 West Coaster 过山车", meta: "约 1 小时 · 过山车 $14/人（网上买）", note: "过山车不用提前预约，到了在售票亭买就行。网上买便宜：单次 $14（现场 $20），无限次手环 $40（现场 $50）。网上买的票要到售票亭换，售票亭在乐园关门前 1 小时关。游乐设施一般 11:00 左右开始运营、晚上 9 点前后停，12 月的时间表官网还没出，下雨或风大会停开，出发前看一下 pacpark.com/hours。趁天亮先坐，在过山车上能看到整片海滩。", g: "Santa Monica Pier" },
     { t: "16:45", k: "sight", name: "码头看日落 · Pacific Wheel 摩天轮亮灯", meta: "日落 ≈16:47 · 免费", note: "太阳落进海里之后摩天轮开始亮灯，码头西头或者旁边的沙滩上拍最好。想坐摩天轮也是 $14/人（网上买）。", g: "Santa Monica Pier" },
     { t: "17:20", k: "sight", name: "3rd Street Promenade 步行街", meta: "约 40 分钟", note: "从码头走过去约 5 分钟，晚上有街头表演，圣诞前会挂灯。" },
     { t: "18:00", k: "meal", name: "晚餐：Santa Monica（Promenade 或 Main Street 一带）", note: "周六晚上人多，热门餐厅最好先在 OpenTable 或 Resy 订位。" },
-    { t: "19:15", k: "move", name: "开往 San Pedro：I-405 → I-110 南下", meta: "约 45 分钟" },
-    { t: "20:00", k: "move", name: "夜游长滩港：Vincent Thomas 大桥 → Terminal Island → 国际门户大桥", meta: "约 25 分钟 · 一路在车上看", note: "从 San Pedro 上绿色的 Vincent Thomas 吊桥（晚上桥身亮蓝色的灯），下桥进 Terminal Island，两边是灯火通明的集装箱码头和龙门吊；再上新的长滩国际门户大桥，从高处看整片港区夜景，下桥就是长滩市中心。码头是管制区，不能开进去，桥上不能停车。晚上大货车少一些，跟车别太近。", g: "Long Beach International Gateway Bridge" },
-    { t: "20:30", k: "sight", name: "Signal Hill · Hilltop Park 夜景", meta: "约 25 分钟 · 免费 · 从市中心开过去约 10 分钟", note: "小山顶的公园，能看到长滩港的灯海、长滩市中心和远处的洛杉矶。城市公园一般开到 22:00（2022 年市政文件写的时间，到了看现场告示）。只有几个车位，旁边住宅街上可以停，晚上留一个人在车上。", g: "Hilltop Park, Signal Hill, CA" },
-    { t: "21:00", k: "move", name: "到长滩住宿", meta: "约 10 分钟", note: "住长滩市中心或长滩机场一带都行，明早顺路在 Rocket Lab 门口看一眼再一路往北。选有自家停车场（最好是封闭车库）的酒店或带车位的 Airbnb，行李全部拿进房间，不要过夜留在车里。", g: "Long Beach, CA" }
+    { t: "19:15", k: "move", name: "夜游：沿 Sunset Blvd 开过 Sunset Strip", meta: "约 45 分钟 · 在车上看", note: "从 Santa Monica 上 Sunset Blvd 一路往东，过了 Beverly Hills 就是 West Hollywood 的 Sunset Strip：巨幅霓虹广告牌、Whisky a Go Go 和 Roxy 这些老牌夜店。路边停车难，坐在车上看就好。想下车逛的话，可以改去 The Grove（圣诞季有大圣诞树和灯光，商场停车楼有保安，安全）。", g: "Sunset Strip, West Hollywood, CA" },
+    { t: "20:05", k: "sight", name: "Hollywood Bowl 观景台 · 洛杉矶夜景", meta: "约 20 分钟 · 免费", note: "Mulholland Drive 上的小观景台，能看到好莱坞碗、市中心的灯海，白天还能看到好莱坞标志。离酒店只有 10 分钟。停车场很小，弯道上车速快，进出小心；网上写 24 小时开放，但没有官方说明，到了看现场的告示。车里别留包。", g: "Hollywood Bowl Overlook, Mulholland Dr, Los Angeles, CA" },
+    { t: "20:35", k: "move", name: "到 Hollywood 住宿", meta: "约 10 分钟", note: "住好莱坞，明早 7 点半爬天文台旁边的 Mount Hollywood 只要几分钟车程。选有自家停车场（最好是封闭车库）的酒店，车里装着全部行李和刚买的东西，全部拿进房间，不要过夜留在车里。", g: "Hollywood, Los Angeles, CA" }
   ], stay: 1 };
 
 const D22 = { d: "22", isNew: true, title: "洛杉矶经典自驾 · Getty 美术馆、Beverly Hills、好莱坞、天文台 → 晚上开到 Ridgecrest",
-  leg: ['<span class="shield">US-101</span>', '<span class="shield">I-405</span>', '<span class="shield">I-5</span>', '<span class="shield">CA-14</span>', '<span>长滩出发，市内约 75 mi + 晚上到 Ridgecrest ≈150 mi · 车程约 2h30m</span>'],
-  pts: [["Rocket Lab 总部", "Rocket Lab, 3881 McGowen St, Long Beach, CA"], ["Mount Hollywood 步道", "Griffith Observatory"], ["Sunset Strip", "Whisky a Go Go, 8901 Sunset Blvd, West Hollywood, CA"], ["Getty Center", "Getty Center"], ["Beverly Hills", "Rodeo Drive, Beverly Hills"], ["Melrose 粉墙", "8221 Melrose Avenue, Los Angeles"], ["RIPNDIP", "RIPNDIP, 441 N Fairfax Ave, Los Angeles"], ["中国剧院", "TCL Chinese Theatre"], ["格里菲斯天文台", "Griffith Observatory"], ["Koreatown", "Koreatown, Los Angeles, CA"], ["Ridgecrest 住宿", "Ridgecrest, CA"]],
+  leg: ['<span class="shield">US-101</span>', '<span class="shield">I-405</span>', '<span class="shield">I-5</span>', '<span class="shield">CA-14</span>', '<span>市内约 45 mi + 晚上到 Ridgecrest ≈150 mi · 车程约 2h30m</span>'],
+  pts: [["Mount Hollywood 步道", "Griffith Observatory"], ["Sunset Strip", "Whisky a Go Go, 8901 Sunset Blvd, West Hollywood, CA"], ["Getty Center", "Getty Center"], ["Beverly Hills", "Rodeo Drive, Beverly Hills"], ["Melrose 粉墙", "8221 Melrose Avenue, Los Angeles"], ["RIPNDIP", "RIPNDIP, 441 N Fairfax Ave, Los Angeles"], ["中国剧院", "TCL Chinese Theatre"], ["格里菲斯天文台", "Griffith Observatory"], ["Koreatown", "Koreatown, Los Angeles, CA"], ["Ridgecrest 住宿", "Ridgecrest, CA"]],
   slots: [
-    { t: "06:45", k: "move", name: "长滩退房，行李装车", note: "今晚住 Ridgecrest，行李一整天都在车上。洛杉矶砸车窗偷东西很常见：出门前就把行李全放进后备厢盖好，到了景点停车场不要再开后备厢，车里什么都别留在明处。" },
-    { t: "07:00", k: "sight", name: "Rocket Lab 总部（长滩 Douglas Park）", meta: "约 10 分钟 · 免费 · 只能从外面看", note: "地址 3881 McGowen St，挨着长滩机场，离酒店几分钟。是 Rocket Lab 的总部、任务控制中心和生产厂房，没有对外参观，大门口拍照就好，别进停车场和厂区。周日一早没人，路边短暂停车，留一个人在车上。", g: "Rocket Lab, 3881 McGowen St, Long Beach, CA" },
-    { t: "07:10", k: "move", name: "一路往北开到格里菲斯天文台", meta: "约 45 分钟 · I-710 → I-5 · 周日早上不堵" },
-    { t: "08:00", k: "hike", name: "Mount Hollywood Trail", meta: "约 3 mi · 爬升 501 ft · 环线 · 约 1.5 小时 · 中等", note: "早上人少、好停车。从天文台停车场出发，山顶能同时看到好莱坞标志和市中心。步道一早就开，天文台建筑要晚些才开门。", at: "trail/us/california/mount-hollywood-trail", g: "Griffith Observatory" },
-    { t: "09:30", k: "move", name: "沿 Sunset Blvd 往西开到 Getty：Sunset Strip → Beverly Hills 豪宅区 → Bel Air", meta: "约 45 分钟 · 开车看 · 周日早上不堵", note: "先过 West Hollywood 的 Sunset Strip：Whisky a Go Go、The Roxy、Chateau Marmont 和一路的巨幅广告牌；再进 Beverly Hills 北边弯弯曲曲的豪宅区，最后在 I-405 旁边上山。", g: "Whisky a Go Go, 8901 Sunset Blvd, West Hollywood, CA" },
-    { t: "10:15", k: "sight", name: "Getty Center 美术馆", meta: "约 2 小时 · 免费（官网可预约入场时段）· 停车 $25 · 周日 10:00–17:30", note: "山顶的白色美术馆，有梵高《鸢尾花》、莫奈的《干草堆》；中央花园和南边观景台能俯瞰整个洛杉矶西区和海边。车停在山脚停车楼（有人管理，比路边安全），坐无人驾驶小电车上山。周一闭馆。", g: "Getty Center" },
-    { t: "12:15", k: "meal", name: "午餐：Getty 里的 Café", meta: "约 45 分钟", note: "自助式餐厅，有室外座位能看风景；想吃正式一点的可以订楼上的 The Restaurant。", g: "Getty Center" },
-    { t: "13:00", k: "move", name: "下山开到 Beverly Hills", meta: "约 20 分钟" },
-    { t: "13:20", k: "sight", name: "Beverly Hills · Rodeo Drive", meta: "约 40 分钟 · 市政停车场头 1 小时通常免费", note: "名牌街 Rodeo Drive、《风月俏佳人》里的 Beverly Wilshire 酒店、Beverly Gardens Park 的 Beverly Hills 标志。12 月有圣诞灯饰。", g: "Rodeo Drive, Beverly Hills" },
-    { t: "14:15", k: "sight", name: "Melrose Avenue · Paul Smith 粉墙", meta: "约 15 分钟 · 免费", note: "潮牌、古着店和涂鸦墙一条街，从 Beverly Hills 开过来约 10 分钟，路边停一下拍照。", g: "8221 Melrose Avenue, Los Angeles" },
-    { t: "14:40", k: "sight", name: "RIPNDIP 旗舰店购物（Fairfax Ave）", meta: "约 45 分钟 · 每天 11:00–19:00", note: "中指猫 Lord Nermal 的潮牌，店在 441 N Fairfax Ave，从粉墙开过去约 5 分钟，附近路边有咪表车位。这一段 Fairfax Ave 潮牌和滑板店很多。", g: "RIPNDIP, 441 N Fairfax Ave, Los Angeles" },
-    { t: "15:25", k: "move", name: "开到好莱坞", meta: "约 20 分钟" },
-    { t: "15:50", k: "sight", name: "好莱坞星光大道 · TCL 中国剧院", meta: "约 30 分钟", note: "看手印和星星，从 Ovation Hollywood 的平台能看到好莱坞标志。", g: "TCL Chinese Theatre" },
+    { t: "07:00", k: "move", name: "退房，行李装车", note: "今晚住 Ridgecrest，行李一整天都在车上。洛杉矶砸车窗偷东西很常见：出门前就把行李全放进后备厢盖好，到了景点停车场不要再开后备厢，车里什么都别留在明处。" },
+    { t: "07:30", k: "hike", name: "Mount Hollywood Trail", meta: "约 3 mi · 爬升 501 ft · 环线 · 约 1.5 小时 · 中等", note: "早上人少、好停车。从天文台停车场出发，山顶能同时看到好莱坞标志和市中心。步道一早就开，天文台建筑要晚些才开门。", at: "trail/us/california/mount-hollywood-trail", g: "Griffith Observatory" },
+    { t: "09:15", k: "move", name: "沿 Sunset Blvd 往西开到 Getty：Sunset Strip → Beverly Hills 豪宅区 → Bel Air", meta: "约 45 分钟 · 开车看 · 周日早上不堵", note: "先过 West Hollywood 的 Sunset Strip：Whisky a Go Go、The Roxy、Chateau Marmont 和一路的巨幅广告牌；再进 Beverly Hills 北边弯弯曲曲的豪宅区，最后在 I-405 旁边上山。", g: "Whisky a Go Go, 8901 Sunset Blvd, West Hollywood, CA" },
+    { t: "10:00", k: "sight", name: "Getty Center 美术馆", meta: "约 2 小时 · 免费（官网可预约入场时段）· 停车 $25 · 周日 10:00–17:30", note: "山顶的白色美术馆，有梵高《鸢尾花》、莫奈的《干草堆》；中央花园和南边观景台能俯瞰整个洛杉矶西区和海边。车停在山脚停车楼（有人管理，比路边安全），坐无人驾驶小电车上山。周一闭馆。", g: "Getty Center" },
+    { t: "12:00", k: "meal", name: "午餐：Getty 里的 Café", meta: "约 45 分钟", note: "自助式餐厅，有室外座位能看风景；想吃正式一点的可以订楼上的 The Restaurant。", g: "Getty Center" },
+    { t: "12:45", k: "move", name: "下山开到 Beverly Hills", meta: "约 20 分钟" },
+    { t: "13:05", k: "sight", name: "Beverly Hills · Rodeo Drive", meta: "约 40 分钟 · 市政停车场头 1 小时通常免费", note: "名牌街 Rodeo Drive、《风月俏佳人》里的 Beverly Wilshire 酒店、Beverly Gardens Park 的 Beverly Hills 标志。12 月有圣诞灯饰。", g: "Rodeo Drive, Beverly Hills" },
+    { t: "14:00", k: "sight", name: "Melrose Avenue · Paul Smith 粉墙", meta: "约 15 分钟 · 免费", note: "潮牌、古着店和涂鸦墙一条街，从 Beverly Hills 开过来约 10 分钟，路边停一下拍照。", g: "8221 Melrose Avenue, Los Angeles" },
+    { t: "14:25", k: "sight", name: "RIPNDIP 旗舰店购物（Fairfax Ave）", meta: "约 45 分钟 · 每天 11:00–19:00", note: "中指猫 Lord Nermal 的潮牌，店在 441 N Fairfax Ave，从粉墙开过去约 5 分钟，附近路边有咪表车位。这一段 Fairfax Ave 潮牌和滑板店很多。", g: "RIPNDIP, 441 N Fairfax Ave, Los Angeles" },
+    { t: "15:10", k: "move", name: "开到好莱坞", meta: "约 20 分钟" },
+    { t: "15:30", k: "sight", name: "好莱坞星光大道 · TCL 中国剧院", meta: "约 50 分钟", note: "看手印和星星，从 Ovation Hollywood 的平台能看到好莱坞标志。", g: "TCL Chinese Theatre" },
     { t: "16:35", k: "sight", name: "格里菲斯天文台 · 日落和夜景", meta: "免费 · {GRIFFITH} · 日落 ≈16:50", note: "看完日落再等半小时，城市灯光亮起来最好看。周日傍晚停车场很满，可以停在山下的 Greek Theatre 一带走上去，或坐 DASH 接驳车。", g: "Griffith Observatory" },
     { t: "17:45", k: "meal", name: "晚餐：Koreatown 韩式烤肉", note: "从天文台开过去约 20 分钟。", g: "Koreatown, Los Angeles, CA" },
     { t: "19:00", k: "move", name: "晚饭后开往 Ridgecrest：I-5 → CA-14 北上", meta: "≈150 mi · 约 2h30m · 到达 ≈21:30", note: "周日晚上是出城方向，不堵。过了 Mojave 之后是沙漠公路，没有路灯。到了先在 Ridgecrest 加满油：明天从 Trona 往后约 100 mi 没有加油站，死亡谷园内的油也很贵。", g: "Ridgecrest, CA" },
@@ -992,8 +994,8 @@ const B_DAYS = [D20, D21, D22, D23, D25,
 
 /* =====================  Plan metadata  ===================== */
 const LODGING_SHARED = [
-  { in: "2026-12-20", out: "2026-12-21", where: "LAX 机场附近（El Segundo）", hint: "晚上 11 点左右才到，选可以晚到入住、停车方便的连锁酒店；离 SpaceX 和海边都近", ss: "El Segundo, California" },
-  { in: "2026-12-21", out: "2026-12-22", where: "长滩 Long Beach", hint: "晚上 9 点左右到，夜游完港口就住下；市中心或长滩机场一带都行，第二天一早顺路看 Rocket Lab 再一路往北", ss: "Long Beach, California" },
+  { in: "2026-12-20", out: "2026-12-21", where: "长滩 Long Beach", hint: "晚上 11 点多才到，选可以晚到入住、带停车场的酒店；长滩机场一带或市中心都行，第二天一早看 Rocket Lab 和长滩港，再一路往北", ss: "Long Beach, California" },
+  { in: "2026-12-21", out: "2026-12-22", where: "Hollywood", hint: "晚上 8 点半左右到；第二天一早爬 Mount Hollywood、去天文台都近；只住一晚，第二天晚上就出城", ss: "Hollywood, Los Angeles" },
   { in: "2026-12-22", out: "2026-12-23", where: "Ridgecrest", hint: "晚上 9 点半左右到，选可以晚到入住的连锁酒店；第二天天亮前出发去死亡谷，比住死亡谷园内便宜一半多", ss: "Ridgecrest, California" },
   { in: "2026-12-23", out: "2026-12-25", where: "拉斯维加斯 Strip", hint: "晚上 7 点左右才到；住 Bellagio、Caesars 一带最方便步行；注意 resort fee 和停车费", ss: "Las Vegas Strip, Las Vegas" }
 ];
@@ -1012,7 +1014,7 @@ const PLANS = {
     key: "a", home: "PHX", dates: "12.20–12.29", nights: 9, days: A_DAYS, miles: "≈1,925 mi", km: "约 3,100 km",
     eyebrow: "Toronto → LAX · road trip · PHX → Toronto",
     lede: "周五晚上飞到洛杉矶，租车出发：洛杉矶玩两天，第二天晚上开到 Ridgecrest 住，第三天一口气玩完死亡谷开到拉斯维加斯。再经胡佛水坝、火焰谷去锡安和布莱斯峡谷，然后是马蹄湾、纪念碑谷和大峡谷南缘，最后在凤凰城还车飞回多伦多。",
-    route: [["LAX", "Los Angeles International Airport"], ["长滩", "Long Beach, CA"], ["Ridgecrest", "Ridgecrest, CA"], ["死亡谷", "Furnace Creek, Death Valley, CA"], ["拉斯维加斯", "Las Vegas Strip, NV"], ["胡佛水坝", "Hoover Dam"], ["火焰谷", "Valley of Fire State Park"], ["锡安", "Springdale, UT"], ["布莱斯峡谷", "Sunset Point, Bryce Canyon"], ["马蹄湾", "Horseshoe Bend, Page, AZ"], ["纪念碑谷", "Monument Valley Navajo Tribal Park"], ["大峡谷", "Grand Canyon Village, AZ"], ["PHX", "Phoenix Sky Harbor International Airport"]],
+    route: [["LAX", "Los Angeles International Airport"], ["长滩", "Long Beach, CA"], ["Hollywood", "Hollywood, Los Angeles, CA"], ["Ridgecrest", "Ridgecrest, CA"], ["死亡谷", "Furnace Creek, Death Valley, CA"], ["拉斯维加斯", "Las Vegas Strip, NV"], ["胡佛水坝", "Hoover Dam"], ["火焰谷", "Valley of Fire State Park"], ["锡安", "Springdale, UT"], ["布莱斯峡谷", "Sunset Point, Bryce Canyon"], ["马蹄湾", "Horseshoe Bend, Page, AZ"], ["纪念碑谷", "Monument Valley Navajo Tribal Park"], ["大峡谷", "Grand Canyon Village, AZ"], ["PHX", "Phoenix Sky Harbor International Airport"]],
     stops: [["LA", "洛杉矶", "Hollywood, Los Angeles, CA", 11], ["1", "死亡谷", "Furnace Creek, Death Valley, CA", 9], ["2", "拉斯维加斯", "Las Vegas Strip, NV", 12], ["3", "锡安", "Zion National Park, UT", 11], ["4", "布莱斯峡谷", "Sunset Point, Bryce Canyon", 12], ["5", "马蹄湾", "Horseshoe Bend, Page, AZ", 13], ["6", "纪念碑谷", "Monument Valley Navajo Tribal Park", 12], ["7", "大峡谷南缘", "Grand Canyon Village, AZ", 11], ["PHX", "凤凰城 PHX", "Phoenix Sky Harbor International Airport", 11]],
     lodging: LODGING_SHARED.slice(0, -1).concat([
       { in: "2026-12-23", out: "2026-12-24", where: "拉斯维加斯 Strip", hint: "只住一晚，晚上 7 点左右才到；住 Bellagio、Caesars 一带最方便步行；注意 resort fee 和停车费", ss: "Las Vegas Strip, Las Vegas" },
@@ -1034,7 +1036,7 @@ const PLANS = {
     key: "b", home: "LAS", dates: "12.20–12.28", nights: 8, days: B_DAYS, miles: "≈1,640 mi", km: "约 2,640 km",
     eyebrow: "Toronto → LAX · road trip · LAS → Toronto",
     lede: "周五晚上飞到洛杉矶，租车出发：洛杉矶玩两天，晚上住 Ridgecrest，一天玩完死亡谷到拉斯维加斯，拉斯维加斯再玩一整天（红岩、胡佛水坝）。然后去锡安、布莱斯峡谷和 Page，不去大峡谷，最后回拉斯维加斯还车飞回多伦多。",
-    route: [["LAX", "Los Angeles International Airport"], ["长滩", "Long Beach, CA"], ["Ridgecrest", "Ridgecrest, CA"], ["死亡谷", "Furnace Creek, Death Valley, CA"], ["拉斯维加斯", "Las Vegas Strip, NV"], ["锡安", "Springdale, UT"], ["布莱斯峡谷", "Sunset Point, Bryce Canyon"], ["马蹄湾", "Horseshoe Bend, Page, AZ"], ["LAS", "Harry Reid International Airport"]],
+    route: [["LAX", "Los Angeles International Airport"], ["长滩", "Long Beach, CA"], ["Hollywood", "Hollywood, Los Angeles, CA"], ["Ridgecrest", "Ridgecrest, CA"], ["死亡谷", "Furnace Creek, Death Valley, CA"], ["拉斯维加斯", "Las Vegas Strip, NV"], ["锡安", "Springdale, UT"], ["布莱斯峡谷", "Sunset Point, Bryce Canyon"], ["马蹄湾", "Horseshoe Bend, Page, AZ"], ["LAS", "Harry Reid International Airport"]],
     stops: [["LA", "洛杉矶", "Hollywood, Los Angeles, CA", 11], ["1", "死亡谷", "Furnace Creek, Death Valley, CA", 9], ["2", "拉斯维加斯", "Las Vegas Strip, NV", 12], ["3", "锡安", "Zion National Park, UT", 11], ["4", "布莱斯峡谷", "Sunset Point, Bryce Canyon", 12], ["5", "马蹄湾", "Horseshoe Bend, Page, AZ", 13], ["LAS", "拉斯维加斯机场", "Harry Reid International Airport", 12]],
     lodging: LODGING_SHARED.concat([
       { in: "2026-12-25", out: "2026-12-26", where: "Springdale（锡安南门）", hint: "走路或坐镇上班车可到公园入口", ss: "Springdale, Utah" },
@@ -1501,7 +1503,8 @@ const BUDGET = {
   // Per-night price incl. taxes and resort fees: [2 people (one hotel room), 4 people], with what was found.
   lodging: {
     "El Segundo, California":    { 2: [150, "LAX 附近连锁酒店（如 Hampton Inn El Segundo），评分 8 分左右"], 4: [200, "套房或两张 Queen 床房（如 Embassy Suites）；只住一晚、到得晚，不值得订 Airbnb"], park: { 2: 25, 4: 25 } },
-    "Long Beach, California":    { 2: [170, "3 星酒店，Booking 评分 8 分左右（估算）"], 4: [280, "Airbnb 整套 2 卧，带车位（估算）"], park: { 2: 25, 4: 0 } },
+    "Long Beach, California":    { 2: [150, "长滩机场附近连锁酒店，评分 8 分左右（估算）"], 4: [200, "两张 Queen 床房或套房；只住一晚、到得晚，不值得订 Airbnb（估算）"], park: { 2: 20, 4: 20 } },
+    "Hollywood, Los Angeles":    { 2: [190, "3 星酒店，Booking 评分 8 分左右"], 4: [345, "Airbnb 整套 2 卧 2 卫，评分 4.7+"], park: { 2: 30, 4: 0 } },
     "Ridgecrest, California":    { 2: [110, "Red Roof Inn、Days Inn 一类连锁酒店，评分 8.2–8.3（含税约 $96–116）"], 4: [125, "两张 Queen 床房（Red Roof Inn、Days Inn 含税约 $116–126；Holiday Inn Express 约 $190）"], park: { 2: 0, 4: 0 } },
     "Las Vegas Strip, Las Vegas": { 2: [100, "Strip 上 4 星酒店，含 resort fee（平日很便宜）"], 4: [200, "Airbnb 整套 2 卧公寓，Strip 附近"], park: { 2: 20, 4: 20 } },
     "Springdale, Utah":          { 2: [205, "Springdale 酒店，评分 8.5+"], 4: [295, "Airbnb 整套房子，在 La Verkin / Hurricane（离公园约 30 分钟）；Springdale 镇上的贵很多"], park: { 2: 0, 4: 0 } },
