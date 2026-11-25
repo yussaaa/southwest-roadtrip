@@ -443,7 +443,7 @@ td small { display: block; color: var(--muted); font-size: 12px; line-height: 1.
   <h2 id="lodging-h">住宿</h2>
   <p class="sec-lede">每晚的入住和退房日期已经填进 Booking.com（酒店）和 Airbnb（整套房子）的搜索链接。下面的筛选条件已经加在链接里，打开后可以在网站上取消。改一下人数和房间数，链接会跟着更新。4 个人建议优先看 Airbnb：一套 2 卧 2 卫通常比两间酒店房便宜，还能做早餐；死亡谷园内和 Tusayan 没有整套出租，订两张 Queen 床的酒店房。</p>
   <div class="filters" aria-label="住宿链接里已加的筛选条件">
-    <div class="frow"><span class="fsite">Booking.com</span><span class="fchip">评分 8+</span><span class="fchip">每晚 ≤ CA$565（≈US$400）</span><span class="fchip">加元结算</span><span class="fchip">🅿 免费停车</span></div>
+    <div class="frow"><span class="fsite">Booking.com</span><span class="fchip">评分 8+</span><span class="fchip">每晚 ≤ CA$500</span><span class="fchip">加元结算</span><span class="fchip">🅿 免费停车</span></div>
     <div class="frow"><span class="fsite">Airbnb</span><span class="fchip">整套房子</span><span class="fchip">2 张床以上</span><span class="fchip">每晚 ≤ CA$664</span><span class="fchip">加元结算</span><span class="fchip">🅿 免费停车</span></div>
   </div>
   <div class="party">
@@ -1500,8 +1500,8 @@ function bookingUrl(l) {
   const a = document.getElementById("adults").value, c = document.getElementById("children").value, r = document.getElementById("rooms").value;
   return "https://www.booking.com/searchresults.html?ss=" + enc(l.ss) + "&checkin=" + l.in + "&checkout=" + l.out +
     "&group_adults=" + a + "&group_children=" + c + "&no_rooms=" + r +
-    // Filters (shown in CAD): guest rating 8+, CA$565 (≈US$400) or less per night, free parking (Booking facility id 46)
-    "&selected_currency=CAD&nflt=" + enc("review_score=80;price=CAD-min-565-1;hotelfacility=46");
+    // Filters (shown in CAD): guest rating 8+, CA$500 or less per night, free parking (Booking facility id 46)
+    "&selected_currency=CAD&nflt=" + enc("review_score=80;price=CAD-min-500-1;hotelfacility=46");
 }
 /* =====================  Budget: 2 people (mid-size SUV, hotel rooms) vs 4 people (full-size SUV, whole-home rentals)  ===================== */
 // Prices checked 2026-11-14/15 for a 12/19 start; return flights and car re-checked 11/15 for the 9-day 12/19–12/27 plan. USD unless marked cad.
