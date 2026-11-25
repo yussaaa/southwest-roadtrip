@@ -173,7 +173,8 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
 .daybody .slot .tm { font-size: 12px; }
 .daybody .sched .slot.has-pic { grid-template-columns: 52px minmax(0, 1fr) clamp(96px, 12vw, 150px); }
 .daybody .slot .pic { border-radius: 10px; }
-.daybody .stay { font-size: 12px; padding: 8px 10px; }
+.daybody .stay { font-size: 13px; padding: 8px 12px; background: var(--trail-soft); border-color: transparent; }
+.daybody .stay::before { content: "🛏"; }
 
 .mapwrap { grid-area: map; display: flex; flex-direction: column; min-width: 0; min-height: 0; background: var(--surface);
   margin: 12px 12px 12px 0; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgb(0 0 0 / .06), 0 8px 24px rgb(0 0 0 / .06); }
@@ -1720,7 +1721,7 @@ function renderDays() {
     let stay = "";
     if (day.stay !== null) {
       const l = lodgingAt(P.lodging[day.stay]);
-      stay = `<div class="stay">住宿：<b>${l.where}</b><span class="num">${fmtDate(l.in)} → ${fmtDate(l.out)} · ${nights(l.in, l.out)} 晚</span><a data-stay="${day.stay}" target="_blank" rel="noopener">Booking.com 搜索 ↗</a></div>`;
+      stay = `<div class="stay">今晚住：<b>${l.where}</b><span class="num">${fmtDate(l.in)} → ${fmtDate(l.out)} · ${nights(l.in, l.out)} 晚</span><a data-stay="${day.stay}" target="_blank" rel="noopener">Booking.com 搜索 ↗</a></div>`;
     }
     return `<li class="dayitem" id="dcard-${i}" data-i="${i}">
       <button type="button" class="dayhead" id="day-${i}" data-sel data-day="${i}" aria-expanded="false" aria-controls="dbody-${i}">
@@ -1731,8 +1732,8 @@ function renderDays() {
       <div class="daybody" id="dbody-${i}" hidden>
         ${alerts.map(a => `<div class="alert${a.warn ? " warn" : ""}">${a.text}</div>`).join("")}
         <div class="leg">${day.leg.join("")}</div>
-        <ol class="sched">${slots}</ol>
         ${stay}
+        <ol class="sched">${slots}</ol>
       </div>
     </li>`;
   }).join("");
